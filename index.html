@@ -14,7 +14,7 @@
   --surface-2: #f3f2ef;
   --ink: #0b0b0b;
   --ink-2: #52514e;
-  --muted: #898781;
+  --muted: #696762;
   --grid: #e1e0d9;
   --axis: #c3c2b7;
   --border: rgba(11,11,11,0.10);
@@ -30,6 +30,7 @@
   --band-good: rgba(12,163,12,0.06);
   --band-warning: rgba(250,178,25,0.09);
   --band-critical: rgba(208,59,59,0.07);
+  --sampled-band: rgba(11,11,11,0.045);
   --shadow: 0 1px 2px rgba(11,11,11,0.04), 0 4px 16px rgba(11,11,11,0.04);
 }
 @media (prefers-color-scheme: dark) {
@@ -40,7 +41,7 @@
     --surface-2: #232321;
     --ink: #f0efec;
     --ink-2: #c3c2b7;
-    --muted: #898781;
+    --muted: #9a9890;
     --grid: #2c2c2a;
     --axis: #383835;
     --border: rgba(255,255,255,0.10);
@@ -53,6 +54,7 @@
     --band-good: rgba(12,163,12,0.08);
     --band-warning: rgba(250,178,25,0.07);
     --band-critical: rgba(208,59,59,0.10);
+    --sampled-band: rgba(255,255,255,0.05);
     --shadow: none;
   }
 }
@@ -63,7 +65,7 @@
   --surface-2: #232321;
   --ink: #f0efec;
   --ink-2: #c3c2b7;
-  --muted: #898781;
+  --muted: #9a9890;
   --grid: #2c2c2a;
   --axis: #383835;
   --border: rgba(255,255,255,0.10);
@@ -76,6 +78,7 @@
   --band-good: rgba(12,163,12,0.08);
   --band-warning: rgba(250,178,25,0.07);
   --band-critical: rgba(208,59,59,0.10);
+  --sampled-band: rgba(255,255,255,0.05);
   --shadow: none;
 }
 
@@ -105,12 +108,15 @@ button, .btn {
   display: inline-flex; align-items: center; gap: 6px;
 }
 button:hover { background: var(--surface-2); }
-button:focus-visible { outline: 2px solid var(--series-1); outline-offset: 2px; }
+button:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--series-1); outline-offset: 2px; }
+button[hidden] { display: none; }
 
 .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--surface); }
-.seg button { border: 0; border-radius: 0; padding: 6px 12px; color: var(--ink-2); }
+.seg button { border: 0; border-radius: 0; padding: 6px 12px; color: var(--ink-2); white-space: nowrap; }
 .seg button + button { border-left: 1px solid var(--border); }
 .seg button[aria-pressed="true"] { background: var(--surface-2); color: var(--ink); font-weight: 600; }
+.seg button:focus-visible { outline-offset: -3px; }
+.seg .sm, .tile .sm, .d-sm { display: none; }
 
 .card {
   background: var(--surface); border: 1px solid var(--border);
@@ -120,11 +126,12 @@ button:focus-visible { outline: 2px solid var(--series-1); outline-offset: 2px; 
 .card .sub { color: var(--muted); font-size: 13px; margin: 2px 0 0; }
 .card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
 .controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.card-error { font-size: 13px; color: var(--critical-ink); margin: 0 0 8px; }
 
 .grid-top { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 2fr); gap: 16px; margin-bottom: 16px; }
 
 /* Hero */
-.hero .label-row { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
+.hero .label-row { display: flex; align-items: center; gap: 8px; margin-top: 4px; flex-wrap: wrap; }
 .hero-num { font-size: 72px; line-height: 1; font-weight: 700; letter-spacing: -0.03em; margin-top: 14px; }
 .hero-num small { font-size: 20px; color: var(--muted); font-weight: 500; letter-spacing: 0; }
 .badge {
@@ -132,10 +139,13 @@ button:focus-visible { outline: 2px solid var(--series-1); outline-offset: 2px; 
   padding: 3px 10px 3px 8px; border-radius: 999px; border: 1px solid var(--border);
   background: var(--surface-2); color: var(--ink);
 }
+.badge.warn { color: var(--warning-ink); background: var(--band-warning); padding-left: 10px; }
+.badge[hidden] { display: none; }
 .dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
 .lvl-low .dot { background: var(--good); }
 .lvl-mod .dot { background: var(--warning); }
 .lvl-high .dot { background: var(--critical); }
+.lvl-none .dot { background: transparent; border: 1.5px solid var(--muted); }
 .delta { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
 .delta strong { font-weight: 650; }
 .delta .up { color: var(--critical-ink); }
@@ -144,11 +154,15 @@ button:focus-visible { outline: 2px solid var(--series-1); outline-offset: 2px; 
 .meter { margin-top: 18px; }
 .meter-track { position: relative; height: 8px; border-radius: 4px; display: flex; gap: 2px; }
 .meter-track span { height: 100%; border-radius: 4px; opacity: .85; }
+.meter-track.unbanded span { background: var(--muted) !important; opacity: .35; }
 .meter-pin { position: absolute; top: -4px; width: 4px; height: 16px; border-radius: 2px; background: var(--ink); box-shadow: 0 0 0 2px var(--surface); transform: translateX(-2px); }
 .meter-scale { position: relative; height: 16px; font-size: 11px; color: var(--muted); margin-top: 6px; font-variant-numeric: tabular-nums; }
-.meter-scale span { position: absolute; top: 0; }
-.meter-scale span[style*="%"] { transform: translateX(-50%); }
+.meter-scale span { position: absolute; top: 0; white-space: nowrap; }
+.meter-scale span.mid { transform: translateX(-50%); }
 .hero-note { margin-top: 16px; font-size: 13px; color: var(--ink-2); border-top: 1px solid var(--border); padding-top: 12px; }
+.hero-note p { margin: 0; }
+.hero-note p + p { margin-top: 6px; }
+.hero-note p.stale { color: var(--warning-ink); font-weight: 600; }
 
 /* Tiles */
 .tiles { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; }
@@ -156,22 +170,31 @@ button:focus-visible { outline: 2px solid var(--series-1); outline-offset: 2px; 
 .tile .k { font-size: 12px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
 .tile .v { font-size: 30px; font-weight: 700; margin-top: 4px; letter-spacing: -0.02em; }
 .tile .s { font-size: 12px; color: var(--ink-2); }
+.tile .s + .s { margin-top: 2px; }
 .mix { margin-top: 16px; }
 .mix-bar { display: flex; height: 10px; gap: 2px; border-radius: 5px; overflow: hidden; }
 .mix-bar span { display: block; height: 100%; }
 .mix-legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--ink-2); margin-top: 8px; }
 .mix-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
-.stats-row { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin-top: 16px; }
-.stat .k { font-size: 12px; color: var(--muted); }
+/* Subgrid keeps labels, values and sub-lines on shared rows, so values line up even when a label wraps. */
+.stats-row { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); grid-template-rows: auto auto auto; column-gap: 12px; margin-top: 16px; }
+.stat { display: grid; grid-row: span 3; grid-template-rows: subgrid; }
+.stat .k { font-size: 12px; color: var(--muted); align-self: end; }
 .stat .v { font-size: 18px; font-weight: 650; font-variant-numeric: tabular-nums; }
+.stat .s { font-size: 12px; color: var(--muted); }
 
 /* Charts */
 .chart-box { position: relative; height: 340px; }
+.chart-box canvas { max-width: 100%; }
 .chart-box.short { height: 220px; }
+/* Charts are rebuilt at this width just before printing, so paper gets neither a stretched phone chart nor a shrunk desktop one. */
+html.print-size .chart-box { width: 720px; max-width: none; }
 .legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--ink-2); margin: -4px 0 10px; }
 .legend .sw { display: inline-block; width: 16px; height: 0; border-top: 2px solid; margin-right: 6px; vertical-align: 3px; }
 .legend .sw.dash { border-top-style: dashed; }
 .legend .band { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+.legend .band.sampled { background: var(--sampled-band); border: 1px solid var(--border); }
+.legend .stale { color: var(--warning-ink); font-weight: 600; }
 .placeholder-flag {
   display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
   color: var(--warning-ink); background: var(--band-warning); border: 1px solid var(--border);
@@ -181,19 +204,36 @@ button:focus-visible { outline: 2px solid var(--series-1); outline-offset: 2px; 
 .stack { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
 
 /* Table */
-.table-wrap { overflow-x: auto; margin: 0 -4px; }
+.table-wrap { overflow-x: auto; }
 table { width: 100%; border-collapse: collapse; font-size: 14px; }
-th, td { text-align: right; padding: 10px 8px; border-bottom: 1px solid var(--grid); white-space: nowrap; font-variant-numeric: tabular-nums; }
-th { font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+th, td { text-align: right; padding: 10px 6px; border-bottom: 1px solid var(--grid); white-space: nowrap; font-variant-numeric: tabular-nums; vertical-align: top; }
+th { font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; vertical-align: bottom; }
 th:first-child, td:first-child, th.l, td.l { text-align: left; }
-td.note { white-space: normal; color: var(--ink-2); min-width: 180px; }
+td.note { white-space: normal; color: var(--ink-2); min-width: 160px; max-width: 360px; font-size: 13px; }
+.clamp { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; cursor: pointer; }
+.clamp.open { display: block; -webkit-line-clamp: unset; }
+tr.note-row { display: none; }
+.cov { font-size: 13px; color: var(--ink-2); }
+.cov.sample { color: var(--warning-ink); }
+.cov.none { color: var(--muted); }
 tbody tr:hover { background: var(--surface-2); }
+tr.missing td { color: var(--muted); }
 .score-cell { display: inline-flex; align-items: center; gap: 6px; font-weight: 650; }
+.score-cell .n { display: inline-block; min-width: 2ch; text-align: right; }
+/* Date column stays put while the table scrolls sideways on phones. */
+th:first-child, td:first-child { position: sticky; left: 0; background: var(--surface); z-index: 1; padding-right: 12px; box-shadow: inset -1px 0 0 var(--grid); }
+td:first-child .cov { display: block; font-size: 12px; white-space: normal; }
+.score-cell.empty { font-weight: 400; }
+tbody tr:hover td:first-child { background: var(--surface-2); }
+.lvl-txt { font-size: 11px; font-weight: 500; color: var(--muted); }
 
-footer { margin-top: 28px; font-size: 12px; color: var(--muted); line-height: 1.6; }
+footer { margin-top: 28px; font-size: 12px; color: var(--ink-2); line-height: 1.6; }
 footer p { margin: 0 0 6px; }
+footer p[hidden] { display: none; }
 
-.error { padding: 16px; border-radius: 10px; background: var(--band-critical); color: var(--ink); margin-bottom: 16px; display: none; }
+.error, .notice { padding: 12px 16px; border-radius: 10px; margin-bottom: 16px; display: none; font-size: 14px; }
+.error { background: var(--band-critical); color: var(--ink); }
+.notice { background: var(--band-warning); color: var(--ink); }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 @media (max-width: 860px) {
@@ -205,12 +245,33 @@ footer p { margin: 0 0 6px; }
   .tiles { gap: 8px; }
   .tile { padding: 10px; }
   .tile .v { font-size: 24px; }
-  .chart-box { height: 280px; }
   .card { padding: 16px; }
+  .seg .lg, .tile .lg, .d-lg { display: none; }
+  .seg .sm, .tile .sm, .d-sm { display: inline; }
+  .chart-box.short { height: 280px; }
+  .seg button { padding: 6px 10px; }
+}
+@media (max-width: 360px) {
+  .tiles { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .tiles .tile:first-child { grid-column: 1 / -1; }
 }
 @media print {
-  .top-actions, .controls button { display: none; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  html.print-size .chart-box { width: auto; }
+  .chart-box, .chart-box.short { height: auto; }
+  .chart-box canvas { width: 100% !important; height: auto !important; }
+  th:first-child, td:first-child { position: static; box-shadow: none; }
+  .top-actions, .controls { display: none; }
   .card { box-shadow: none; break-inside: avoid; }
+  .table-wrap { overflow: visible; margin: 0; }
+  table { font-size: 11px; }
+  th, td { padding: 6px 4px; white-space: normal; }
+  td:first-child { white-space: nowrap; }
+  th { font-size: 10px; letter-spacing: 0; }
+  th:last-child, td.note { display: none; }
+  tr.note-row { display: table-row; }
+  tr:has(+ tr.note-row) td { border-bottom: 0; padding-bottom: 2px; }
+  tr.note-row td { text-align: left; white-space: normal; color: var(--ink-2); padding-top: 0; }
 }
 </style>
 </head>
@@ -236,35 +297,33 @@ footer p { margin: 0 0 6px; }
   </header>
 
   <div class="error" id="error" role="alert"></div>
+  <div class="notice" id="notice" role="status"></div>
 
   <section class="grid-top">
-    <div class="card hero" aria-labelledby="hero-h">
-      <h2 id="hero-h">Current negative score</h2>
+    <div class="card hero" id="heroCard" aria-labelledby="hero-h">
+      <h2 id="hero-h">Latest negative score</h2>
       <p class="sub" id="heroDate">—</p>
       <div class="hero-num" id="heroNum">—<small> / 100</small></div>
-      <div class="label-row"><span class="badge" id="heroBadge"><span class="dot"></span><span>—</span></span></div>
+      <div class="label-row">
+        <span class="badge" id="heroBadge"><span class="dot"></span><span>—</span></span>
+      </div>
       <div class="delta" id="heroDelta"></div>
       <div class="meter" aria-hidden="true">
-        <div class="meter-track">
-          <span style="width:30%;background:var(--good)"></span>
-          <span style="width:30%;background:var(--warning)"></span>
-          <span style="width:40%;background:var(--critical)"></span>
-          <i class="meter-pin" id="meterPin" style="left:0"></i>
-        </div>
-        <div class="meter-scale"><span style="left:0">0</span><span style="left:30%">30</span><span style="left:60%">60</span><span style="right:0">100</span></div>
+        <div class="meter-track" id="meterTrack"></div>
+        <div class="meter-scale" id="meterScale"></div>
       </div>
       <div class="hero-note" id="heroNote"></div>
     </div>
 
-    <div class="card" aria-labelledby="today-h">
+    <div class="card" id="breakdownCard" aria-labelledby="today-h">
       <div class="card-head">
         <div>
           <h2 id="today-h">Latest day breakdown</h2>
-          <p class="sub">Posts classified on the most recent day</p>
+          <p class="sub" id="breakdownSub">Posts classified on the most recent day</p>
         </div>
       </div>
       <div class="tiles">
-        <div class="tile"><div class="k">Negative</div><div class="v" id="tNeg">—</div><div class="s" id="tNegPct"></div></div>
+        <div class="tile"><div class="k">Negative</div><div class="v" id="tNeg">—</div><div class="s" id="tNegPct"></div><div class="s" id="tNegAcc"></div><div class="s" id="tNegTop"></div></div>
         <div class="tile"><div class="k">Neutral</div><div class="v" id="tNeu">—</div><div class="s" id="tNeuPct"></div></div>
         <div class="tile"><div class="k">Positive</div><div class="v" id="tPos">—</div><div class="s" id="tPosPct"></div></div>
       </div>
@@ -277,15 +336,15 @@ footer p { margin: 0 0 6px; }
         </div>
       </div>
       <div class="stats-row">
-        <div class="stat"><div class="k">7-day average</div><div class="v" id="sAvg">—</div></div>
-        <div class="stat"><div class="k">Period high</div><div class="v" id="sHigh">—</div></div>
-        <div class="stat"><div class="k">Engagement-weighted</div><div class="v" id="sEng">—</div></div>
+        <div class="stat"><div class="k">7-day average</div><div class="v" id="sAvg">—</div><div class="s" id="sAvgS"></div></div>
+        <div class="stat"><div class="k">High</div><div class="v" id="sHigh">—</div><div class="s" id="sHighS"></div></div>
+        <div class="stat"><div class="k">Engagement-weighted</div><div class="v" id="sEng">—</div><div class="s" id="sEngS"></div></div>
       </div>
     </div>
   </section>
 
   <div class="stack">
-    <section class="card" aria-labelledby="trend-h">
+    <section class="card" id="trendCard" aria-labelledby="trend-h">
       <div class="card-head">
         <div>
           <h2 id="trend-h">Negative score over time</h2>
@@ -293,8 +352,9 @@ footer p { margin: 0 0 6px; }
         </div>
         <div class="controls">
           <div class="seg" role="group" aria-label="Score type">
-            <button type="button" data-metric="negative_score" aria-pressed="true">Raw score</button>
-            <button type="button" data-metric="engagement_weighted_negative" aria-pressed="false">Engagement-weighted</button>
+            <button type="button" data-metric="negative_score" aria-pressed="true"><span class="lg">Raw score</span><span class="sm">Raw</span></button>
+            <button type="button" data-metric="engagement_weighted_negative" aria-pressed="false"><span class="lg">Engagement-weighted</span><span class="sm">Engagement</span></button>
+            <button type="button" data-metric="negative_accounts_score" aria-pressed="false" hidden><span class="lg">By account</span><span class="sm">Accounts</span></button>
           </div>
           <div class="seg" role="group" aria-label="Moving average">
             <button type="button" id="maBtn" aria-pressed="true">7-day avg</button>
@@ -305,11 +365,11 @@ footer p { margin: 0 0 6px; }
       <div class="chart-box"><canvas id="trendChart" aria-label="Line chart of daily negative score" role="img"></canvas></div>
     </section>
 
-    <section class="card" aria-labelledby="px-h">
+    <section class="card" id="pxCard" aria-labelledby="px-h">
       <div class="card-head">
         <div>
           <h2 id="px-h">IREN &amp; CIFR price, indexed</h2>
-          <p class="sub">Indexed to 100 on the first day of the period. Shown on its own scale to compare timing with the score above.</p>
+          <p class="sub">Indexed to 100 on the first trading day shown, on its own scale, for context. Prices are 4 pm ET closes while score days run midnight to midnight ET, so a move on the same date can't show which came first. Moving together is not evidence that one drives the other.</p>
         </div>
         <span class="placeholder-flag" id="pxFlag" hidden>⚠ Placeholder data, not real prices</span>
       </div>
@@ -317,11 +377,11 @@ footer p { margin: 0 0 6px; }
       <div class="chart-box short"><canvas id="pxChart" aria-label="Line chart of indexed IREN and CIFR prices" role="img"></canvas></div>
     </section>
 
-    <section class="card" aria-labelledby="tbl-h">
+    <section class="card" id="tableCard" aria-labelledby="tbl-h">
       <div class="card-head">
         <div>
           <h2 id="tbl-h">Recent activity</h2>
-          <p class="sub">Last 10 days, newest first</p>
+          <p class="sub">Last 10 days, newest first. Coverage shows posts classified, with X's own count in brackets for context. Tap a note to expand it.</p>
         </div>
       </div>
       <div class="table-wrap">
@@ -329,24 +389,31 @@ footer p { margin: 0 0 6px; }
           <thead>
             <tr>
               <th scope="col">Date</th>
-              <th scope="col">Score</th>
+              <th scope="col" class="l">Score</th>
               <th scope="col">Eng.-weighted</th>
               <th scope="col">Negative</th>
+              <th scope="col" title="Distinct accounts behind the negative posts">Neg. accounts</th>
+              <th scope="col" title="Most negative posts from any single account">Top account</th>
               <th scope="col">Neutral</th>
               <th scope="col">Positive</th>
+              <th scope="col" class="l" title="Posts classified. X's own daily count in brackets, for context only">Coverage</th>
               <th scope="col" class="l">Notes</th>
             </tr>
           </thead>
           <tbody id="tbody"></tbody>
         </table>
       </div>
+      <p class="sub" id="tableFoot" style="margin-top:10px" hidden>* One account wrote a large share of that day's negative posts; without it the day would fall in a lower band. Hover the score for details.</p>
     </section>
   </div>
 
   <footer>
-    <p><strong>Method.</strong> Posts mentioning Mike Alfred on X are classified daily as negative, neutral or positive. The negative score (0–100) summarises how negative the day's conversation was; the engagement-weighted version gives more weight to posts with more likes, reposts and replies.</p>
-    <p><strong>Bands.</strong> Low &lt; 30 · Moderate 30–59 · Elevated negative ≥ 60. The 7-day average is a trailing mean and uses fewer days until seven days of data exist.</p>
-    <p>Data refreshes automatically once a day. Not investment advice.</p>
+    <p><strong>Method.</strong> Posts mentioning Mike Alfred on X are classified daily as negative, neutral or positive by an automated reader (the Grok bot), judging sentiment toward him personally. The negative score (0–100) is the share of classified posts that are negative. The engagement-weighted version gives more weight to posts with more likes, reposts and replies.</p>
+    <p><strong>Coverage.</strong> “Full capture” means every post X search returns for the day was classified, after removing spam and duplicates. X's own daily count, shown where available, runs higher: on the days measured so far, search returned 62–91% of it (the day notes give the shortfall as a share of X's count). The likely reason is posts search no longer returns, such as deleted posts or protected accounts, but that has not been verified.</p>
+    <p id="sampledNote" hidden><strong>Sampled days.</strong> Days drawn dashed on a shaded background classified only a sample of 20–50 posts, mostly top-ranked, and were labelled by an earlier keyword method that reads lower than reading each post, so they are not comparable with full-capture days. They are also much noisier: one post moves that day's score by 2–5 points. They get no band label and do not set the chart's scale; a ▲ marks any value above the top of the chart.</p>
+    <p><strong>7-day average.</strong> Uses only days captured the same way and skips unfinished days and days with no posts, so it restarts where coverage changes. At the start of a run it averages fewer than seven days; the tooltip shows how many.</p>
+    <p id="bandNote"></p>
+    <p>Days run midnight to midnight US Eastern. Data refreshes once a day. Not investment advice.</p>
   </footer>
 </div>
 
@@ -355,35 +422,172 @@ footer p { margin: 0 0 6px; }
 (function () {
   "use strict";
 
+  // Raw-score bands, from the read-labelled full-capture days of Sep 4 – Oct 19, 2026:
+  // Moderate = median (13) + 1, Elevated = 90th percentile of the 39 days before the Oct 13 run (24) + 1,
+  // each rounded up to a multiple of 5. Before Oct 13: 29 Low, 7 Moderate, 3 Elevated; Oct 13–19: 6 of 7
+  // Elevated. Recheck after the Jul 22 – Sep 3 re-capture and whenever labelling changes.
+  // Everything below reads these constants.
+  const BAND_MODERATE = 15;
+  const BAND_ELEVATED = 25;
+  const METER_MAX = 50;
+  const MAX_FILL_GAP = 31;   // days; longer gaps are not filled with empty days
+
+  const NUM_FIELDS = ["negative_score", "engagement_weighted_negative", "negative_accounts_score",
+    "negative_count", "neutral_count", "positive_count", "classified_posts", "total_matching_posts",
+    "unique_negative_accounts", "unique_accounts", "top_account_negative_posts"];
+  const SCORE_FIELDS = ["negative_score", "engagement_weighted_negative", "negative_accounts_score"];
+
   const LEVELS = [
-    { max: 30,  key: "low",  label: "Low",               color: "--good" },
-    { max: 60,  key: "mod",  label: "Moderate",          color: "--warning" },
-    { max: 101, key: "high", label: "Elevated Negative", color: "--critical" }
+    { max: BAND_MODERATE, key: "low",  label: "Low" },
+    { max: BAND_ELEVATED, key: "mod",  label: "Moderate" },
+    { max: Infinity,      key: "high", label: "Elevated" }
   ];
-  const level = v => LEVELS.find(l => v < l.max);
+  // Band the value as displayed (whole number), so the badge never disagrees with the number shown.
+  const level = v => LEVELS.find(l => Math.round(v) < l.max);
   const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
-  const fmt = (v, d = 0) => (v == null || isNaN(v)) ? "—" : Number(v).toFixed(d);
+  const num = v => {
+    if (typeof v === "string") v = v.trim();
+    return (v == null || v === "" || typeof v === "boolean" || typeof v === "object" || isNaN(v)) ? null : Number(v);
+  };
+  const fmt = (v, d = 0) => num(v) == null ? "—" : num(v).toFixed(d);
+  const days = n => n + (n === 1 ? " day" : " days");
   const $ = id => document.getElementById(id);
+  const escapeHtml = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 
   const parseDate = s => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
   const shortDate = s => parseDate(s).toLocaleDateString(undefined, { month: "short", day: "numeric" });
   const longDate  = s => parseDate(s).toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric", year: "numeric" });
+  const dayNum = s => { const [y, m, d] = s.split("-").map(Number); return Date.UTC(y, m - 1, d) / 864e5; };
+  const isoOf = n => new Date(n * 864e5).toISOString().slice(0, 10);
+  const etDay = t => { try { return new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York" }).format(t); } catch (e) { return new Date(t).toISOString().slice(0, 10); } };
+  const todayET = () => etDay(new Date());
+  // last_updated as a US Eastern day: converted when it carries an offset, else its written date.
+  const luDayOf = v => {
+    const s = String(v || "").trim(), m = /^(\d{4}-\d{2}-\d{2})/.exec(s), t = Date.parse(s);
+    return /T.*(Z|[+-]\d{2}:?\d{2})$/i.test(s) && !isNaN(t) ? dayNum(etDay(new Date(t))) : m ? dayNum(m[1]) : NaN;
+  };
+  const nb = t => String(t).replace(/ /g, "\u00a0");   // keep "310 posts", "5 days", "Oct 18" unbroken
+
+  // "full" | "sample" | "unknown" (rows without the flag) | "missing" (calendar day with no row)
+  const method = r => r._missing ? "missing" : r.full_capture === true ? "full" : r.full_capture === false ? "sample" : "unknown";
+  const classified = r => {
+    if (r.classified_posts != null) return r.classified_posts;
+    const c = [r.negative_count, r.neutral_count, r.positive_count];
+    return c.every(x => x != null) ? c[0] + c[1] + c[2] : null;
+  };
+  const hasScore = r => !r._missing && r.negative_score != null;
+  const isPartial = r => r.partial_day === true;
+
+  // Score with the busiest single account's negative posts removed, when that account is a large share.
+  function withoutTop(r) {
+    const neg = r.negative_count, top = r.top_account_negative_posts, n = classified(r);
+    if (neg == null || top == null || !n || top > neg || top < 3 || top / neg < 0.25 || n <= top) return null;
+    return { top, neg, score: Math.round((neg - top) / (n - top) * 100) };
+  }
+
+  const METRICS = {
+    negative_score:               { name: "Negative score",      sub: "Share of classified posts that are negative", dp: 0 },
+    engagement_weighted_negative: { name: "Engagement-weighted", sub: "Negative share weighted by likes, reposts and replies", dp: 1 },
+    negative_accounts_score:      { name: "By account",          sub: "Share of posting accounts that posted something negative", dp: 0 }
+  };
 
   let DATA = null, PRICES = null, metric = "negative_score", showMA = true;
   let trendChart = null, pxChart = null;
 
-  function trailingMA(values, n) {
-    return values.map((_, i) => {
-      const win = values.slice(Math.max(0, i - n + 1), i + 1).filter(v => v != null);
-      return win.length ? win.reduce((a, b) => a + b, 0) / win.length : null;
+  // ---------- Load and normalise ----------
+  // One row per calendar day. Bad or implausible dates are dropped, numbers and flags coerced,
+  // duplicates merged (valid score, then full capture, then finished day, then later row wins),
+  // short gaps filled with empty rows so they show as gaps.
+  function normalise(raw) {
+    const out = { rows: [], badDates: 0, stray: [], future: [], outOfRange: 0, dupes: 0, noFlag: 0, holes: [] };
+    const list = Array.isArray(raw && raw.scores) ? raw.scores : [];
+    const byDate = new Map();
+    // A score counts as present if one was written, even out of range, so a bad full-capture row is
+    // blanked and reported rather than silently replaced by a sampled duplicate.
+    const rank = r => (r._hadScore ? 4 : 0) + (r.full_capture === true ? 2 : 0) + (r.partial_day === true ? 0 : 1);
+    list.forEach(src => {
+      if (!src || typeof src !== "object") { out.badDates++; return; }
+      const m = /^(\d{4}-\d{2}-\d{2})(?:$|T)/.exec(String(src.date ?? "").trim());
+      if (!m || isNaN(dayNum(m[1])) || isoOf(dayNum(m[1])) !== m[1]) { out.badDates++; return; }
+      const r = Object.assign({}, src, { date: m[1], _src: src });
+      NUM_FIELDS.forEach(k => { if (k in r) r[k] = num(r[k]); });
+      ["full_capture", "partial_day"].forEach(k => {
+        const v = r[k];
+        if (typeof v === "string" && /^\s*(true|false)\s*$/i.test(v)) r[k] = /true/i.test(v);
+        else if (v === 0 || v === 1) r[k] = v === 1;
+      });
+      if (classified(r) === 0) { r._noPosts = true; SCORE_FIELDS.forEach(k => { r[k] = null; }); }
+      r._hadScore = r.negative_score != null || r._noPosts === true;
+      r._bad = SCORE_FIELDS.filter(k => r[k] != null && (r[k] < 0 || r[k] > 100));
+      r._bad.forEach(k => { r[k] = null; });
+      const cur = byDate.get(r.date);
+      if (cur) out.dupes++;
+      if (!cur || rank(r) >= rank(cur)) byDate.set(r.date, r);
     });
+    byDate.forEach(r => { if (r._bad.length) out.outOfRange++; });
+
+    // Plausibility: nothing dated after the later of today (ET) and the file's own write date (a
+    // last_updated more than a day ahead is itself a typo and is ignored); and no tiny cluster (1–2 rows)
+    // cut off from the rest by a long gap, which is usually a mistyped year.
+    const today = dayNum(todayET()), luDay = luDayOf(raw && raw.last_updated);
+    const limit = Math.max(today, luDay <= today + 1 ? luDay : -Infinity);
+    let dates = [...byDate.keys()].sort().filter(d => dayNum(d) <= limit || (out.future.push(d), false));
+    const segs = [];
+    dates.forEach((d, i) => {
+      if (i && dayNum(d) - dayNum(dates[i - 1]) > MAX_FILL_GAP) segs.push([]);
+      if (!segs.length) segs.push([]);
+      segs[segs.length - 1].push(d);
+    });
+    // The newest cluster is kept when it reaches today or the write date: the bot resuming after a long pause.
+    const newestSeg = segs[segs.length - 1];
+    const isCurrent = sg => sg === newestSeg && [today, luDay].some(a => dayNum(sg[sg.length - 1]) >= a - 2);
+    if (segs.some(sg => sg.length > 2)) segs.forEach(sg => { if (sg.length <= 2 && !isCurrent(sg)) { out.stray.push(...sg); sg.length = 0; } });
+    dates = segs.flat();
+    if (!dates.length) return out;
+    out.noFlag = dates.filter(d => typeof byDate.get(d).full_capture !== "boolean").length;
+
+    dates.forEach((d, i) => {
+      if (i) {
+        const gap = dayNum(d) - dayNum(dates[i - 1]);
+        if (gap > 1 && gap <= MAX_FILL_GAP) for (let n = dayNum(dates[i - 1]) + 1; n < dayNum(d); n++) out.rows.push({ date: isoOf(n), _missing: true, negative_score: null });
+        else if (gap > MAX_FILL_GAP) {   // one break row, so lines and averages never join across a long hole
+          out.rows.push({ date: isoOf(dayNum(dates[i - 1]) + 1), _missing: true, _hole: gap - 1, negative_score: null });
+          out.holes.push(`${isoOf(dayNum(dates[i - 1]) + 1)} to ${isoOf(dayNum(d) - 1)}`);
+        }
+      }
+      out.rows.push(byDate.get(d));
+    });
+    return out;
+  }
+
+  // Trailing mean over the last n rows (calendar days), using only days captured the same way as
+  // day i and never unfinished days. Returns the mean and how many days went into it.
+  function trailingMA(values, rows, n) {
+    const groups = rows.map(method);
+    return values.map((v, i) => {
+      if (v == null || isPartial(rows[i])) return { v: null, n: 0 };
+      const win = [];
+      for (let j = Math.max(0, i - n + 1); j <= i; j++) {
+        if (groups[j] === groups[i] && values[j] != null && !isPartial(rows[j]) && dayNum(rows[i].date) - dayNum(rows[j].date) < n) win.push(values[j]);
+      }
+      return win.length ? { v: win.reduce((a, b) => a + b, 0) / win.length, n: win.length } : { v: null, n: 0 };
+    });
+  }
+
+  function formatUpdated(v, latestDate) {
+    const s = typeof v === "string" ? v.trim() : "";
+    if (/^\d{4}-\d{2}-\d{2}$/.test(s)) return "Updated " + longDate(s);
+    // Only timestamps with an explicit offset are unambiguous.
+    if (/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2}(\.\d+)?)?(Z|[+-]\d{2}:?\d{2})$/.test(s)) {
+      const ts = new Date(s);
+      if (!isNaN(ts) && ts - Date.now() <= 864e5) return "Last updated " + ts.toLocaleString(undefined, { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short" });
+    }
+    return latestDate ? "Data through " + longDate(latestDate) : "";
   }
 
   // ---------- Theme ----------
   const THEME_KEY = "mast-theme";
-  function applyStoredTheme() {
-    try { const t = localStorage.getItem(THEME_KEY); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
-  }
+  try { const t = localStorage.getItem(THEME_KEY); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
   function currentTheme() {
     const t = document.documentElement.getAttribute("data-theme");
     if (t) return t;
@@ -395,80 +599,291 @@ footer p { margin: 0 0 6px; }
     try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
     renderCharts();
   });
-  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", renderCharts);
-  applyStoredTheme();
+  // Print in light colours. Charts are canvases, so they are redrawn without animation:
+  // the browser captures the page as soon as these handlers return.
+  let printTheme;
+  const printing = () => printTheme !== undefined || matchMedia("print").matches;
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => renderCharts(printing()));
+  window.addEventListener("beforeprint", () => {
+    printTheme = document.documentElement.getAttribute("data-theme");
+    document.documentElement.setAttribute("data-theme", "light");
+    document.documentElement.classList.add("print-size");
+    renderCharts(true);
+  });
+  window.addEventListener("afterprint", () => {
+    if (printTheme === undefined) return;
+    document.documentElement.classList.remove("print-size");
+    if (printTheme) document.documentElement.setAttribute("data-theme", printTheme);
+    else document.documentElement.removeAttribute("data-theme");
+    printTheme = undefined;
+    renderCharts(true);
+  });
+
+  // A failure in one card is reported in that card instead of taking down the page.
+  function safe(cardId, fn) {
+    const card = $(cardId);
+    const old = card && card.querySelector(".card-error");
+    if (old) old.remove();
+    try { fn(); } catch (e) {
+      console.error(e);
+      if (card) {
+        const p = document.createElement("p");
+        p.className = "card-error"; p.textContent = "This section could not be drawn from the current data.";
+        card.insertBefore(p, card.firstChild);
+      }
+    }
+  }
 
   // ---------- Summary ----------
+  function renderBands(rows) {
+    const segs = [
+      [0, BAND_MODERATE, "var(--good)"],
+      [BAND_MODERATE, BAND_ELEVATED, "var(--warning)"],
+      [BAND_ELEVATED, METER_MAX, "var(--critical)"]
+    ];
+    $("meterTrack").innerHTML = segs.map(([a, b, c]) => `<span style="width:${(b - a) / METER_MAX * 100}%;background:${c}"></span>`).join("") +
+      `<i class="meter-pin" id="meterPin" hidden></i>`;
+    $("meterScale").innerHTML =
+      `<span style="left:0">0</span>` +
+      `<span class="mid" style="left:${BAND_MODERATE / METER_MAX * 100}%">${BAND_MODERATE}</span>` +
+      `<span class="mid" style="left:${BAND_ELEVATED / METER_MAX * 100}%">${BAND_ELEVATED}</span>` +
+      `<span style="right:0">${METER_MAX}+</span>`;
+    const full = (rows || []).filter(r => hasScore(r) && method(r) === "full" && !isPartial(r)).map(r => r.negative_score).sort((a, b) => a - b);
+    const median = full.length >= 10 ? full[Math.floor((full.length - 1) / 2)] : null;
+    $("bandNote").innerHTML = `<strong>Bands.</strong> Low below ${BAND_MODERATE} · Moderate ${BAND_MODERATE}–${BAND_ELEVATED - 1} · Elevated ${BAND_ELEVATED} and above, on the raw score only. ` +
+      (median != null ? `The median full-capture day scores ${Math.round(median)}, so “Elevated” means well above his usual level, not that most posts are negative.`
+                      : `“Elevated” means well above his usual level, not that most posts are negative.`);
+  }
+
   function renderSummary() {
-    const s = DATA.scores;
-    const last = s[s.length - 1], prev = s[s.length - 2];
+    const rows = DATA.rows;
+    const scored = rows.filter(hasScore);
+    const last = scored[scored.length - 1], prev = scored[scored.length - 2];
+    const newest = rows[rows.length - 1];
+    const partial = isPartial(last);
+    const m = method(last);
+    const banded = m !== "sample" && !partial;
     const lv = level(last.negative_score);
 
-    const ts = new Date(DATA.last_updated);
-    $("updated").textContent = "Last updated " + ts.toLocaleString(undefined, {
-      month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short"
-    });
-
-    $("heroDate").textContent = longDate(last.date);
+    $("updated").textContent = formatUpdated(DATA.last_updated, newest.date);
+    $("heroDate").textContent = longDate(last.date) + (partial ? " (not finished)" : "");
     $("heroNum").innerHTML = fmt(last.negative_score) + "<small> / 100</small>";
     const badge = $("heroBadge");
-    badge.className = "badge lvl-" + lv.key;
-    badge.lastElementChild.textContent = lv.label;
-    $("meterPin").style.left = Math.min(100, Math.max(0, last.negative_score)) + "%";
+    badge.className = "badge lvl-" + (banded ? lv.key : "none");
+    badge.lastElementChild.textContent = banded ? lv.label : partial ? "Day not finished" : "Sampled day";
+    $("meterPin").style.left = Math.min(100, Math.max(0, last.negative_score / METER_MAX * 100)) + "%";
+    $("meterPin").hidden = false;
+    $("meterTrack").classList.toggle("unbanded", !banded);
 
     if (prev) {
-      const d = last.negative_score - prev.negative_score;
+      const d = Math.round(last.negative_score) - Math.round(prev.negative_score);
       const cls = d > 0 ? "up" : d < 0 ? "down" : "";
       const arrow = d > 0 ? "▲" : d < 0 ? "▼" : "■";
-      $("heroDelta").innerHTML = `<strong class="${cls}">${arrow} ${d > 0 ? "+" : ""}${fmt(d)}</strong> vs ${shortDate(prev.date)} (${fmt(prev.negative_score)})`;
+      const caveat = partial ? " · day not finished" : isPartial(prev) ? ` · ${shortDate(prev.date)} not finished` : method(prev) !== m ? " · different coverage" : "";
+      $("heroDelta").innerHTML = `<strong class="${cls}">${arrow} ${d > 0 ? "+" : ""}${d}</strong> vs ${shortDate(prev.date)} (${fmt(prev.negative_score)})${caveat}`;
+    } else {
+      $("heroDelta").textContent = "";
     }
-    $("heroNote").textContent = last.notes || "";
-    $("heroNote").style.display = last.notes ? "" : "none";
 
-    const total = last.negative_count + last.neutral_count + last.positive_count;
-    const pct = n => total ? Math.round(n / total * 100) + "% of " + total + " posts" : "";
-    $("tNeg").textContent = last.negative_count; $("tNegPct").textContent = pct(last.negative_count);
-    $("tNeu").textContent = last.neutral_count;  $("tNeuPct").textContent = pct(last.neutral_count);
-    $("tPos").textContent = last.positive_count; $("tPosPct").textContent = pct(last.positive_count);
+    const n = classified(last), total = last.total_matching_posts;
+    const lines = [];
+    if (newest !== last) {
+      lines.push(newest._missing ? `No data yet for ${shortDate(newest.date)}.` :
+                 newest._noPosts ? (isPartial(newest) ? `No matching posts yet for ${shortDate(newest.date)} (day not finished).` : `${shortDate(newest.date)} had no matching posts.`) :
+                 `${shortDate(newest.date)} has no usable score.`);
+    }
+    // The morning run scores yesterday, so a lag of 1–2 days is normal.
+    const today = dayNum(todayET()), luDay = luDayOf(DATA.last_updated);
+    const behind = Math.max(today, luDay <= today + 1 ? luDay : -Infinity) - dayNum(newest.date);
+    const stale = behind > 2;
+    if (stale) lines.unshift(`The latest day in the data is ${shortDate(newest.date)}, ${days(behind)} ago; newer days have not been added yet.`);
+    if (m === "full") lines.push(`Full capture: ${fmt(n)} posts classified` + (total != null ? ` (X counts ${total} ${partial ? "so far" : "for the day"})` : "") + ".");
+    else if (m === "sample") lines.push(`Sampled day: ${fmt(n)} posts classified` + (total != null ? ` of about ${total}` : "") + ". One post moves the score by about " + (n ? (100 / n).toFixed(1) : "—") + " points.");
+    else if (n != null) lines.push(`${fmt(n)} posts classified.`);
+    const wt = withoutTop(last);
+    if (wt) lines.push(`One account wrote ${wt.top} of the ${wt.neg} negative posts. Without it the score would be ${wt.score}` + (banded ? ` (${level(wt.score).label})` : "") + ".");
+    $("heroNote").innerHTML = lines.map((t, i) => stale && i === 0 ? `<p class="stale">⚠ ${escapeHtml(t)}</p>` : `<p>${escapeHtml(t)}</p>`).join("");
+    $("heroNote").style.display = lines.length ? "" : "none";
+
+    $("breakdownSub").textContent = "Posts classified on " + longDate(last.date) + (partial ? " (not finished)" : "");
+    const pct = c => (num(c) != null && n) ? Math.round(c / n * 100) + "% of " + nb(n + " posts") : "";
+    $("tNeg").textContent = fmt(last.negative_count); $("tNegPct").textContent = pct(last.negative_count);
+    $("tNeu").textContent = fmt(last.neutral_count);  $("tNeuPct").textContent = pct(last.neutral_count);
+    $("tPos").textContent = fmt(last.positive_count); $("tPosPct").textContent = pct(last.positive_count);
+    const ua = last.unique_negative_accounts, top = last.top_account_negative_posts;
+    $("tNegAcc").innerHTML = ua == null ? "" : `${ua} <span class="lg">distinct </span>account${ua === 1 ? "" : "s"}`;
+    $("tNegTop").innerHTML = top != null && top > 1 ? `top<span class="lg"> account</span>: ${nb(top + " posts")}` : "";
     $("mixBar").innerHTML = [
       [last.negative_count, "var(--critical)"], [last.neutral_count, "var(--axis)"], [last.positive_count, "var(--good)"]
-    ].filter(([n]) => n > 0).map(([n, c]) => `<span style="flex:${n};background:${c}"></span>`).join("");
+    ].filter(([c]) => c > 0).map(([c, col]) => `<span style="flex:${c};background:${col}"></span>`).join("");
 
-    const last7 = s.slice(-7).map(r => r.negative_score);
-    $("sAvg").textContent = fmt(last7.reduce((a, b) => a + b, 0) / last7.length, 1);
-    const hi = s.reduce((a, r) => r.negative_score > a.negative_score ? r : a, s[0]);
-    $("sHigh").textContent = fmt(hi.negative_score) + " · " + shortDate(hi.date);
+    // Same average the chart draws, at the latest finished day.
+    const ma = trailingMA(rows.map(r => r.negative_score), rows, 7);
+    let li = -1;
+    for (let i = rows.length - 1; i >= 0; i--) if (hasScore(rows[i]) && !isPartial(rows[i])) { li = i; break; }
+    const a = li >= 0 ? ma[li] : { v: null, n: 0 };
+    $("sAvg").textContent = fmt(a.v, 1);
+    $("sAvgS").textContent = a.v == null ? "" : [a.n < 7 ? nb(days(a.n)) : "", rows[li].date !== last.date ? "to " + nb(shortDate(rows[li].date)) : ""].filter(Boolean).join(", ");
+
+    // High: finished days only, full capture when there is any, so a noisy sample doesn't set the record.
+    const done = scored.filter(r => !isPartial(r));
+    const full = done.filter(r => method(r) === "full");
+    const pool = full.length ? full : done;
+    if (pool.length) {
+      const hiVal = Math.max(...pool.map(r => Math.round(r.negative_score)));
+      const ties = pool.filter(r => Math.round(r.negative_score) === hiVal);
+      $("sHigh").textContent = fmt(hiVal);
+      $("sHighS").textContent = (full.length ? "full capture · " : "no full-capture days · ") +
+        (ties.length > 1 ? `${nb(ties.length + " days")}, latest ${nb(shortDate(ties[ties.length - 1].date))}` : nb(shortDate(ties[0].date)));
+    } else {
+      $("sHigh").textContent = "—"; $("sHighS").textContent = "no finished days";
+    }
     $("sEng").textContent = fmt(last.engagement_weighted_negative, 1);
+    $("sEngS").textContent = shortDate(last.date) + (partial ? " so far" : "");
+    $("sampledNote").hidden = !rows.some(r => method(r) === "sample");
+  }
+
+  function coverageCell(r) {
+    const m = method(r), n = classified(r), total = r.total_matching_posts;
+    const xc = total != null ? ` <span title="X's own count for the day. It runs higher than what search returns and is context, not a coverage denominator.">(X: ${total})</span>` : "";
+    if (m === "missing") return `<span class="cov none">No data</span>`;
+    if (r._noPosts)      return `<span class="cov none">No posts</span>`;
+    if (m === "full")    return `<span class="cov">Full · ${fmt(n)}${xc}</span>`;
+    if (m === "sample")  return `<span class="cov sample">Sample · ${fmt(n)}</span>`;
+    return `<span class="cov">${fmt(n)}${xc}</span>`;
+  }
+
+  function scoreCell(r) {
+    if (!hasScore(r)) return `<span class="score-cell empty"><span class="dot" aria-hidden="true"></span><span class="n">—</span></span>`;
+    const val = `<span class="n">${fmt(r.negative_score)}</span>`;
+    if (method(r) === "sample") return `<span class="score-cell lvl-none" title="Sampled day: no band"><span class="dot"></span>${val}<span class="lvl-txt">sampled</span></span>`;
+    if (isPartial(r))           return `<span class="score-cell lvl-none" title="Day not finished: no band"><span class="dot"></span>${val}<span class="lvl-txt">not final</span></span>`;
+    const lv = level(r.negative_score), wt = withoutTop(r);
+    const flag = wt && level(wt.score).key !== lv.key ? ` title="Without the top account (${wt.top} posts) the score would be ${wt.score}, ${level(wt.score).label}"` : "";
+    return `<span class="score-cell lvl-${lv.key}"${flag}><span class="dot"></span>${val}<span class="lvl-txt">${lv.label}${flag ? "*" : ""}</span></span>`;
   }
 
   function renderTable() {
-    const rows = DATA.scores.slice(-10).reverse();
+    const rows = DATA.rows.slice(-10).reverse();
     $("tbody").innerHTML = rows.map(r => {
-      const lv = level(r.negative_score);
-      return `<tr>
-        <td>${longDate(r.date)}</td>
-        <td><span class="score-cell lvl-${lv.key}" title="${lv.label}"><span class="dot"></span>${fmt(r.negative_score)}<span class="sr-only"> (${lv.label})</span></span></td>
+      const full = typeof r.notes === "string" && r.notes ? escapeHtml(r.notes) : "";
+      // Read-labelled notes all open with the same lead-in (the footer says it), so show the day-specific part.
+      const note = full.replace(/^Labelled by reading each post \(sentiment toward Mike Alfred personally\)\.\s*/, "") || full;
+      return `<tr${r._missing ? ' class="missing"' : ""}>
+        <td><span class="d-lg">${longDate(r.date)}</span><span class="d-sm">${shortDate(r.date)}</span>${isPartial(r) ? ' <span class="cov sample">(partial)</span>' : ""}${r._hole ? ` <span class="cov none">(${days(r._hole)} missing)</span>` : ""}</td>
+        <td class="l">${scoreCell(r)}</td>
         <td>${fmt(r.engagement_weighted_negative, 1)}</td>
-        <td>${r.negative_count}</td>
-        <td>${r.neutral_count}</td>
-        <td>${r.positive_count}</td>
-        <td class="note l">${escapeHtml(r.notes || "")}</td>
-      </tr>`;
+        <td>${fmt(r.negative_count)}</td>
+        <td>${fmt(r.unique_negative_accounts)}</td>
+        <td>${fmt(r.top_account_negative_posts)}</td>
+        <td>${fmt(r.neutral_count)}</td>
+        <td>${fmt(r.positive_count)}</td>
+        <td class="l">${coverageCell(r)}</td>
+        <td class="note l">${full ? `<div class="clamp" tabindex="0" role="button" aria-expanded="false" title="${full}">${note}</div>` : ""}</td>
+      </tr>${full ? `<tr class="note-row"><td colspan="9">${full}</td></tr>` : ""}`;
     }).join("");
+    const flagged = rows.filter(r => {
+      if (!hasScore(r) || method(r) === "sample" || isPartial(r)) return false;
+      const wt = withoutTop(r);
+      return wt && level(wt.score).key !== level(r.negative_score).key;
+    });
+    $("tableFoot").hidden = !flagged.length;
+    $("tableFoot").textContent = "* One account wrote a large share of that day's negative posts; without it the day would fall in a lower band: " +
+      flagged.map(r => { const wt = withoutTop(r); return `${nb(shortDate(r.date))}: ${nb(fmt(r.negative_score) + " → " + wt.score)} (${level(wt.score).label}) without ${wt.top} posts from one account`; }).join("; ") + ".";
   }
-  function escapeHtml(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
+  $("tbody").addEventListener("click", e => toggleNote(e.target.closest(".clamp")));
+  $("tbody").addEventListener("keydown", e => {
+    if ((e.key === "Enter" || e.key === " ") && e.target.classList.contains("clamp")) { e.preventDefault(); toggleNote(e.target); }
+  });
+  function toggleNote(el) {
+    if (!el) return;
+    const open = el.classList.toggle("open");
+    el.setAttribute("aria-expanded", String(open));
+  }
 
   // ---------- Charts ----------
-  const bandsPlugin = {
-    id: "bands",
+  function registerChartHelpers() {
+    if (typeof Chart === "undefined") return;
+    // Hover snaps to the nearest day that has data, so weekends (prices) and empty days never go dead.
+    if (!Chart.Interaction.modes.nearestDay) Chart.Interaction.modes.nearestDay = function (chart, e) {
+      const pos = Chart.helpers && Chart.helpers.getRelativePosition ? Chart.helpers.getRelativePosition(e, chart) : e;
+      const a = chart.chartArea, n = chart.data.labels.length;
+      if (!n || pos.x < a.left - 12 || pos.x > a.right + 12) return [];
+      const i0 = Math.max(0, Math.min(n - 1, Math.round(chart.scales.x.getValueForPixel(pos.x))));
+      const items = i => chart.data.datasets.flatMap((ds, k) =>
+        chart.isDatasetVisible(k) && ds.data[i] != null ? [{ element: chart.getDatasetMeta(k).data[i], datasetIndex: k, index: i }] : []);
+      for (let r = 0; r < n; r++) {
+        for (const i of r ? [i0 - r, i0 + r] : [i0]) {
+          if (i >= 0 && i < n) { const it = items(i); if (it.length) return it; }
+        }
+      }
+      return [];
+    };
+    // On narrow charts, put the tooltip in the half of the plot away from the point instead of on top of it.
+    if (!Chart.Tooltip.positioners.offPoint) Chart.Tooltip.positioners.offPoint = function (items, ev) {
+      const pos = Chart.Tooltip.positioners.average.call(this, items, ev);
+      if (!pos || !items.length || this.chart.width >= 520) return pos;
+      const a = this.chart.chartArea, y = items.reduce((t, it) => t + it.element.y, 0) / items.length;
+      return y > (a.top + a.bottom) / 2 ? { x: pos.x, y: a.top, yAlign: "top" } : { x: pos.x, y: a.bottom, yAlign: "bottom" };
+    };
+  }
+
+  // Background: raw-score bands (raw metric only), then a neutral wash over sampled-day runs.
+  const backdropPlugin = {
+    id: "backdrop",
     beforeDatasetsDraw(chart, _a, opts) {
       if (!opts || !opts.enabled) return;
-      const { ctx, chartArea: a, scales: { y } } = chart;
-      [[0, 30, "--band-good"], [30, 60, "--band-warning"], [60, 100, "--band-critical"]].forEach(([lo, hi, c]) => {
-        const top = y.getPixelForValue(Math.min(hi, y.max)), bot = y.getPixelForValue(Math.max(lo, y.min));
-        if (bot <= top) return;
-        ctx.save(); ctx.fillStyle = css(c); ctx.fillRect(a.left, top, a.right - a.left, bot - top); ctx.restore();
+      const { ctx, chartArea: a, scales: { x, y } } = chart;
+      if (opts.bands) {
+        // Edges at x.5 so the shading agrees with the whole-number band labels.
+        [[0, BAND_MODERATE - 0.5, "--band-good"], [BAND_MODERATE - 0.5, BAND_ELEVATED - 0.5, "--band-warning"], [BAND_ELEVATED - 0.5, y.max, "--band-critical"]].forEach(([lo, hi, c]) => {
+          const top = y.getPixelForValue(Math.min(hi, y.max)), bot = y.getPixelForValue(Math.max(lo, y.min));
+          if (bot <= top) return;
+          ctx.save(); ctx.fillStyle = css(c); ctx.fillRect(a.left, top, a.right - a.left, bot - top); ctx.restore();
+        });
+      }
+      const runs = opts.sampledRuns || [];
+      const step = chart.data.labels.length > 1 ? x.getPixelForValue(1) - x.getPixelForValue(0) : 0;
+      runs.forEach(([i0, i1]) => {
+        const l = Math.max(a.left, x.getPixelForValue(i0) - step / 2);
+        const r = Math.min(a.right, x.getPixelForValue(i1) + step / 2);
+        ctx.save();
+        ctx.fillStyle = css("--sampled-band"); ctx.fillRect(l, a.top, r - l, a.bottom - a.top);
+        if (r - l > 70) {
+          ctx.fillStyle = css("--ink-2"); ctx.font = '11px system-ui, -apple-system, "Segoe UI", sans-serif';
+          ctx.textBaseline = "top";
+          // Leave the caption out where an off-scale marker would land on it; the legend still names the shading.
+          const tw = ctx.measureText("Sampled days").width;
+          const hit = chart.data.datasets[0].data.some((v, i) => v != null && v > y.max && Math.abs(x.getPixelForValue(i) - (l + 6 + tw / 2)) < tw / 2 + 14);
+          if (!hit) ctx.fillText("Sampled days", l + 6, a.top + 6);
+        }
+        ctx.restore();
       });
+    },
+    // Values above the top of the axis: a ▲ at the top edge (hollow for an unfinished day) and the value on a
+    // surface-coloured tag. Highest first; a tag that would touch a higher value's marker is skipped (the tooltip
+    // and table still have it).
+    afterDatasetsDraw(chart, _a, opts) {
+      if (!opts || !opts.enabled) return;
+      const { ctx, chartArea: a, scales: { x, y } } = chart;
+      const c1 = css("--series-1"), partial = opts.partial || [];
+      const pts = chart.data.datasets[0].data.map((v, i) => ({ v, i })).filter(p => p.v != null && p.v > y.max).sort((p, q) => q.v - p.v);
+      const taken = [];
+      ctx.save();
+      ctx.font = '600 10px system-ui, -apple-system, "Segoe UI", sans-serif'; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      pts.forEach(({ v, i }) => {
+        const px = x.getPixelForValue(i);
+        ctx.beginPath(); ctx.moveTo(px, a.top); ctx.lineTo(px - 4, a.top + 7); ctx.lineTo(px + 4, a.top + 7); ctx.closePath();
+        if (partial[i]) { ctx.strokeStyle = c1; ctx.lineWidth = 1.5; ctx.stroke(); } else { ctx.fillStyle = c1; ctx.fill(); }
+        const label = String(Math.round(v)), w = ctx.measureText(label).width + 6;
+        // A dropped higher value still claims its spot, so no lower value's tag sits under its ▲.
+        const clash = taken.some(t => Math.abs(t - px) < w + 2);
+        taken.push(px);
+        if (clash) return;
+        ctx.fillStyle = css("--surface"); ctx.fillRect(px - w / 2, a.top + 9, w, 13);
+        ctx.fillStyle = c1; ctx.fillText(label, px, a.top + 15.5);
+      });
+      ctx.restore();
     }
   };
   const crosshairPlugin = {
@@ -482,142 +897,318 @@ footer p { margin: 0 0 6px; }
     }
   };
 
-  function baseOptions(yOpts) {
-    const ink2 = css("--ink-2"), muted = css("--muted"), grid = css("--grid"), axis = css("--axis");
+  // Label the newest day always, then every k-th day counting back, spaced by the widest label (any locale).
+  function endAnchoredTick(value, i) {
+    const ch = this.chart, n = ch.data.labels.length;
+    if (!ch.$endTick || ch.$endTick.w !== ch.width) {
+      const ctx = ch.ctx; ctx.save(); ctx.font = Chart.helpers.toFont(this.options.ticks.font).string;
+      const widest = ch.data.labels.reduce((m, l) => Math.max(m, ctx.measureText(l).width), 0); ctx.restore();
+      ch.$endTick = { w: ch.width, k: Math.max(1, Math.ceil((widest + 16) / ((ch.width - 60) / Math.max(1, n - 1)))) };
+    }
+    return (n - 1 - i) % ch.$endTick.k === 0 ? this.getLabelForValue(value) : "";
+  }
+
+  function baseOptions(yOpts, still) {
+    const muted = css("--muted"), grid = css("--grid"), axis = css("--axis");
     return {
-      responsive: true, maintainAspectRatio: false, animation: { duration: 250 },
-      interaction: { mode: "index", intersect: false },
+      responsive: true, maintainAspectRatio: false, animation: still ? false : { duration: 250 },
+      interaction: { mode: "nearestDay", intersect: false },
       layout: { padding: { right: 8 } },
       plugins: {
         legend: { display: false },
         tooltip: {
-          backgroundColor: css("--surface"), titleColor: css("--ink"), bodyColor: ink2,
+          position: "offPoint",
+          backgroundColor: css("--surface"), titleColor: css("--ink"), bodyColor: css("--ink-2"),
           borderColor: css("--border"), borderWidth: 1, padding: 10, cornerRadius: 8,
           boxPadding: 4, usePointStyle: true, titleFont: { weight: "600" }
         }
       },
       scales: {
-        x: { grid: { display: false }, border: { color: axis }, ticks: { color: muted, maxRotation: 0, autoSkipPadding: 16 } },
-        y: Object.assign({ grid: { color: grid }, border: { display: false }, ticks: { color: muted, padding: 6 } }, yOpts)
+        x: { grid: { display: false }, border: { color: axis }, ticks: { color: muted, maxRotation: 0, autoSkip: false, callback: endAnchoredTick } },
+        // Same y-axis width on both charts, so the same date lines up vertically.
+        y: Object.assign({ grid: { color: grid }, border: { display: false }, ticks: { color: muted, padding: 6 }, afterFit: s => { s.width = 44; } }, yOpts)
       }
     };
   }
 
-  function renderTrend() {
-    const s = DATA.scores;
-    const labels = s.map(r => shortDate(r.date));
-    const vals = s.map(r => r[metric] == null ? null : Number(r[metric]));
-    const ma = trailingMA(vals, 7);
+  function runsOf(flags) {
+    const runs = []; let start = -1;
+    flags.forEach((f, i) => {
+      if (f && start < 0) start = i;
+      if (!f && start >= 0) { runs.push([start, i - 1]); start = -1; }
+    });
+    if (start >= 0) runs.push([start, flags.length - 1]);
+    return runs;
+  }
+
+  function renderTrend(still) {
+    const rows = DATA.rows;
+    const M = METRICS[metric];
+    const labels = rows.map(r => shortDate(r.date));
+    const vals = rows.map(r => r._missing ? null : (r[metric] ?? null));
+    const groups = rows.map(method);
+    const sampled = groups.map(g => g === "sample");
+    const partial = rows.map(isPartial);
+    const anySampledDays = sampled.some(Boolean);
+    const seriesSampled = vals.some((v, i) => v != null && sampled[i]);
+    const seriesSolid = vals.some((v, i) => v != null && !sampled[i]);
+    const ma = trailingMA(vals, rows, 7);
+    const maVals = ma.map(x => x.v);
     const c1 = css("--series-1"), cma = css("--series-ma"), surf = css("--surface");
-    const name = metric === "negative_score" ? "Negative score" : "Engagement-weighted";
+    const dense = rows.length > 45;
+    const isRaw = metric === "negative_score";
 
-    $("trendSub").textContent = (metric === "negative_score"
-      ? "Raw negative score" : "Engagement-weighted negative score") + " · 0–100, higher is more negative";
+    // Scale from finished full-capture days when there are any; sampled spikes above it get a marker.
+    const trusted = vals.map((v, i) => groups[i] === "full" && !partial[i] ? v : null).filter(v => v != null);
+    const scaleVals = trusted.length ? trusted.concat(maVals.filter((v, i) => v != null && groups[i] === "full"))
+                                     : vals.concat(maVals).filter(v => v != null);
+    const target = Math.max(METER_MAX, Math.max(0, ...scaleVals) * 1.1);
+    const step = target <= 25 ? 5 : target <= 50 ? 10 : 20;
+    const yMax = Math.min(100, Math.ceil(target / step) * step);
+    const offScale = vals.some(v => v != null && v > yMax);
 
-    $("trendLegend").innerHTML =
-      `<span><i class="sw" style="border-color:${c1}"></i>${name}</span>` +
-      (showMA ? `<span><i class="sw dash" style="border-color:${cma}"></i>7-day trailing avg</span>` : "") +
-      `<span><i class="band" style="background:var(--good)"></i>Low &lt;30</span>` +
-      `<span><i class="band" style="background:var(--warning)"></i>Moderate 30–59</span>` +
-      `<span><i class="band" style="background:var(--critical)"></i>Elevated ≥60</span>`;
+    $("trendSub").textContent = M.sub + " · 0–100, higher is more negative";
 
+    let legend = "";
+    if (seriesSolid)   legend += `<span><i class="sw" style="border-color:${c1}"></i>${M.name}${seriesSampled ? ", full capture" : ""}</span>`;
+    if (seriesSampled) legend += `<span><i class="sw dash" style="border-color:${c1}"></i>${M.name}, sampled</span>`;
+    if (showMA) legend += `<span><i class="sw" style="border-color:${cma};border-top-width:1.5px"></i>7-day trailing avg${seriesSampled ? " (dashed on sampled days)" : ""}</span>`;
+    if (isRaw) legend += `<span><i class="band" style="background:var(--good)"></i>Low &lt;${BAND_MODERATE}</span>` +
+                         `<span><i class="band" style="background:var(--warning)"></i>Moderate ${BAND_MODERATE}–${BAND_ELEVATED - 1}</span>` +
+                         `<span><i class="band" style="background:var(--critical)"></i>Elevated ${BAND_ELEVATED}+</span>`;
+    if (anySampledDays) legend += `<span><i class="band sampled"></i>Sampled days</span>`;
+    if (offScale) legend += `<span><span style="color:${c1}">▲</span> above the chart (value shown where it fits)</span>`;
+    if (vals.some((v, i) => v != null && partial[i])) legend += `<span>○ Day not finished</span>`;
+    $("trendLegend").innerHTML = legend;
+
+    const dashIfSampled = ctx => (sampled[ctx.p0DataIndex] || sampled[ctx.p1DataIndex]) ? [5, 4] : undefined;
+    // Points: hidden on long ranges except isolated days (otherwise invisible) and unfinished days (hollow).
+    const radius = c => {
+      const i = c.dataIndex;
+      if (vals[i] == null) return 0;
+      if (partial[i] || !dense) return 4;
+      return (vals[i - 1] == null && vals[i + 1] == null) ? 3 : 0;
+    };
     const datasets = [{
-      label: name, data: vals, borderColor: c1, backgroundColor: c1, borderWidth: 2,
-      pointRadius: s.length > 45 ? 0 : 4, pointHoverRadius: 6, pointBackgroundColor: c1,
-      pointBorderColor: surf, pointBorderWidth: 2, tension: 0.25, spanGaps: true
+      label: M.name, data: vals, borderColor: c1, backgroundColor: c1, borderWidth: 2,
+      pointRadius: radius, pointHoverRadius: 6,
+      pointBackgroundColor: c => partial[c.dataIndex] ? surf : c1,
+      pointBorderColor: c => partial[c.dataIndex] ? c1 : surf, pointBorderWidth: 2,
+      tension: 0.2, spanGaps: false,
+      segment: { borderDash: dashIfSampled }
     }];
     if (showMA) datasets.push({
-      label: "7-day avg", data: ma, borderColor: cma, backgroundColor: cma, borderWidth: 2,
-      borderDash: [5, 4], pointRadius: 0, pointHoverRadius: 4, tension: 0.25, spanGaps: true
+      label: "7-day avg", data: maVals, borderColor: cma, backgroundColor: cma, borderWidth: 1.5,
+      pointRadius: 0, pointHoverRadius: 4, tension: 0.3, spanGaps: false,
+      // Break the average where coverage changes; dash it over sampled days like the daily line.
+      segment: {
+        borderColor: ctx => groups[ctx.p0DataIndex] !== groups[ctx.p1DataIndex] ? "transparent" : undefined,
+        borderDash: dashIfSampled
+      }
     });
 
-    const opts = baseOptions({ min: 0, max: 100, ticks: { color: css("--muted"), stepSize: 20, padding: 6 } });
-    opts.plugins.bands = { enabled: true };
+    const opts = baseOptions({ min: 0, max: yMax, ticks: { color: css("--muted"), padding: 6, stepSize: step } }, still);
+    opts.plugins.backdrop = { enabled: true, bands: isRaw, sampledRuns: runsOf(sampled), partial };
     opts.plugins.tooltip.callbacks = {
-      title: items => longDate(s[items[0].dataIndex].date),
-      label: it => ` ${it.dataset.label}: ${fmt(it.parsed.y, it.datasetIndex === 0 && metric === "negative_score" ? 0 : 1)}`,
-      afterBody: items => {
-        const r = s[items[0].dataIndex];
-        return [`${level(r.negative_score).label}`, `Neg ${r.negative_count} · Neu ${r.neutral_count} · Pos ${r.positive_count}`];
+      title: items => longDate(rows[items[0].dataIndex].date),
+      label: it => it.datasetIndex === 0
+        ? ` ${it.dataset.label}: ${fmt(it.parsed.y, M.dp)}`
+        : ` 7-day avg${ma[it.dataIndex].n < 7 ? ` (${days(ma[it.dataIndex].n)})` : ""}: ${fmt(it.parsed.y, 1)}`,
+      afterBody: function (items) {
+        const r = rows[items[0].dataIndex], m = method(r), n = classified(r);
+        const lines = [];
+        const narrow = this.chart.width < 520;   // phones: keep the box small enough to sit clear of the point
+        if (hasScore(r)) {
+          const raw = isRaw ? "" : `Raw score ${fmt(r.negative_score)} · `;
+          lines.push(m === "sample" ? `${raw}sampled, 1 post ≈ ${n ? (100 / n).toFixed(1) : "—"} pts`
+                   : isPartial(r)   ? `${raw}day not finished`
+                   :                  `${raw}${level(r.negative_score).label}`);
+          const wt = withoutTop(r);
+          if (wt) lines.push(`Without the top account (${wt.top} posts): ${wt.score}`);
+        }
+        if (narrow) return lines;
+        lines.push(`Neg ${fmt(r.negative_count)} · Neu ${fmt(r.neutral_count)} · Pos ${fmt(r.positive_count)}`);
+        if (r.unique_negative_accounts != null) lines.push(`Negative accounts ${r.unique_negative_accounts} · top account ${fmt(r.top_account_negative_posts)}`);
+        lines.push(m === "full" ? `Full capture · ${fmt(n)} posts` : m === "sample" ? `Sampled · ${fmt(n)} posts` : `${fmt(n)} posts`);
+        return lines;
       }
     };
 
     if (trendChart) trendChart.destroy();
-    trendChart = new Chart($("trendChart"), { type: "line", data: { labels, datasets }, options: opts, plugins: [bandsPlugin, crosshairPlugin] });
+    trendChart = new Chart($("trendChart"), { type: "line", data: { labels, datasets }, options: opts, plugins: [backdropPlugin, crosshairPlugin] });
   }
 
-  function renderPrices() {
-    if (!PRICES || !PRICES.series) { $("px-h").closest(".card").style.display = "none"; return; }
-    $("pxFlag").hidden = !PRICES.is_placeholder;
-    const dates = DATA.scores.map(r => r.date);
+  function renderPrices(still) {
+    const card = $("pxCard");
+    // Price keys as YYYY-MM-DD (a trailing time, as pandas writes, is dropped; unreadable keys are ignored).
+    const series = {}, unreadable = [];
+    if (PRICES && PRICES.series && typeof PRICES.series === "object") Object.keys(PRICES.series).forEach(t => {
+      const src = PRICES.series[t];
+      if (!src || typeof src !== "object") return;
+      const out = {};
+      Object.keys(src).forEach(k => {
+        const m = /^(\d{4}-\d{2}-\d{2})(?:$|[T ])/.exec(k.trim());
+        if (m && !isNaN(dayNum(m[1])) && num(src[k]) != null) out[m[1]] = num(src[k]);
+      });
+      if (Object.keys(out).length) series[t] = out;
+      else if (Object.keys(src).length) unreadable.push(t);
+    });
+    const tickers = Object.keys(series).slice(0, 2);
+    if (PRICES && PRICES._error) {
+      card.style.display = "";
+      $("pxLegend").innerHTML = `<span class="stale">⚠ data/prices.json ${escapeHtml(PRICES._error)}</span>`;
+      if (pxChart) { pxChart.destroy(); pxChart = null; }
+      return;
+    }
+    const badKeys = unreadable.length ? `<span class="stale">⚠ ${escapeHtml(unreadable.join(", "))}: no readable dates in data/prices.json (keys must be YYYY-MM-DD)</span>` : "";
+    if (!tickers.length) {
+      if (!badKeys) { card.style.display = "none"; return; }
+      card.style.display = ""; $("pxLegend").innerHTML = badKeys;
+      if (pxChart) { pxChart.destroy(); pxChart = null; }
+      return;
+    }
+    card.style.display = "";
+    $("px-h").textContent = tickers.join(" & ") + " price, indexed";
+    $("pxFlag").hidden = PRICES.is_placeholder !== true;
+    const dates = DATA.rows.map(r => r.date);
     const labels = dates.map(shortDate);
     const colors = [css("--series-1"), css("--series-2")];
-    const tickers = Object.keys(PRICES.series).slice(0, 2);
+    const dense = dates.length > 45;
     const datasets = tickers.map((t, i) => {
-      const raw = dates.map(d => PRICES.series[t][d] ?? null);
-      const base = raw.find(v => v != null);
+      const raw = dates.map(d => series[t][d] ?? null);
+      const base = raw.find(v => v != null && v > 0);
+      const data = raw.map(v => v == null || !base ? null : v / base * 100);
+      // Chart.js hands the segment callback adjacent indices, nulls included, so measure the calendar
+      // days between the nearest real closes on either side.
+      const span = (a, b) => { while (a > 0 && data[a] == null) a--; while (b < data.length - 1 && data[b] == null) b++; return dayNum(dates[b]) - dayNum(dates[a]); };
       return {
-        label: t, data: raw.map(v => v == null ? null : v / base * 100),
+        label: t, data,
         borderColor: colors[i], backgroundColor: colors[i], borderWidth: 2,
-        pointRadius: 3, pointHoverRadius: 5, pointBorderColor: css("--surface"), pointBorderWidth: 2,
-        tension: 0.2, spanGaps: false
+        pointRadius: dense ? 0 : 3, pointHoverRadius: 5, pointBorderColor: css("--surface"), pointBorderWidth: 2,
+        tension: 0.2, spanGaps: true,
+        // Join weekends and holidays, but leave a visible hole where prices are missing for over 5 days.
+        segment: { borderColor: ctx => span(ctx.p0DataIndex, ctx.p1DataIndex) > 5 ? "transparent" : undefined }
       };
     });
-    $("pxLegend").innerHTML = tickers.map((t, i) => `<span><i class="sw" style="border-color:${colors[i]}"></i>${t}</span>`).join("") +
-      `<span style="color:var(--muted)">Gaps are non-trading days</span>`;
-    const opts = baseOptions({ grace: "5%" });
+    const lastDate = dates[dates.length - 1];
+    const lastOf = t => dates.filter(d => series[t][d] != null).pop();   // last close actually drawn
+    const lastPx = tickers.map(lastOf);
+    const stale = tickers.filter((t, i) => !lastPx[i] || dayNum(lastDate) - dayNum(lastPx[i]) > 4);
+    const shown = lastPx.filter(Boolean).sort();
+    $("pxLegend").innerHTML = tickers.map((t, i) => `<span><i class="sw" style="border-color:${colors[i]}"></i>${escapeHtml(t)}</span>`).join("") +
+      (shown.length ? `<span style="color:var(--muted)">Closes through ${longDate(shown[0])}</span>` : "") +
+      (stale.length ? `<span class="stale">⚠ ${escapeHtml(stale.join(", "))} not updated for more than 4 days</span>` : "") +
+      badKeys + `<span style="color:var(--muted)">Trading days only; joined across weekends and holidays</span>`;
+    const opts = baseOptions({ grace: "5%" }, still);
     opts.plugins.tooltip.callbacks = {
       title: items => longDate(dates[items[0].dataIndex]),
-      label: it => ` ${it.dataset.label}: ${fmt(it.parsed.y, 1)}`
+      label: it => {
+        const close = series[it.dataset.label][dates[it.dataIndex]] ?? null;
+        return ` ${it.dataset.label}: ${fmt(it.parsed.y, 1)}` + (close != null && PRICES.is_placeholder !== true ? `  ($${close.toFixed(2)})` : "");
+      }
     };
     if (pxChart) pxChart.destroy();
     pxChart = new Chart($("pxChart"), { type: "line", data: { labels, datasets }, options: opts, plugins: [crosshairPlugin] });
   }
 
-  function renderCharts() {
+  function renderCharts(still) {
     if (!DATA || typeof Chart === "undefined") return;
     Chart.defaults.font.family = 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif';
     Chart.defaults.font.size = 12;
-    renderTrend(); renderPrices();
+    registerChartHelpers();
+    safe("trendCard", () => renderTrend(still));
+    safe("pxCard", () => renderPrices(still));
   }
 
   // ---------- Controls ----------
   document.querySelectorAll("[data-metric]").forEach(b => b.addEventListener("click", () => {
     metric = b.dataset.metric;
     document.querySelectorAll("[data-metric]").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
-    renderTrend();
+    if (DATA && typeof Chart !== "undefined") safe("trendCard", () => renderTrend());
   }));
   $("maBtn").addEventListener("click", () => {
-    showMA = !showMA; $("maBtn").setAttribute("aria-pressed", String(showMA)); renderTrend();
+    showMA = !showMA; $("maBtn").setAttribute("aria-pressed", String(showMA));
+    if (DATA && typeof Chart !== "undefined") safe("trendCard", () => renderTrend());
   });
 
   $("csvBtn").addEventListener("click", () => {
     if (!DATA) return;
-    const cols = ["date", "negative_score", "engagement_weighted_negative", "negative_count", "neutral_count", "positive_count", "notes"];
-    const q = v => { const s = v == null ? "" : String(v); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
-    const csv = [cols.join(",")].concat(DATA.scores.map(r => cols.map(c => q(r[c])).join(","))).join("\n");
-    const url = URL.createObjectURL(new Blob([csv], { type: "text/csv" }));
+    // Rows as written in the data file (one per date). Known columns first, then any other field.
+    const recs = DATA.rows.filter(r => !r._missing).map(r => Object.assign({}, r._src, { date: r.date }));
+    if (!recs.length) return;
+    const preferred = ["date", "negative_score", "engagement_weighted_negative", "negative_accounts_score",
+      "negative_count", "neutral_count", "positive_count", "classified_posts", "total_matching_posts",
+      "unique_negative_accounts", "unique_accounts", "top_account_negative_posts", "full_capture", "partial_day", "notes"];
+    const present = new Set(); recs.forEach(r => Object.keys(r).forEach(k => present.add(k)));
+    const cols = preferred.filter(k => present.has(k)).concat([...present].filter(k => !preferred.includes(k)));
+    const q = v => {
+      if (v == null) return "";
+      let s = typeof v === "object" ? JSON.stringify(v) : String(v);
+      if (typeof v === "string" && /^[=+\-@\t\r]/.test(s)) s = "'" + s;   // keep spreadsheets from running it as a formula
+      return /[",\r\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+    };
+    const csv = "\uFEFF" + [cols.join(",")].concat(recs.map(r => cols.map(c => q(r[c])).join(","))).join("\r\n");
+    const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
     const a = document.createElement("a");
-    a.href = url; a.download = "mike-alfred-sentiment-" + DATA.scores[DATA.scores.length - 1].date + ".csv";
+    a.href = url; a.download = "mike-alfred-sentiment-" + recs[recs.length - 1].date + ".csv";
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   });
 
   // ---------- Load ----------
-  function showError(msg) { const e = $("error"); e.textContent = msg; e.style.display = "block"; $("updated").textContent = "Data unavailable"; }
+  function showError(msg) { const e = $("error"); e.textContent = msg; e.style.display = "block"; }
+  function showNotice(msg) { const e = $("notice"); e.textContent = msg; e.style.display = "block"; }
 
-  Promise.all([
-    fetch("data/sentiment.json", { cache: "no-store" }).then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
-    fetch("data/prices.json", { cache: "no-store" }).then(r => r.ok ? r.json() : null).catch(() => null)
-  ]).then(([d, p]) => {
-    if (!d || !Array.isArray(d.scores) || !d.scores.length) throw new Error("no scores in file");
-    d.scores.sort((a, b) => a.date.localeCompare(b.date));
-    DATA = d; PRICES = p;
-    renderSummary(); renderTable(); renderCharts();
-    if (typeof Chart === "undefined") showError("Charts could not load (Chart.js unavailable). Figures and table are still current.");
-  }).catch(err => {
-    showError("Could not load data/sentiment.json (" + err.message + "). If you opened this file directly from disk, serve the folder over HTTP instead, e.g. `python -m http.server`.");
+  function hideCharts() { $("trendCard").hidden = true; $("pxCard").hidden = true; }
+  const getJSON = url => fetch(url, { cache: "no-store" }).then(r => {
+    if (!r.ok) { const e = new Error("HTTP " + r.status); e.status = r.status; throw e; }
+    return r.text().then(t => { try { return JSON.parse(t); } catch (e) { e.parse = true; throw e; } });
   });
+
+  renderBands();
+  const pricesP = getJSON("data/prices.json").catch(err => {
+    console.error("data/prices.json:", err);
+    return err.status === 404 ? null : { _error: err.parse ? "is not valid JSON (" + err.message + ")" : "could not be loaded (" + err.message + ")" };
+  });
+  getJSON("data/sentiment.json")
+    .catch(err => {
+      $("updated").textContent = "Data unavailable";
+      showError(err.parse ? "data/sentiment.json is not valid JSON (" + err.message + ")."
+        : location.protocol === "file:" ? "Could not load data/sentiment.json. This page was opened directly from disk; serve the folder over HTTP instead, e.g. `python -m http.server`."
+        : "Could not load data/sentiment.json (" + err.message + ").");
+      hideCharts();
+      return null;
+    })
+    .then(d => {
+      if (!d) return;
+      const norm = normalise(d);
+      if (!norm.rows.some(hasScore)) {
+        $("updated").textContent = "Data unavailable";
+        showError("data/sentiment.json loaded, but it has no usable daily scores.");
+        hideCharts();
+        return;
+      }
+      DATA = { last_updated: d.last_updated, rows: norm.rows };
+      const skipped = [];
+      if (norm.badDates) skipped.push(`${norm.badDates} row${norm.badDates === 1 ? "" : "s"} with an unreadable date`);
+      if (norm.future.length) skipped.push(`${norm.future.length} row${norm.future.length === 1 ? "" : "s"} dated after today (${norm.future.slice(0, 3).join(", ")}${norm.future.length > 3 ? ", …" : ""})`);
+      if (norm.stray.length) skipped.push(`${norm.stray.length} row${norm.stray.length === 1 ? "" : "s"} dated far from the rest (${norm.stray.slice(0, 3).join(", ")}${norm.stray.length > 3 ? ", …" : ""})`);
+      if (norm.outOfRange) skipped.push(`${norm.outOfRange} day${norm.outOfRange === 1 ? "" : "s"} with a score outside 0–100, shown blank`);
+      if (norm.noFlag) skipped.push(norm.noFlag < norm.rows.filter(r => !r._missing).length
+        ? `${norm.noFlag} day${norm.noFlag === 1 ? "" : "s"} without a full_capture flag`
+        : "no day has a valid full_capture flag, so sampled and full-capture days can't be told apart");
+      if (norm.holes.length) skipped.push(`no data from ${norm.holes.join(", ")}`);
+      if (skipped.length) showNotice("Data check: " + skipped.join("; ") + ".");
+      if (norm.dupes) console.warn(norm.dupes + " duplicate date(s) in sentiment.json were merged.");
+
+      const hasAcct = DATA.rows.some(r => r.negative_accounts_score != null);
+      document.querySelector('[data-metric="negative_accounts_score"]').hidden = !hasAcct;
+      renderBands(DATA.rows);
+      safe("heroCard", renderSummary);
+      safe("tableCard", renderTable);
+      if (typeof Chart === "undefined") { hideCharts(); showError("Charts could not load (Chart.js unavailable). Figures and table are still current."); return; }
+      return pricesP.then(p => { PRICES = p; renderCharts(); });
+    });
 })();
 </script>
 </body>
