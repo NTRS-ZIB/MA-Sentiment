@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mike Alfred Sentiment Tracker</title>
+<meta name="description" content="Daily sentiment about Mike Alfred on X, scored 0–100 for negativity.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232a78d6'/%3E%3Cpath d='M6 22l6-7 5 4 9-11' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7;
+  --surface: #fcfcfb;
+  --surface-2: #f3f2ef;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #898781;
+  --grid: #e1e0d9;
+  --axis: #c3c2b7;
+  --border: rgba(11,11,11,0.10);
+  --series-1: #2a78d6;
+  --series-2: #eb6834;
+  --series-ma: #52514e;
+  --good: #0ca30c;
+  --warning: #fab219;
+  --critical: #d03b3b;
+  --good-ink: #006300;
+  --warning-ink: #8a5a00;
+  --critical-ink: #b02a2a;
+  --band-good: rgba(12,163,12,0.06);
+  --band-warning: rgba(250,178,25,0.09);
+  --band-critical: rgba(208,59,59,0.07);
+  --shadow: 0 1px 2px rgba(11,11,11,0.04), 0 4px 16px rgba(11,11,11,0.04);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #0d0d0d;
+    --surface: #1a1a19;
+    --surface-2: #232321;
+    --ink: #f0efec;
+    --ink-2: #c3c2b7;
+    --muted: #898781;
+    --grid: #2c2c2a;
+    --axis: #383835;
+    --border: rgba(255,255,255,0.10);
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --series-ma: #c3c2b7;
+    --good-ink: #0ca30c;
+    --warning-ink: #fab219;
+    --critical-ink: #e66767;
+    --band-good: rgba(12,163,12,0.08);
+    --band-warning: rgba(250,178,25,0.07);
+    --band-critical: rgba(208,59,59,0.10);
+    --shadow: none;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d;
+  --surface: #1a1a19;
+  --surface-2: #232321;
+  --ink: #f0efec;
+  --ink-2: #c3c2b7;
+  --muted: #898781;
+  --grid: #2c2c2a;
+  --axis: #383835;
+  --border: rgba(255,255,255,0.10);
+  --series-1: #3987e5;
+  --series-2: #d95926;
+  --series-ma: #c3c2b7;
+  --good-ink: #0ca30c;
+  --warning-ink: #fab219;
+  --critical-ink: #e66767;
+  --band-good: rgba(12,163,12,0.08);
+  --band-warning: rgba(250,178,25,0.07);
+  --band-critical: rgba(208,59,59,0.10);
+  --shadow: none;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--page);
+  color: var(--ink);
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1120px; margin: 0 auto; padding: 28px 16px 48px; }
+
+header.top {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap; margin-bottom: 24px;
+}
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 0 0 4px; }
+h1 { font-size: 26px; line-height: 1.2; margin: 0; letter-spacing: -0.01em; }
+.updated { color: var(--ink-2); font-size: 13px; margin-top: 6px; }
+.top-actions { display: flex; gap: 8px; align-items: center; }
+
+button, .btn {
+  font: inherit; font-size: 13px; color: var(--ink);
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 8px; padding: 7px 12px; cursor: pointer;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+button:hover { background: var(--surface-2); }
+button:focus-visible { outline: 2px solid var(--series-1); outline-offset: 2px; }
+
+.seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--surface); }
+.seg button { border: 0; border-radius: 0; padding: 6px 12px; color: var(--ink-2); }
+.seg button + button { border-left: 1px solid var(--border); }
+.seg button[aria-pressed="true"] { background: var(--surface-2); color: var(--ink); font-weight: 600; }
+
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; box-shadow: var(--shadow); padding: 20px;
+}
+.card h2 { font-size: 15px; margin: 0; font-weight: 650; }
+.card .sub { color: var(--muted); font-size: 13px; margin: 2px 0 0; }
+.card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+.controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+
+.grid-top { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 2fr); gap: 16px; margin-bottom: 16px; }
+
+/* Hero */
+.hero .label-row { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
+.hero-num { font-size: 72px; line-height: 1; font-weight: 700; letter-spacing: -0.03em; margin-top: 14px; }
+.hero-num small { font-size: 20px; color: var(--muted); font-weight: 500; letter-spacing: 0; }
+.badge {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600;
+  padding: 3px 10px 3px 8px; border-radius: 999px; border: 1px solid var(--border);
+  background: var(--surface-2); color: var(--ink);
+}
+.dot { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+.lvl-low .dot { background: var(--good); }
+.lvl-mod .dot { background: var(--warning); }
+.lvl-high .dot { background: var(--critical); }
+.delta { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+.delta strong { font-weight: 650; }
+.delta .up { color: var(--critical-ink); }
+.delta .down { color: var(--good-ink); }
+
+.meter { margin-top: 18px; }
+.meter-track { position: relative; height: 8px; border-radius: 4px; display: flex; gap: 2px; }
+.meter-track span { height: 100%; border-radius: 4px; opacity: .85; }
+.meter-pin { position: absolute; top: -4px; width: 4px; height: 16px; border-radius: 2px; background: var(--ink); box-shadow: 0 0 0 2px var(--surface); transform: translateX(-2px); }
+.meter-scale { position: relative; height: 16px; font-size: 11px; color: var(--muted); margin-top: 6px; font-variant-numeric: tabular-nums; }
+.meter-scale span { position: absolute; top: 0; }
+.meter-scale span[style*="%"] { transform: translateX(-50%); }
+.hero-note { margin-top: 16px; font-size: 13px; color: var(--ink-2); border-top: 1px solid var(--border); padding-top: 12px; }
+
+/* Tiles */
+.tiles { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; }
+.tile { background: var(--surface-2); border-radius: 10px; padding: 14px; }
+.tile .k { font-size: 12px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
+.tile .v { font-size: 30px; font-weight: 700; margin-top: 4px; letter-spacing: -0.02em; }
+.tile .s { font-size: 12px; color: var(--ink-2); }
+.mix { margin-top: 16px; }
+.mix-bar { display: flex; height: 10px; gap: 2px; border-radius: 5px; overflow: hidden; }
+.mix-bar span { display: block; height: 100%; }
+.mix-legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--ink-2); margin-top: 8px; }
+.mix-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+.stats-row { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin-top: 16px; }
+.stat .k { font-size: 12px; color: var(--muted); }
+.stat .v { font-size: 18px; font-weight: 650; font-variant-numeric: tabular-nums; }
+
+/* Charts */
+.chart-box { position: relative; height: 340px; }
+.chart-box.short { height: 220px; }
+.legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12px; color: var(--ink-2); margin: -4px 0 10px; }
+.legend .sw { display: inline-block; width: 16px; height: 0; border-top: 2px solid; margin-right: 6px; vertical-align: 3px; }
+.legend .sw.dash { border-top-style: dashed; }
+.legend .band { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+.placeholder-flag {
+  display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600;
+  color: var(--warning-ink); background: var(--band-warning); border: 1px solid var(--border);
+  border-radius: 6px; padding: 2px 8px;
+}
+.stack { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+
+/* Table */
+.table-wrap { overflow-x: auto; margin: 0 -4px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: right; padding: 10px 8px; border-bottom: 1px solid var(--grid); white-space: nowrap; font-variant-numeric: tabular-nums; }
+th { font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+th:first-child, td:first-child, th.l, td.l { text-align: left; }
+td.note { white-space: normal; color: var(--ink-2); min-width: 180px; }
+tbody tr:hover { background: var(--surface-2); }
+.score-cell { display: inline-flex; align-items: center; gap: 6px; font-weight: 650; }
+
+footer { margin-top: 28px; font-size: 12px; color: var(--muted); line-height: 1.6; }
+footer p { margin: 0 0 6px; }
+
+.error { padding: 16px; border-radius: 10px; background: var(--band-critical); color: var(--ink); margin-bottom: 16px; display: none; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+@media (max-width: 860px) {
+  .grid-top { grid-template-columns: minmax(0,1fr); }
+}
+@media (max-width: 520px) {
+  h1 { font-size: 22px; }
+  .hero-num { font-size: 60px; }
+  .tiles { gap: 8px; }
+  .tile { padding: 10px; }
+  .tile .v { font-size: 24px; }
+  .chart-box { height: 280px; }
+  .card { padding: 16px; }
+}
+@media print {
+  .top-actions, .controls button { display: none; }
+  .card { box-shadow: none; break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div>
+      <p class="eyebrow">Sentiment on X · Daily</p>
+      <h1>Mike Alfred Sentiment Tracker</h1>
+      <div class="updated" id="updated">Loading…</div>
+    </div>
+    <div class="top-actions">
+      <button id="csvBtn" type="button" title="Download the full data set as CSV">
+        <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8m0 0l-3-3m3 3l3-3M3 13h10" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Export CSV
+      </button>
+      <button id="themeBtn" type="button" aria-label="Toggle light or dark theme">
+        <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zm0 1.5v10a5 5 0 010-10z" fill="currentColor"/></svg>
+        Theme
+      </button>
+    </div>
+  </header>
+
+  <div class="error" id="error" role="alert"></div>
+
+  <section class="grid-top">
+    <div class="card hero" aria-labelledby="hero-h">
+      <h2 id="hero-h">Current negative score</h2>
+      <p class="sub" id="heroDate">—</p>
+      <div class="hero-num" id="heroNum">—<small> / 100</small></div>
+      <div class="label-row"><span class="badge" id="heroBadge"><span class="dot"></span><span>—</span></span></div>
+      <div class="delta" id="heroDelta"></div>
+      <div class="meter" aria-hidden="true">
+        <div class="meter-track">
+          <span style="width:30%;background:var(--good)"></span>
+          <span style="width:30%;background:var(--warning)"></span>
+          <span style="width:40%;background:var(--critical)"></span>
+          <i class="meter-pin" id="meterPin" style="left:0"></i>
+        </div>
+        <div class="meter-scale"><span style="left:0">0</span><span style="left:30%">30</span><span style="left:60%">60</span><span style="right:0">100</span></div>
+      </div>
+      <div class="hero-note" id="heroNote"></div>
+    </div>
+
+    <div class="card" aria-labelledby="today-h">
+      <div class="card-head">
+        <div>
+          <h2 id="today-h">Latest day breakdown</h2>
+          <p class="sub">Posts classified on the most recent day</p>
+        </div>
+      </div>
+      <div class="tiles">
+        <div class="tile"><div class="k">Negative</div><div class="v" id="tNeg">—</div><div class="s" id="tNegPct"></div></div>
+        <div class="tile"><div class="k">Neutral</div><div class="v" id="tNeu">—</div><div class="s" id="tNeuPct"></div></div>
+        <div class="tile"><div class="k">Positive</div><div class="v" id="tPos">—</div><div class="s" id="tPosPct"></div></div>
+      </div>
+      <div class="mix">
+        <div class="mix-bar" id="mixBar" role="img" aria-label="Share of posts by sentiment"></div>
+        <div class="mix-legend">
+          <span><i style="background:var(--critical)"></i>Negative</span>
+          <span><i style="background:var(--axis)"></i>Neutral</span>
+          <span><i style="background:var(--good)"></i>Positive</span>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat"><div class="k">7-day average</div><div class="v" id="sAvg">—</div></div>
+        <div class="stat"><div class="k">Period high</div><div class="v" id="sHigh">—</div></div>
+        <div class="stat"><div class="k">Engagement-weighted</div><div class="v" id="sEng">—</div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stack">
+    <section class="card" aria-labelledby="trend-h">
+      <div class="card-head">
+        <div>
+          <h2 id="trend-h">Negative score over time</h2>
+          <p class="sub" id="trendSub">0–100, higher is more negative</p>
+        </div>
+        <div class="controls">
+          <div class="seg" role="group" aria-label="Score type">
+            <button type="button" data-metric="negative_score" aria-pressed="true">Raw score</button>
+            <button type="button" data-metric="engagement_weighted_negative" aria-pressed="false">Engagement-weighted</button>
+          </div>
+          <div class="seg" role="group" aria-label="Moving average">
+            <button type="button" id="maBtn" aria-pressed="true">7-day avg</button>
+          </div>
+        </div>
+      </div>
+      <div class="legend" id="trendLegend"></div>
+      <div class="chart-box"><canvas id="trendChart" aria-label="Line chart of daily negative score" role="img"></canvas></div>
+    </section>
+
+    <section class="card" aria-labelledby="px-h">
+      <div class="card-head">
+        <div>
+          <h2 id="px-h">IREN &amp; CIFR price, indexed</h2>
+          <p class="sub">Indexed to 100 on the first day of the period. Shown on its own scale to compare timing with the score above.</p>
+        </div>
+        <span class="placeholder-flag" id="pxFlag" hidden>⚠ Placeholder data, not real prices</span>
+      </div>
+      <div class="legend" id="pxLegend"></div>
+      <div class="chart-box short"><canvas id="pxChart" aria-label="Line chart of indexed IREN and CIFR prices" role="img"></canvas></div>
+    </section>
+
+    <section class="card" aria-labelledby="tbl-h">
+      <div class="card-head">
+        <div>
+          <h2 id="tbl-h">Recent activity</h2>
+          <p class="sub">Last 10 days, newest first</p>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Date</th>
+              <th scope="col">Score</th>
+              <th scope="col">Eng.-weighted</th>
+              <th scope="col">Negative</th>
+              <th scope="col">Neutral</th>
+              <th scope="col">Positive</th>
+              <th scope="col" class="l">Notes</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p><strong>Method.</strong> Posts mentioning Mike Alfred on X are classified daily as negative, neutral or positive. The negative score (0–100) summarises how negative the day's conversation was; the engagement-weighted version gives more weight to posts with more likes, reposts and replies.</p>
+    <p><strong>Bands.</strong> Low &lt; 30 · Moderate 30–59 · Elevated negative ≥ 60. The 7-day average is a trailing mean and uses fewer days until seven days of data exist.</p>
+    <p>Data refreshes automatically once a day. Not investment advice.</p>
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  const LEVELS = [
+    { max: 30,  key: "low",  label: "Low",               color: "--good" },
+    { max: 60,  key: "mod",  label: "Moderate",          color: "--warning" },
+    { max: 101, key: "high", label: "Elevated Negative", color: "--critical" }
+  ];
+  const level = v => LEVELS.find(l => v < l.max);
+  const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  const fmt = (v, d = 0) => (v == null || isNaN(v)) ? "—" : Number(v).toFixed(d);
+  const $ = id => document.getElementById(id);
+
+  const parseDate = s => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
+  const shortDate = s => parseDate(s).toLocaleDateString(undefined, { month: "short", day: "numeric" });
+  const longDate  = s => parseDate(s).toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric", year: "numeric" });
+
+  let DATA = null, PRICES = null, metric = "negative_score", showMA = true;
+  let trendChart = null, pxChart = null;
+
+  function trailingMA(values, n) {
+    return values.map((_, i) => {
+      const win = values.slice(Math.max(0, i - n + 1), i + 1).filter(v => v != null);
+      return win.length ? win.reduce((a, b) => a + b, 0) / win.length : null;
+    });
+  }
+
+  // ---------- Theme ----------
+  const THEME_KEY = "mast-theme";
+  function applyStoredTheme() {
+    try { const t = localStorage.getItem(THEME_KEY); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  }
+  function currentTheme() {
+    const t = document.documentElement.getAttribute("data-theme");
+    if (t) return t;
+    return matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+  $("themeBtn").addEventListener("click", () => {
+    const next = currentTheme() === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem(THEME_KEY, next); } catch (e) {}
+    renderCharts();
+  });
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", renderCharts);
+  applyStoredTheme();
+
+  // ---------- Summary ----------
+  function renderSummary() {
+    const s = DATA.scores;
+    const last = s[s.length - 1], prev = s[s.length - 2];
+    const lv = level(last.negative_score);
+
+    const ts = new Date(DATA.last_updated);
+    $("updated").textContent = "Last updated " + ts.toLocaleString(undefined, {
+      month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit", timeZoneName: "short"
+    });
+
+    $("heroDate").textContent = longDate(last.date);
+    $("heroNum").innerHTML = fmt(last.negative_score) + "<small> / 100</small>";
+    const badge = $("heroBadge");
+    badge.className = "badge lvl-" + lv.key;
+    badge.lastElementChild.textContent = lv.label;
+    $("meterPin").style.left = Math.min(100, Math.max(0, last.negative_score)) + "%";
+
+    if (prev) {
+      const d = last.negative_score - prev.negative_score;
+      const cls = d > 0 ? "up" : d < 0 ? "down" : "";
+      const arrow = d > 0 ? "▲" : d < 0 ? "▼" : "■";
+      $("heroDelta").innerHTML = `<strong class="${cls}">${arrow} ${d > 0 ? "+" : ""}${fmt(d)}</strong> vs ${shortDate(prev.date)} (${fmt(prev.negative_score)})`;
+    }
+    $("heroNote").textContent = last.notes || "";
+    $("heroNote").style.display = last.notes ? "" : "none";
+
+    const total = last.negative_count + last.neutral_count + last.positive_count;
+    const pct = n => total ? Math.round(n / total * 100) + "% of " + total + " posts" : "";
+    $("tNeg").textContent = last.negative_count; $("tNegPct").textContent = pct(last.negative_count);
+    $("tNeu").textContent = last.neutral_count;  $("tNeuPct").textContent = pct(last.neutral_count);
+    $("tPos").textContent = last.positive_count; $("tPosPct").textContent = pct(last.positive_count);
+    $("mixBar").innerHTML = [
+      [last.negative_count, "var(--critical)"], [last.neutral_count, "var(--axis)"], [last.positive_count, "var(--good)"]
+    ].filter(([n]) => n > 0).map(([n, c]) => `<span style="flex:${n};background:${c}"></span>`).join("");
+
+    const last7 = s.slice(-7).map(r => r.negative_score);
+    $("sAvg").textContent = fmt(last7.reduce((a, b) => a + b, 0) / last7.length, 1);
+    const hi = s.reduce((a, r) => r.negative_score > a.negative_score ? r : a, s[0]);
+    $("sHigh").textContent = fmt(hi.negative_score) + " · " + shortDate(hi.date);
+    $("sEng").textContent = fmt(last.engagement_weighted_negative, 1);
+  }
+
+  function renderTable() {
+    const rows = DATA.scores.slice(-10).reverse();
+    $("tbody").innerHTML = rows.map(r => {
+      const lv = level(r.negative_score);
+      return `<tr>
+        <td>${longDate(r.date)}</td>
+        <td><span class="score-cell lvl-${lv.key}" title="${lv.label}"><span class="dot"></span>${fmt(r.negative_score)}<span class="sr-only"> (${lv.label})</span></span></td>
+        <td>${fmt(r.engagement_weighted_negative, 1)}</td>
+        <td>${r.negative_count}</td>
+        <td>${r.neutral_count}</td>
+        <td>${r.positive_count}</td>
+        <td class="note l">${escapeHtml(r.notes || "")}</td>
+      </tr>`;
+    }).join("");
+  }
+  function escapeHtml(s) { return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
+
+  // ---------- Charts ----------
+  const bandsPlugin = {
+    id: "bands",
+    beforeDatasetsDraw(chart, _a, opts) {
+      if (!opts || !opts.enabled) return;
+      const { ctx, chartArea: a, scales: { y } } = chart;
+      [[0, 30, "--band-good"], [30, 60, "--band-warning"], [60, 100, "--band-critical"]].forEach(([lo, hi, c]) => {
+        const top = y.getPixelForValue(Math.min(hi, y.max)), bot = y.getPixelForValue(Math.max(lo, y.min));
+        if (bot <= top) return;
+        ctx.save(); ctx.fillStyle = css(c); ctx.fillRect(a.left, top, a.right - a.left, bot - top); ctx.restore();
+      });
+    }
+  };
+  const crosshairPlugin = {
+    id: "crosshair",
+    afterDatasetsDraw(chart) {
+      const act = chart.tooltip && chart.tooltip.getActiveElements();
+      if (!act || !act.length) return;
+      const x = act[0].element.x, { ctx, chartArea: a } = chart;
+      ctx.save(); ctx.strokeStyle = css("--axis"); ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(x, a.top); ctx.lineTo(x, a.bottom); ctx.stroke(); ctx.restore();
+    }
+  };
+
+  function baseOptions(yOpts) {
+    const ink2 = css("--ink-2"), muted = css("--muted"), grid = css("--grid"), axis = css("--axis");
+    return {
+      responsive: true, maintainAspectRatio: false, animation: { duration: 250 },
+      interaction: { mode: "index", intersect: false },
+      layout: { padding: { right: 8 } },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: css("--surface"), titleColor: css("--ink"), bodyColor: ink2,
+          borderColor: css("--border"), borderWidth: 1, padding: 10, cornerRadius: 8,
+          boxPadding: 4, usePointStyle: true, titleFont: { weight: "600" }
+        }
+      },
+      scales: {
+        x: { grid: { display: false }, border: { color: axis }, ticks: { color: muted, maxRotation: 0, autoSkipPadding: 16 } },
+        y: Object.assign({ grid: { color: grid }, border: { display: false }, ticks: { color: muted, padding: 6 } }, yOpts)
+      }
+    };
+  }
+
+  function renderTrend() {
+    const s = DATA.scores;
+    const labels = s.map(r => shortDate(r.date));
+    const vals = s.map(r => r[metric] == null ? null : Number(r[metric]));
+    const ma = trailingMA(vals, 7);
+    const c1 = css("--series-1"), cma = css("--series-ma"), surf = css("--surface");
+    const name = metric === "negative_score" ? "Negative score" : "Engagement-weighted";
+
+    $("trendSub").textContent = (metric === "negative_score"
+      ? "Raw negative score" : "Engagement-weighted negative score") + " · 0–100, higher is more negative";
+
+    $("trendLegend").innerHTML =
+      `<span><i class="sw" style="border-color:${c1}"></i>${name}</span>` +
+      (showMA ? `<span><i class="sw dash" style="border-color:${cma}"></i>7-day trailing avg</span>` : "") +
+      `<span><i class="band" style="background:var(--good)"></i>Low &lt;30</span>` +
+      `<span><i class="band" style="background:var(--warning)"></i>Moderate 30–59</span>` +
+      `<span><i class="band" style="background:var(--critical)"></i>Elevated ≥60</span>`;
+
+    const datasets = [{
+      label: name, data: vals, borderColor: c1, backgroundColor: c1, borderWidth: 2,
+      pointRadius: s.length > 45 ? 0 : 4, pointHoverRadius: 6, pointBackgroundColor: c1,
+      pointBorderColor: surf, pointBorderWidth: 2, tension: 0.25, spanGaps: true
+    }];
+    if (showMA) datasets.push({
+      label: "7-day avg", data: ma, borderColor: cma, backgroundColor: cma, borderWidth: 2,
+      borderDash: [5, 4], pointRadius: 0, pointHoverRadius: 4, tension: 0.25, spanGaps: true
+    });
+
+    const opts = baseOptions({ min: 0, max: 100, ticks: { color: css("--muted"), stepSize: 20, padding: 6 } });
+    opts.plugins.bands = { enabled: true };
+    opts.plugins.tooltip.callbacks = {
+      title: items => longDate(s[items[0].dataIndex].date),
+      label: it => ` ${it.dataset.label}: ${fmt(it.parsed.y, it.datasetIndex === 0 && metric === "negative_score" ? 0 : 1)}`,
+      afterBody: items => {
+        const r = s[items[0].dataIndex];
+        return [`${level(r.negative_score).label}`, `Neg ${r.negative_count} · Neu ${r.neutral_count} · Pos ${r.positive_count}`];
+      }
+    };
+
+    if (trendChart) trendChart.destroy();
+    trendChart = new Chart($("trendChart"), { type: "line", data: { labels, datasets }, options: opts, plugins: [bandsPlugin, crosshairPlugin] });
+  }
+
+  function renderPrices() {
+    if (!PRICES || !PRICES.series) { $("px-h").closest(".card").style.display = "none"; return; }
+    $("pxFlag").hidden = !PRICES.is_placeholder;
+    const dates = DATA.scores.map(r => r.date);
+    const labels = dates.map(shortDate);
+    const colors = [css("--series-1"), css("--series-2")];
+    const tickers = Object.keys(PRICES.series).slice(0, 2);
+    const datasets = tickers.map((t, i) => {
+      const raw = dates.map(d => PRICES.series[t][d] ?? null);
+      const base = raw.find(v => v != null);
+      return {
+        label: t, data: raw.map(v => v == null ? null : v / base * 100),
+        borderColor: colors[i], backgroundColor: colors[i], borderWidth: 2,
+        pointRadius: 3, pointHoverRadius: 5, pointBorderColor: css("--surface"), pointBorderWidth: 2,
+        tension: 0.2, spanGaps: false
+      };
+    });
+    $("pxLegend").innerHTML = tickers.map((t, i) => `<span><i class="sw" style="border-color:${colors[i]}"></i>${t}</span>`).join("") +
+      `<span style="color:var(--muted)">Gaps are non-trading days</span>`;
+    const opts = baseOptions({ grace: "5%" });
+    opts.plugins.tooltip.callbacks = {
+      title: items => longDate(dates[items[0].dataIndex]),
+      label: it => ` ${it.dataset.label}: ${fmt(it.parsed.y, 1)}`
+    };
+    if (pxChart) pxChart.destroy();
+    pxChart = new Chart($("pxChart"), { type: "line", data: { labels, datasets }, options: opts, plugins: [crosshairPlugin] });
+  }
+
+  function renderCharts() {
+    if (!DATA || typeof Chart === "undefined") return;
+    Chart.defaults.font.family = 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif';
+    Chart.defaults.font.size = 12;
+    renderTrend(); renderPrices();
+  }
+
+  // ---------- Controls ----------
+  document.querySelectorAll("[data-metric]").forEach(b => b.addEventListener("click", () => {
+    metric = b.dataset.metric;
+    document.querySelectorAll("[data-metric]").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+    renderTrend();
+  }));
+  $("maBtn").addEventListener("click", () => {
+    showMA = !showMA; $("maBtn").setAttribute("aria-pressed", String(showMA)); renderTrend();
+  });
+
+  $("csvBtn").addEventListener("click", () => {
+    if (!DATA) return;
+    const cols = ["date", "negative_score", "engagement_weighted_negative", "negative_count", "neutral_count", "positive_count", "notes"];
+    const q = v => { const s = v == null ? "" : String(v); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
+    const csv = [cols.join(",")].concat(DATA.scores.map(r => cols.map(c => q(r[c])).join(","))).join("\n");
+    const url = URL.createObjectURL(new Blob([csv], { type: "text/csv" }));
+    const a = document.createElement("a");
+    a.href = url; a.download = "mike-alfred-sentiment-" + DATA.scores[DATA.scores.length - 1].date + ".csv";
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  });
+
+  // ---------- Load ----------
+  function showError(msg) { const e = $("error"); e.textContent = msg; e.style.display = "block"; $("updated").textContent = "Data unavailable"; }
+
+  Promise.all([
+    fetch("data/sentiment.json", { cache: "no-store" }).then(r => { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
+    fetch("data/prices.json", { cache: "no-store" }).then(r => r.ok ? r.json() : null).catch(() => null)
+  ]).then(([d, p]) => {
+    if (!d || !Array.isArray(d.scores) || !d.scores.length) throw new Error("no scores in file");
+    d.scores.sort((a, b) => a.date.localeCompare(b.date));
+    DATA = d; PRICES = p;
+    renderSummary(); renderTable(); renderCharts();
+    if (typeof Chart === "undefined") showError("Charts could not load (Chart.js unavailable). Figures and table are still current.");
+  }).catch(err => {
+    showError("Could not load data/sentiment.json (" + err.message + "). If you opened this file directly from disk, serve the folder over HTTP instead, e.g. `python -m http.server`.");
+  });
+})();
+</script>
+</body>
+</html>

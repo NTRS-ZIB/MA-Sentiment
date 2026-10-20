@@ -1,0 +1,20 @@
+{
+  "is_placeholder": true,
+  "note": "PLACEHOLDER values for layout only. These are not real IREN or CIFR prices. Replace with real closing prices (indexed or raw) before sharing.",
+  "series": {
+    "IREN": {
+      "2026-10-14": 100.0,
+      "2026-10-15": 101.8,
+      "2026-10-16": 98.9,
+      "2026-10-19": 93.5,
+      "2026-10-20": 94.1
+    },
+    "CIFR": {
+      "2026-10-14": 100.0,
+      "2026-10-15": 99.1,
+      "2026-10-16": 97.4,
+      "2026-10-19": 92.7,
+      "2026-10-20": 91.9
+    }
+  }
+}
