@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-20T09:50:09-04:00",
+  "last_updated": "2026-10-20T12:00:49-04:00",
   "scores": [
     {
       "date": "2026-07-22",
@@ -8,6 +8,9 @@
       "neutral_count": 27,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 28 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -17,6 +20,9 @@
       "neutral_count": 29,
       "negative_score": 3,
       "engagement_weighted_negative": 1.2,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 32 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 3 spam/dup"
     },
     {
@@ -26,6 +32,9 @@
       "neutral_count": 37,
       "negative_score": 3,
       "engagement_weighted_negative": 6.5,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 38 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -35,6 +44,9 @@
       "neutral_count": 26,
       "negative_score": 7,
       "engagement_weighted_negative": 1.4,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Backfill sample of 28 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -44,6 +56,9 @@
       "neutral_count": 26,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 26 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -53,6 +68,9 @@
       "neutral_count": 19,
       "negative_score": 17,
       "engagement_weighted_negative": 2.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 3,
+      "partial_day": false,
       "notes": "Backfill sample of 23 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 1 spam/dup"
     },
     {
@@ -62,6 +80,9 @@
       "neutral_count": 49,
       "negative_score": 2,
       "engagement_weighted_negative": 0.2,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 50 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -71,6 +92,9 @@
       "neutral_count": 31,
       "negative_score": 9,
       "engagement_weighted_negative": 0.8,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 3,
+      "partial_day": false,
       "notes": "Backfill sample of 35 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -80,6 +104,9 @@
       "neutral_count": 21,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 21 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -89,6 +116,9 @@
       "neutral_count": 32,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 35 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -98,6 +128,9 @@
       "neutral_count": 19,
       "negative_score": 13,
       "engagement_weighted_negative": 8.2,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Backfill sample of 23 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); relevancy page 1 returned <10 posts, page 2 replaced with 25 most-recent posts"
     },
     {
@@ -107,6 +140,9 @@
       "neutral_count": 37,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 37 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 1 spam/dup"
     },
     {
@@ -116,6 +152,9 @@
       "neutral_count": 24,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 25 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -125,6 +164,9 @@
       "neutral_count": 23,
       "negative_score": 15,
       "engagement_weighted_negative": 8.9,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 27 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -134,6 +176,9 @@
       "neutral_count": 23,
       "negative_score": 18,
       "engagement_weighted_negative": 4.2,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 3,
+      "partial_day": false,
       "notes": "Backfill sample of 28 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -143,6 +188,9 @@
       "neutral_count": 20,
       "negative_score": 9,
       "engagement_weighted_negative": 3.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Backfill sample of 22 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -152,6 +200,9 @@
       "neutral_count": 20,
       "negative_score": 23,
       "engagement_weighted_negative": 7.9,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Backfill sample of 26 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -161,6 +212,9 @@
       "neutral_count": 40,
       "negative_score": 11,
       "engagement_weighted_negative": 4.6,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 46 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -170,6 +224,9 @@
       "neutral_count": 25,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 25 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); relevancy page 1 returned <10 posts, page 2 replaced with 25 most-recent posts"
     },
     {
@@ -179,6 +236,9 @@
       "neutral_count": 45,
       "negative_score": 4,
       "engagement_weighted_negative": 8.5,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Backfill sample of 47 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 1 spam/dup"
     },
     {
@@ -188,6 +248,9 @@
       "neutral_count": 15,
       "negative_score": 27,
       "engagement_weighted_negative": 19.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Backfill sample of 22 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -197,6 +260,9 @@
       "neutral_count": 26,
       "negative_score": 10,
       "engagement_weighted_negative": 2.5,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 3,
+      "partial_day": false,
       "notes": "Backfill sample of 29 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 1 spam/dup"
     },
     {
@@ -206,6 +272,9 @@
       "neutral_count": 28,
       "negative_score": 3,
       "engagement_weighted_negative": 0.4,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 30 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 1 spam/dup"
     },
     {
@@ -215,6 +284,9 @@
       "neutral_count": 31,
       "negative_score": 6,
       "engagement_weighted_negative": 0.8,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Backfill sample of 35 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -224,6 +296,9 @@
       "neutral_count": 21,
       "negative_score": 30,
       "engagement_weighted_negative": 10.5,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 4,
+      "partial_day": false,
       "notes": "Backfill sample of 30 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 3 spam/dup"
     },
     {
@@ -233,6 +308,9 @@
       "neutral_count": 21,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 21 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 8 spam/dup"
     },
     {
@@ -242,6 +320,9 @@
       "neutral_count": 23,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 24 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); relevancy page 1 returned <10 posts, page 2 replaced with 25 most-recent posts"
     },
     {
@@ -251,6 +332,9 @@
       "neutral_count": 31,
       "negative_score": 6,
       "engagement_weighted_negative": 5.2,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Backfill sample of 34 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -260,6 +344,9 @@
       "neutral_count": 36,
       "negative_score": 3,
       "engagement_weighted_negative": 1.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 38 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 3 spam/dup"
     },
     {
@@ -269,6 +356,9 @@
       "neutral_count": 44,
       "negative_score": 2,
       "engagement_weighted_negative": 0.2,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 45 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 1 spam/dup"
     },
     {
@@ -278,6 +368,9 @@
       "neutral_count": 40,
       "negative_score": 2,
       "engagement_weighted_negative": 0.4,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 41 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 2 spam/dup"
     },
     {
@@ -287,6 +380,9 @@
       "neutral_count": 27,
       "negative_score": 7,
       "engagement_weighted_negative": 4.9,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Backfill sample of 29 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 2 spam/dup"
     },
     {
@@ -296,6 +392,9 @@
       "neutral_count": 41,
       "negative_score": 7,
       "engagement_weighted_negative": 1.4,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 3,
+      "partial_day": false,
       "notes": "Backfill sample of 46 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -305,6 +404,9 @@
       "neutral_count": 42,
       "negative_score": 2,
       "engagement_weighted_negative": 1.9,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 46 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -314,6 +416,9 @@
       "neutral_count": 41,
       "negative_score": 2,
       "engagement_weighted_negative": 1.1,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 42 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -323,6 +428,9 @@
       "neutral_count": 39,
       "negative_score": 5,
       "engagement_weighted_negative": 8.5,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Backfill sample of 41 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 5 spam/dup"
     },
     {
@@ -332,6 +440,9 @@
       "neutral_count": 41,
       "negative_score": 11,
       "engagement_weighted_negative": 14.6,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 5,
+      "partial_day": false,
       "notes": "Backfill sample of 46 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 2 spam/dup"
     },
     {
@@ -341,6 +452,9 @@
       "neutral_count": 31,
       "negative_score": 16,
       "engagement_weighted_negative": 17.2,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 6,
+      "partial_day": false,
       "notes": "Backfill sample of 38 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -350,6 +464,9 @@
       "neutral_count": 22,
       "negative_score": 12,
       "engagement_weighted_negative": 19.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 3,
+      "partial_day": false,
       "notes": "Backfill sample of 25 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -359,6 +476,9 @@
       "neutral_count": 22,
       "negative_score": 4,
       "engagement_weighted_negative": 8.5,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 23 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -368,6 +488,9 @@
       "neutral_count": 31,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 31 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -377,6 +500,9 @@
       "neutral_count": 23,
       "negative_score": 8,
       "engagement_weighted_negative": 2.2,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Backfill sample of 25 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -386,6 +512,9 @@
       "neutral_count": 21,
       "negative_score": 19,
       "engagement_weighted_negative": 0.8,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 5,
+      "partial_day": false,
       "notes": "Backfill sample of 27 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -395,6 +524,9 @@
       "neutral_count": 22,
       "negative_score": 8,
       "engagement_weighted_negative": 0.5,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Backfill sample of 24 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -404,6 +536,9 @@
       "neutral_count": 38,
       "negative_score": 3,
       "engagement_weighted_negative": 0.8,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 39 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 3 spam/dup"
     },
     {
@@ -413,6 +548,9 @@
       "neutral_count": 25,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 25 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -422,6 +560,9 @@
       "neutral_count": 44,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 44 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -431,6 +572,9 @@
       "neutral_count": 46,
       "negative_score": 2,
       "engagement_weighted_negative": 1.4,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 47 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -440,6 +584,9 @@
       "neutral_count": 28,
       "negative_score": 3,
       "engagement_weighted_negative": 1.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 29 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -449,6 +596,9 @@
       "neutral_count": 23,
       "negative_score": 7,
       "engagement_weighted_negative": 0.9,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Backfill sample of 27 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -458,6 +608,9 @@
       "neutral_count": 43,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 43 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -467,6 +620,9 @@
       "neutral_count": 46,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 47 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 1 spam/dup"
     },
     {
@@ -476,6 +632,9 @@
       "neutral_count": 28,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 28 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -485,6 +644,9 @@
       "neutral_count": 30,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 31 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -494,6 +656,9 @@
       "neutral_count": 29,
       "negative_score": 12,
       "engagement_weighted_negative": 21.5,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 4,
+      "partial_day": false,
       "notes": "Backfill sample of 34 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 4 spam/dup"
     },
     {
@@ -503,6 +668,9 @@
       "neutral_count": 23,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 24 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); relevancy search returned 0 posts, used 25 most-recent posts instead"
     },
     {
@@ -512,6 +680,9 @@
       "neutral_count": 33,
       "negative_score": 8,
       "engagement_weighted_negative": 3.1,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Backfill sample of 38 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -521,6 +692,9 @@
       "neutral_count": 43,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 43 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 2 spam/dup"
     },
     {
@@ -530,6 +704,9 @@
       "neutral_count": 47,
       "negative_score": 2,
       "engagement_weighted_negative": 2.9,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 49 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -539,6 +716,9 @@
       "neutral_count": 40,
       "negative_score": 9,
       "engagement_weighted_negative": 9.6,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 4,
+      "partial_day": false,
       "notes": "Backfill sample of 47 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -548,6 +728,9 @@
       "neutral_count": 28,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 28 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -557,6 +740,9 @@
       "neutral_count": 47,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 48 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -566,6 +752,9 @@
       "neutral_count": 19,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 20 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -575,6 +764,9 @@
       "neutral_count": 28,
       "negative_score": 3,
       "engagement_weighted_negative": 35.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 30 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -584,6 +776,9 @@
       "neutral_count": 44,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 46 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -593,6 +788,9 @@
       "neutral_count": 20,
       "negative_score": 5,
       "engagement_weighted_negative": 3.7,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 22 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -602,6 +800,9 @@
       "neutral_count": 31,
       "negative_score": 0,
       "engagement_weighted_negative": 0.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 0,
+      "partial_day": false,
       "notes": "Backfill sample of 31 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -611,6 +812,9 @@
       "neutral_count": 39,
       "negative_score": 2,
       "engagement_weighted_negative": 1.4,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 40 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 1 spam/dup"
     },
     {
@@ -620,6 +824,9 @@
       "neutral_count": 22,
       "negative_score": 8,
       "engagement_weighted_negative": 1.6,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Backfill sample of 24 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 1 spam/dup"
     },
     {
@@ -629,6 +836,9 @@
       "neutral_count": 22,
       "negative_score": 11,
       "engagement_weighted_negative": 0.6,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 3,
+      "partial_day": false,
       "notes": "Backfill sample of 28 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -638,6 +848,9 @@
       "neutral_count": 22,
       "negative_score": 8,
       "engagement_weighted_negative": 4.5,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Backfill sample of 24 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -647,6 +860,9 @@
       "neutral_count": 39,
       "negative_score": 17,
       "engagement_weighted_negative": 8.2,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 5,
+      "partial_day": false,
       "notes": "Backfill sample of 47 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 1 spam/dup"
     },
     {
@@ -656,6 +872,9 @@
       "neutral_count": 23,
       "negative_score": 4,
       "engagement_weighted_negative": 0.9,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 24 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -665,6 +884,9 @@
       "neutral_count": 28,
       "negative_score": 10,
       "engagement_weighted_negative": 9.5,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Backfill sample of 31 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -674,6 +896,9 @@
       "neutral_count": 32,
       "negative_score": 8,
       "engagement_weighted_negative": 2.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 3,
+      "partial_day": false,
       "notes": "Backfill sample of 36 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -683,6 +908,9 @@
       "neutral_count": 23,
       "negative_score": 8,
       "engagement_weighted_negative": 3.1,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Backfill sample of 25 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -692,6 +920,9 @@
       "neutral_count": 37,
       "negative_score": 14,
       "engagement_weighted_negative": 23.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 5,
+      "partial_day": false,
       "notes": "Backfill sample of 43 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -701,6 +932,9 @@
       "neutral_count": 29,
       "negative_score": 6,
       "engagement_weighted_negative": 1.3,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Backfill sample of 31 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -710,6 +944,9 @@
       "neutral_count": 20,
       "negative_score": 17,
       "engagement_weighted_negative": 11.4,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 4,
+      "partial_day": false,
       "notes": "Backfill sample of 24 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -719,6 +956,9 @@
       "neutral_count": 41,
       "negative_score": 11,
       "engagement_weighted_negative": 9.6,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 4,
+      "partial_day": false,
       "notes": "Backfill sample of 46 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days)"
     },
     {
@@ -728,6 +968,9 @@
       "neutral_count": 16,
       "negative_score": 6,
       "engagement_weighted_negative": 0.3,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 17 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 6 spam/dup"
     },
     {
@@ -737,6 +980,9 @@
       "neutral_count": 27,
       "negative_score": 4,
       "engagement_weighted_negative": 0.4,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 28 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); relevancy page 1 returned <10 posts, page 2 replaced with 25 most-recent posts"
     },
     {
@@ -746,6 +992,9 @@
       "neutral_count": 22,
       "negative_score": 4,
       "engagement_weighted_negative": 2.6,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 1,
+      "partial_day": false,
       "notes": "Backfill sample of 23 classified posts (top relevancy results, up to 2 pages of 25); full-day volume unavailable (X counts only cover the last 7 days); dropped 12 spam/dup"
     },
     {
@@ -755,6 +1004,9 @@
       "neutral_count": 25,
       "negative_score": 14,
       "engagement_weighted_negative": 4.7,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 4,
+      "partial_day": false,
       "notes": "Sample of 29 classified posts (top relevancy results); X counts only cover from 09:35 ET, ~288+ matching posts; dropped 1 spam/dup"
     },
     {
@@ -764,6 +1016,9 @@
       "neutral_count": 44,
       "negative_score": 8,
       "engagement_weighted_negative": 2.4,
+      "total_matching_posts": 260,
+      "unique_negative_accounts": 4,
+      "partial_day": false,
       "notes": "Sample of 48 classified posts (top relevancy results, max 2 pages of 25) out of ~260 matching posts per X counts; dropped 2 spam/dup"
     },
     {
@@ -773,6 +1028,9 @@
       "neutral_count": 18,
       "negative_score": 22,
       "engagement_weighted_negative": 7.2,
+      "total_matching_posts": 356,
+      "unique_negative_accounts": 5,
+      "partial_day": false,
       "notes": "Sample of 23 classified posts (top relevancy results, max 2 pages of 25) out of ~356 matching posts per X counts; second page returned 0 results"
     },
     {
@@ -782,6 +1040,9 @@
       "neutral_count": 20,
       "negative_score": 23,
       "engagement_weighted_negative": 3.8,
+      "total_matching_posts": 281,
+      "unique_negative_accounts": 6,
+      "partial_day": false,
       "notes": "Sample of 26 classified posts (top relevancy results, max 2 pages of 25) out of ~281 matching posts per X counts"
     },
     {
@@ -791,6 +1052,9 @@
       "neutral_count": 31,
       "negative_score": 6,
       "engagement_weighted_negative": 4.3,
+      "total_matching_posts": 283,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Sample of 34 classified posts (top relevancy results, max 2 pages of 25) out of ~283 matching posts per X counts; dropped 13 spam/dup"
     },
     {
@@ -800,6 +1064,9 @@
       "neutral_count": 20,
       "negative_score": 29,
       "engagement_weighted_negative": 18.0,
+      "total_matching_posts": 211,
+      "unique_negative_accounts": 2,
+      "partial_day": false,
       "notes": "Sample of 28 classified posts (top relevancy results, max 2 pages of 25) out of ~211 matching posts per X counts; dropped 1 spam/dup; relevancy search returned only 4 posts, supplemented with 25 most-recent (late-evening) posts, many from one hostile account (Victhebricbz)"
     },
     {
@@ -809,6 +1076,9 @@
       "neutral_count": 23,
       "negative_score": 23,
       "engagement_weighted_negative": 5.4,
+      "total_matching_posts": 374,
+      "unique_negative_accounts": 7,
+      "partial_day": false,
       "notes": "Sample of 30 classified posts (top relevancy results, max 2 pages of 25) out of ~374 matching posts per X counts"
     },
     {
@@ -818,7 +1088,10 @@
       "neutral_count": 25,
       "negative_score": 13,
       "engagement_weighted_negative": 10.0,
-      "notes": "PARTIAL day (00:00-09:3x ET): 30 classified posts of ~53 matching so far; dropped 1 spam/dup"
+      "total_matching_posts": 182,
+      "unique_negative_accounts": 4,
+      "partial_day": true,
+      "notes": "PARTIAL day (00:00-09:3x ET): 30 classified posts of ~53 matching so far; dropped 1 spam/dup; total_matching_posts is a partial-day count through 11:59 ET"
     }
   ]
 }
