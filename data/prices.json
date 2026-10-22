@@ -1,6 +1,6 @@
 {
   "is_placeholder": false,
-  "note": "Daily closing prices (split-adjusted) from Yahoo Finance via yfinance, cross-checked against Nasdaq.com historical data; retrieved 2026-10-20, last updated 2026-10-21.",
+  "note": "Daily closing prices (split-adjusted) from Yahoo Finance via yfinance, cross-checked against Nasdaq.com historical data; retrieved 2026-10-20, last updated 2026-10-22.",
   "series": {
     "IREN": {
       "2022-01-03": 15.23,
@@ -1206,7 +1206,8 @@
       "2026-10-15": 30.39,
       "2026-10-16": 26.99,
       "2026-10-19": 27.73,
-      "2026-10-20": 26.62
+      "2026-10-20": 26.62,
+      "2026-10-21": 27.84
     },
     "CIFR": {
       "2022-01-03": 4.61,
@@ -2412,7 +2413,8 @@
       "2026-10-15": 10.04,
       "2026-10-16": 8.98,
       "2026-10-19": 8.94,
-      "2026-10-20": 8.88
+      "2026-10-20": 8.88,
+      "2026-10-21": 9.13
     }
   }
 }
