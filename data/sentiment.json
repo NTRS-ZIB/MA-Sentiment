@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-25T08:09:57-04:00",
+  "last_updated": "2026-10-26T08:06:50-04:00",
   "scores": [
     {
       "date": "2026-07-22",
@@ -1615,6 +1615,23 @@
       "classified_posts": 169,
       "partial_day": false,
       "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 195 matching posts paged (11 pages, recency, 25/page) until no next_token; 169 classified after dropping 25 spam/dup; X counts reports 266 for the day, +71 vs paged (27%) (X counts includes posts that search paging did not return, e.g. since-deleted posts or protected/suspended accounts; cause not verified); paging stalled on empty pages with a next_token at 15:57Z UTC, so the day was paged in sub-windows (04:00-12:00Z, 12:00-15:30Z, 15:30-15:57Z plus a mentions-timeline check for 15:35-15:54Z); search returned nothing for a burst of about 70 posts that X counts shows at 15:35-15:53Z UTC (posts not retrievable, likely filtered spam or since-removed; cause not verified)"
+    },
+    {
+      "date": "2026-10-25",
+      "negative_count": 19,
+      "positive_count": 25,
+      "neutral_count": 146,
+      "negative_score": 10,
+      "engagement_weighted_negative": 40.1,
+      "total_matching_posts": 196,
+      "unique_negative_accounts": 15,
+      "unique_accounts": 147,
+      "negative_accounts_score": 10,
+      "top_account_negative_posts": 3,
+      "full_capture": true,
+      "classified_posts": 190,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 194 matching posts paged (9 pages, recency, 25/page) until no next_token; 190 classified after dropping 4 spam/dup; X counts reports 196 for the day, +2 vs paged (1%) (X counts includes posts that search paging did not return, e.g. since-deleted posts or protected/suspended accounts; cause not verified)"
     }
   ]
 }
