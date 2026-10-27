@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-10-26T21:31:10-04:00",
+  "last_updated": "2026-10-26T21:32:38-04:00",
   "scores": [
+    {
+      "date": "2026-07-15",
+      "negative_count": 21,
+      "positive_count": 28,
+      "neutral_count": 319,
+      "negative_score": 6,
+      "engagement_weighted_negative": 5.2,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 19,
+      "unique_accounts": 297,
+      "negative_accounts_score": 6,
+      "top_account_negative_posts": 3,
+      "full_capture": true,
+      "classified_posts": 368,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 401 matching posts paged (21 pages, recency, 25/page) until no next_token; 368 classified after dropping 33 spam/dup; no X count available (outside 7-day counts window); Recency paging ran to 13:18:28Z, where Telegram-copypasta spam bot 1129064065433784323 began flooding; the remaining 04:00-13:18:28Z window was paged with -from:1129064065433784323 (that bot is dropped as spam anyway)."
+    },
     {
       "date": "2026-07-16",
       "negative_count": 55,
