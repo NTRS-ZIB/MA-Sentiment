@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-10-26T21:26:47-04:00",
+  "last_updated": "2026-10-26T21:31:10-04:00",
   "scores": [
+    {
+      "date": "2026-07-16",
+      "negative_count": 55,
+      "positive_count": 31,
+      "neutral_count": 190,
+      "negative_score": 20,
+      "engagement_weighted_negative": 15.6,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 41,
+      "unique_accounts": 235,
+      "negative_accounts_score": 17,
+      "top_account_negative_posts": 6,
+      "full_capture": true,
+      "classified_posts": 276,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 341 matching posts paged (17 pages, recency, 25/page) until no next_token; 276 classified after dropping 65 spam/dup; no X count available (outside 7-day counts window)"
+    },
     {
       "date": "2026-07-17",
       "negative_count": 21,
@@ -55,19 +72,19 @@
     {
       "date": "2026-07-20",
       "negative_count": 24,
-      "positive_count": 52,
-      "neutral_count": 196,
+      "positive_count": 53,
+      "neutral_count": 200,
       "negative_score": 9,
-      "engagement_weighted_negative": 5.4,
+      "engagement_weighted_negative": 5.3,
       "total_matching_posts": null,
       "unique_negative_accounts": 24,
-      "unique_accounts": 227,
-      "negative_accounts_score": 11,
+      "unique_accounts": 230,
+      "negative_accounts_score": 10,
       "top_account_negative_posts": 1,
       "full_capture": true,
-      "classified_posts": 272,
+      "classified_posts": 277,
       "partial_day": false,
-      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 445 matching posts paged (29 pages, recency, 25/page) until no next_token; 272 classified after dropping 172 spam/dup; no X count available (outside 7-day counts window); paging stalled on empty pages with a next_token at 18:27:59Z, so the rest of the day was paged in sub-windows (04:00-14:00Z, 14:00-17:00Z, 17:00-18:00Z, 18:00-18:27:59Z); the 18:00-18:27:59Z window returned only empty pages under both recency and relevancy sort and was treated as having no retrievable posts; a copypasta spam bot (author 1501109417940766723) posted about 172 times, so after 04:51:29Z its posts were excluded with -from:1501109417940766723 for the last 51 minutes of the window (its posts are dropped as spam anyway)"
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 450 matching posts paged (35 pages, recency, 25/page) until no next_token; 277 classified after dropping 172 spam/dup; no X count available (outside 7-day counts window); paging stalled on empty pages with a next_token at 18:27:59Z, so the rest of the day was paged in sub-windows (04:00-14:00Z, 14:00-17:00Z, 17:00-18:00Z, 18:00-18:14Z, 18:14-18:21Z, 18:21-18:27:59Z); 18:00-18:27:59Z as one window returned nothing, but the smaller windows found 5 more posts (added in a later pass); 18:21-18:27:59Z still returned only empty pages and was treated as having no retrievable posts; a copypasta spam bot (author 1501109417940766723) posted about 172 times, so after 04:51:29Z its posts were excluded with -from:1501109417940766723 for the last 51 minutes of the 04:00-14:00Z window (its posts are dropped as spam anyway)"
     },
     {
       "date": "2026-07-21",
@@ -84,7 +101,7 @@
       "full_capture": true,
       "classified_posts": 293,
       "partial_day": false,
-      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 402 matching posts paged (34 pages, recency, 25/page) until no next_token; 293 classified after dropping 108 spam/dup; no X count available (outside 7-day counts window); paging stalled on empty pages with a next_token at 00:47:55Z on 07-22 UTC, so the rest of the day was paged in sub-windows (04:00-20:00Z, 20:00-23:00Z, 23:00-00:00Z, 00:00-00:30Z, 00:30-00:47:55Z); the 00:30-00:47:55Z window returned only empty pages under both recency and relevancy sort and was treated as having no retrievable posts; a copypasta spam bot (author 1501109417940766723, 'copy and search my username on telegram') flooded 09:14Z onward, so after its pages the 04:00-09:14:43Z window was paged with -from:1501109417940766723 added (its posts are dropped as spam anyway)"
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 402 matching posts paged (34 pages, recency, 25/page) until no next_token; 293 classified after dropping 108 spam/dup; no X count available (outside 7-day counts window); paging stalled on empty pages with a next_token at 00:47:55Z on 07-22 UTC, so the rest of the day was paged in sub-windows (04:00-20:00Z, 20:00-23:00Z, 23:00-00:00Z, 00:00-00:30Z, 00:30-00:47:55Z); the 00:30-00:47:55Z window returned only empty pages under both recency and relevancy sort, and again when split into 00:30-00:35, 00:30-00:39 and 00:39-00:47:55Z, and was treated as having no retrievable posts; a copypasta spam bot (author 1501109417940766723, 'copy and search my username on telegram') flooded 09:14Z onward, so after its pages the 04:00-09:14:43Z window was paged with -from:1501109417940766723 added (its posts are dropped as spam anyway)"
     },
     {
       "date": "2026-07-22",
