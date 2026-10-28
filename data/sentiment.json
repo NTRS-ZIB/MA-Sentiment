@@ -1,6 +1,40 @@
 {
-  "last_updated": "2026-10-27T21:23:30-04:00",
+  "last_updated": "2026-10-27T21:36:56-04:00",
   "scores": [
+    {
+      "date": "2026-07-08",
+      "negative_count": 42,
+      "positive_count": 76,
+      "neutral_count": 384,
+      "negative_score": 8,
+      "engagement_weighted_negative": 10.9,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 38,
+      "unique_accounts": 357,
+      "negative_accounts_score": 11,
+      "top_account_negative_posts": 2,
+      "full_capture": true,
+      "classified_posts": 502,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 549 matching posts paged (50 pages, recency, 25/page) until no next_token; 502 classified after dropping 45 spam/dup; no X count available (outside 7-day counts window); paging slowed at 17:41Z UTC, so the rest of the day was paged in sub-windows (04:00-12:00Z, 12:00-15:00Z, 15:00-17:41:04Z); the 15:00-17:41:04Z window returned only empty pages with a next_token below 17:27:52Z and was re-split (15:00-16:15Z, 16:15-16:50Z, 16:50-17:10Z, 17:10-17:27Z, 17:27-17:27:52Z), which recovered posts the wider window had skipped; all windows paged until no next_token (posts at window boundaries returned twice are counted once)"
+    },
+    {
+      "date": "2026-07-09",
+      "negative_count": 93,
+      "positive_count": 63,
+      "neutral_count": 493,
+      "negative_score": 14,
+      "engagement_weighted_negative": 51.1,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 71,
+      "unique_accounts": 470,
+      "negative_accounts_score": 15,
+      "top_account_negative_posts": 8,
+      "full_capture": true,
+      "classified_posts": 649,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 692 matching posts paged (68 pages, recency, 25/page) until no next_token; 649 classified after dropping 37 spam/dup; no X count available (outside 7-day counts window); paging slowed to 9-12 posts per page at 18:51Z UTC, so the rest of the day was paged in sub-windows (04:00-12:00Z, 12:00-16:00Z, 16:00-18:00Z, 18:00-18:51:18Z); windows that slowed or returned empty pages with a next_token were re-split (12:00-12:35Z, 12:35-13:06:23Z, 13:30-13:47Z, 13:47-13:53Z, 13:53-13:58:37Z, 16:00-16:05:30Z, 16:05:30-16:10:30Z); the 16:05:30-16:10:30Z window and the last part of 13:53-13:58:37Z (below 13:53:35Z) only returned empty pages with a next_token and were closed as empty; all other windows paged until no next_token (posts at window boundaries returned twice are counted once). The search was unreliable on this day (wide windows skipped posts that narrow windows returned), so a few posts may be missing"
+    },
     {
       "date": "2026-07-10",
       "negative_count": 98,
