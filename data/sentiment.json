@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-27T21:36:56-04:00",
+  "last_updated": "2026-10-28T08:09:53-04:00",
   "scores": [
     {
       "date": "2026-07-08",
@@ -1887,6 +1887,23 @@
       "classified_posts": 212,
       "partial_day": false,
       "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 292 matching posts paged (13 pages, recency, 25/page) until no next_token; 212 classified after dropping 80 spam/dup; X counts reports 296 for the day, +4 vs paged (1%) (X counts includes posts that search paging did not return, e.g. since-deleted posts or protected/suspended accounts; cause not verified)"
+    },
+    {
+      "date": "2026-10-27",
+      "negative_count": 54,
+      "positive_count": 37,
+      "neutral_count": 540,
+      "negative_score": 9,
+      "engagement_weighted_negative": 11.0,
+      "total_matching_posts": 676,
+      "unique_negative_accounts": 52,
+      "unique_accounts": 475,
+      "negative_accounts_score": 11,
+      "top_account_negative_posts": 2,
+      "full_capture": true,
+      "classified_posts": 631,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 648 matching posts paged (28 pages, recency, 25/page) until no next_token; 631 classified after dropping 17 spam/dup; X counts reports 676 for the day, +28 vs paged (4%) (X counts includes posts that search paging did not return, e.g. since-deleted posts or protected/suspended accounts; cause not verified)"
     }
   ]
 }
