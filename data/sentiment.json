@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-29T21:32:55-04:00",
+  "last_updated": "2026-10-29T21:34:02-04:00",
   "scores": [
     {
       "date": "2026-06-24",
@@ -85,6 +85,23 @@
       "classified_posts": 463,
       "partial_day": false,
       "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 482 matching posts paged (30 pages, recency, 25/page) until no next_token; 463 classified after dropping 16 spam/dup; no X count available (outside 7-day counts window); paging stalled/slowed, so end_time was narrowed to just after the oldest captured post (00:20:03Z on 06-29 UTC, then 22:37:12Z, then 14:36:48Z) and paging continued to the end"
+    },
+    {
+      "date": "2026-06-30",
+      "negative_count": 48,
+      "positive_count": 73,
+      "neutral_count": 688,
+      "negative_score": 6,
+      "engagement_weighted_negative": 11.1,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 37,
+      "unique_accounts": 642,
+      "negative_accounts_score": 6,
+      "top_account_negative_posts": 6,
+      "full_capture": true,
+      "classified_posts": 809,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 850 matching posts paged (57 pages, recency, 25/page) until no next_token; 809 classified after dropping 35 spam/dup; no X count available (outside 7-day counts window); paging stalled/slowed, so end_time was narrowed to just after the oldest captured post (20:06:59Z, then 17:08:23Z, then 14:44:25Z, then 13:17:19Z, then 13:05:10Z, then 06:48:05Z) and paging continued to the end"
     },
     {
       "date": "2026-07-01",
