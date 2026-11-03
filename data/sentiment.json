@@ -1,23 +1,6 @@
 {
-  "last_updated": "2026-11-02T21:39:00-05:00",
+  "last_updated": "2026-11-02T21:39:25-05:00",
   "scores": [
-    {
-      "date": "2026-05-10",
-      "negative_count": 9,
-      "positive_count": 39,
-      "neutral_count": 329,
-      "negative_score": 2,
-      "engagement_weighted_negative": 1.8,
-      "total_matching_posts": null,
-      "unique_negative_accounts": 9,
-      "unique_accounts": 291,
-      "negative_accounts_score": 3,
-      "top_account_negative_posts": 1,
-      "full_capture": true,
-      "classified_posts": 377,
-      "partial_day": false,
-      "notes": "Keyword-labelled candidates, reading in progress (0/377 read). Full capture: all 392 matching posts paged (36 pages, recency, 25/page) until no next_token; 377 classified after dropping 6 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (04:00Z to 04:00Z next day) because recency paging was slow (sparse pages); slow windows were cut at the oldest captured post (exclusive end) and the rest re-paged as fresh windows. Fresh/uncut windows: 04:00:00-12:00:00Z, 17:00:00-17:55:47Z, 12:00:00-14:00:00Z, 23:00:00-23:06:33Z; all paged until no next_token. Cut windows (tail captured before the cut): 15:45:06-16:00:00Z (was 12:00:00-16:00:00Z), 17:55:47-20:00:00Z (was 16:00:00-20:00:00Z), 03:11:43-04:00:00Z (was 20:00:00-04:00:00Z), 20:16:19-23:00:00Z (was 20:00:00-23:00:00Z), 02:04:47-03:11:43Z (was 23:00:00-03:11:43Z), 16:00:05-17:00:00Z (was 16:00:00-17:00:00Z), 14:00:14-15:45:06Z (was 14:00:00-15:45:06Z), 23:06:33-00:30:00Z (was 23:00:00-00:30:00Z), 00:37:23-02:04:47Z (was 00:30:00-02:04:47Z). Judgment call: remainder windows 20:00:00-20:16:19Z, 16:00:00-16:00:05Z, 14:00:00-14:00:14Z, 00:30:00-00:37:23Z returned only the already-captured boundary post with an unchanged next_token (paging loop), so they were treated as done."
-    },
     {
       "date": "2026-05-11",
       "negative_count": 44,
