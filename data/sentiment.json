@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-06T21:51:51-05:00",
+  "last_updated": "2026-11-07T08:13:46-05:00",
   "scores": [
     {
       "date": "2026-04-07",
@@ -3621,6 +3621,23 @@
       "classified_posts": 607,
       "partial_day": false,
       "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 765 matching posts paged (32 pages, recency, 25/page) until no next_token; 607 classified after dropping 157 spam/dup; X counts reports 804 for the day, +39 vs paged (5%) (X counts includes posts that search paging did not return, e.g. since-deleted posts or protected/suspended accounts; cause not verified); paging stalled/slowed, so end_time was narrowed to just after the oldest captured post (15:21:26Z) and paging continued to the end"
+    },
+    {
+      "date": "2026-11-06",
+      "negative_count": 127,
+      "positive_count": 16,
+      "neutral_count": 287,
+      "negative_score": 30,
+      "engagement_weighted_negative": 31.3,
+      "total_matching_posts": 458,
+      "unique_negative_accounts": 83,
+      "unique_accounts": 301,
+      "negative_accounts_score": 28,
+      "top_account_negative_posts": 13,
+      "full_capture": true,
+      "classified_posts": 430,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 434 matching posts paged (20 pages, recency, 25/page) until no next_token; 430 classified after dropping 4 spam/dup; X counts reports 458 for the day, +24 vs paged (5%) (X counts includes posts that search paging did not return, e.g. since-deleted posts or protected/suspended accounts; cause not verified)"
     }
   ]
 }
