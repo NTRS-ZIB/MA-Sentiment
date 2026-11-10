@@ -1,6 +1,91 @@
 {
-  "last_updated": "2026-11-08T08:12:27-05:00",
+  "last_updated": "2026-11-09T21:07:08-05:00",
   "scores": [
+    {
+      "date": "2026-03-21",
+      "negative_count": 24,
+      "positive_count": 52,
+      "neutral_count": 240,
+      "negative_score": 8,
+      "engagement_weighted_negative": 2.9,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 22,
+      "unique_accounts": 265,
+      "negative_accounts_score": 8,
+      "top_account_negative_posts": 3,
+      "full_capture": true,
+      "classified_posts": 316,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 323 matching posts paged (31 pages, recency, 25/page) until no next_token; 316 classified after dropping 6 spam/dup; no X count available (outside 7-day counts window)"
+    },
+    {
+      "date": "2026-03-22",
+      "negative_count": 42,
+      "positive_count": 42,
+      "neutral_count": 305,
+      "negative_score": 11,
+      "engagement_weighted_negative": 9.2,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 38,
+      "unique_accounts": 317,
+      "negative_accounts_score": 12,
+      "top_account_negative_posts": 2,
+      "full_capture": true,
+      "classified_posts": 389,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 391 matching posts paged (45 pages, recency, 25/page) until no next_token; 389 classified after dropping 1 spam/dup; no X count available (outside 7-day counts window)"
+    },
+    {
+      "date": "2026-03-23",
+      "negative_count": 45,
+      "positive_count": 97,
+      "neutral_count": 403,
+      "negative_score": 8,
+      "engagement_weighted_negative": 11.1,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 33,
+      "unique_accounts": 391,
+      "negative_accounts_score": 8,
+      "top_account_negative_posts": 8,
+      "full_capture": true,
+      "classified_posts": 545,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 576 matching posts paged (50 pages, recency, 25/page) until no next_token; 545 classified after dropping 30 spam/dup; no X count available (outside 7-day counts window)"
+    },
+    {
+      "date": "2026-03-24",
+      "negative_count": 41,
+      "positive_count": 30,
+      "neutral_count": 320,
+      "negative_score": 10,
+      "engagement_weighted_negative": 10.7,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 39,
+      "unique_accounts": 326,
+      "negative_accounts_score": 12,
+      "top_account_negative_posts": 2,
+      "full_capture": true,
+      "classified_posts": 391,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 403 matching posts paged (48 pages, recency, 25/page) until no next_token; 391 classified after dropping 8 spam/dup; no X count available (outside 7-day counts window)"
+    },
+    {
+      "date": "2026-03-25",
+      "negative_count": 56,
+      "positive_count": 50,
+      "neutral_count": 481,
+      "negative_score": 10,
+      "engagement_weighted_negative": 8.9,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 45,
+      "unique_accounts": 424,
+      "negative_accounts_score": 11,
+      "top_account_negative_posts": 4,
+      "full_capture": true,
+      "classified_posts": 587,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 630 matching posts paged (59 pages, recency, 25/page) until no next_token; 587 classified after dropping 39 spam/dup; no X count available (outside 7-day counts window)"
+    },
     {
       "date": "2026-03-26",
       "negative_count": 75,
@@ -16,7 +101,7 @@
       "full_capture": true,
       "classified_posts": 943,
       "partial_day": false,
-      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 955 matching posts paged (53 pages, recency, 25/page) until no next_token; 943 classified after dropping 12 spam/dup; no X count available (outside 7-day counts window); run13 full capture: 955 posts across 53 pages (4 windows); proactive -from spam exclusions (Imikealfreq, lnmikealfred/sanjay, dixieoneshot007, pabloskif, TheLongInnstor, DrejerServices, IMikealfreog) plus -from:796719216 (mikealfred_b telegram impersonator discovered flooding Mar 29 evening, applied here proactively); no extra in-window floods and no stalls; BUSY vs usual 200-375, driven by a heavy afternoon (25 of 53 pages in the noon-6pm ET window) and a solid evening (13 pages) plus a busy morning (12 pages); NarcissistX10 posted 12 times across the day and morris11183 posted 11 (kept, not a single-page telegram/impersonator flood); keyword labels only, not read-labelled."
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 955 matching posts paged (53 pages, recency, 25/page) until no next_token; 943 classified after dropping 12 spam/dup; no X count available (outside 7-day counts window); run13 full capture: 955 posts across 53 pages (4 windows); proactive -from spam exclusions (Imikealfreq, lnmikealfred/sanjay, dixieoneshot007, pabloskif, TheLongInnstor, DrejerServices, IMikealfreog) plus -from:796719216 (mikealfred_b telegram impersonator discovered flooding Mar 29 evening, applied here proactively); no extra in-window floods and no stalls; BUSY vs usual 200-375, driven by a heavy afternoon (25 of 53 pages in the noon-6pm ET window) and a solid evening (13 pages) plus a busy morning (12 pages); NarcissistX10 posted 12 times across the day and morris11183 posted 11 (kept, not a single-page telegram/impersonator flood); read-labelled in run13."
     },
     {
       "date": "2026-03-27",
@@ -33,7 +118,7 @@
       "full_capture": true,
       "classified_posts": 366,
       "partial_day": false,
-      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 369 matching posts paged (44 pages, recency, 25/page) until no next_token; 366 classified after dropping 1 spam/dup; no X count available (outside 7-day counts window); run13 full capture: 369 posts across 44 pages (4 original windows plus resplit remainder windows); proactive -from spam exclusions (Imikealfreq, lnmikealfred/sanjay, dixieoneshot007, pabloskif, TheLongInnstor, DrejerServices, IMikealfreog) plus -from:796719216 (mikealfred_b telegram impersonator discovered flooding Mar 29 evening, applied here proactively); no extra in-window floods; afternoon 16:00-22:00Z stalled on empty next_token pages after oldest 18:20:08Z \u2014 narrowed that window end to 18:20:09Z then resplit remaining range into 16:00-17:10 and 17:10-18:20:08 (recovered 41 posts in 16:00-17:10); 17:10-18:20:08 needed further resplits/narrowing (17:10-17:42 recovered 16; 17:42-18:20:08 then 17:42-17:58 / 17:58-18:13:43) and recovered more isolated posts (including 18:13:43 and 18:04:45/18:00:38); narrowed the 17:58 window end to 18:00:39Z after empty token and terminated with empty no-token; high-typical vs usual 200-375; keyword labels only, not read-labelled."
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 369 matching posts paged (44 pages, recency, 25/page) until no next_token; 366 classified after dropping 1 spam/dup; no X count available (outside 7-day counts window); run13 full capture: 369 posts across 44 pages (4 original windows plus resplit remainder windows); proactive -from spam exclusions (Imikealfreq, lnmikealfred/sanjay, dixieoneshot007, pabloskif, TheLongInnstor, DrejerServices, IMikealfreog) plus -from:796719216 (mikealfred_b telegram impersonator discovered flooding Mar 29 evening, applied here proactively); no extra in-window floods; afternoon 16:00-22:00Z stalled on empty next_token pages after oldest 18:20:08Z \u2014 narrowed that window end to 18:20:09Z then resplit remaining range into 16:00-17:10 and 17:10-18:20:08 (recovered 41 posts in 16:00-17:10); 17:10-18:20:08 needed further resplits/narrowing (17:10-17:42 recovered 16; 17:42-18:20:08 then 17:42-17:58 / 17:58-18:13:43) and recovered more isolated posts (including 18:13:43 and 18:04:45/18:00:38); narrowed the 17:58 window end to 18:00:39Z after empty token and terminated with empty no-token; high-typical vs usual 200-375; read-labelled in run13."
     },
     {
       "date": "2026-03-28",
@@ -50,7 +135,7 @@
       "full_capture": true,
       "classified_posts": 569,
       "partial_day": false,
-      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 570 matching posts paged (30 pages, recency, 25/page) until no next_token; 569 classified after dropping 1 spam/dup; no X count available (outside 7-day counts window); run13 full capture: 570 posts across 30 pages (4 windows); proactive -from spam exclusions (Imikealfreq, lnmikealfred/sanjay, dixieoneshot007, pabloskif, TheLongInnstor, DrejerServices, IMikealfreog) plus -from:796719216 (mikealfred_b telegram impersonator discovered flooding Mar 29 evening, applied here proactively); no extra in-window floods and no stalls; busy vs usual 200-375, driven by a heavy evening (17 of 30 pages in the 6pm-midnight ET window) and a solid afternoon (9 pages); Tank_Hankerous posted often in the evening (kept, real user); keyword labels only, not read-labelled."
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 570 matching posts paged (30 pages, recency, 25/page) until no next_token; 569 classified after dropping 1 spam/dup; no X count available (outside 7-day counts window); run13 full capture: 570 posts across 30 pages (4 windows); proactive -from spam exclusions (Imikealfreq, lnmikealfred/sanjay, dixieoneshot007, pabloskif, TheLongInnstor, DrejerServices, IMikealfreog) plus -from:796719216 (mikealfred_b telegram impersonator discovered flooding Mar 29 evening, applied here proactively); no extra in-window floods and no stalls; busy vs usual 200-375, driven by a heavy evening (17 of 30 pages in the 6pm-midnight ET window) and a solid afternoon (9 pages); Tank_Hankerous posted often in the evening (kept, real user); read-labelled in run13."
     },
     {
       "date": "2026-03-29",
@@ -67,7 +152,7 @@
       "full_capture": true,
       "classified_posts": 915,
       "partial_day": false,
-      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 949 matching posts paged (63 pages, recency, 25/page) until no next_token; 915 classified after dropping 34 spam/dup; no X count available (outside 7-day counts window); run13 full capture: 949 posts across 63 pages (4 windows); proactive -from spam exclusions (Imikealfreq, lnmikealfred/sanjay, dixieoneshot007, pabloskif, TheLongInnstor, DrejerServices, IMikealfreog); evening w3 flooded by telegram impersonator mikealfred_b (796719216, 'Visit my profile I highly recommend you to join my first private Telegram group') at 24 of 25 on one page \u2014 added -from:796719216 for the remainder of that window and narrowed its end to 2026-03-30T03:05:20Z (1s after oldest post on the flood page); no other stalls; BUSY vs usual 200-375 (overnight window alone took 32 pages); keyword labels only, not read-labelled."
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 949 matching posts paged (63 pages, recency, 25/page) until no next_token; 915 classified after dropping 34 spam/dup; no X count available (outside 7-day counts window); run13 full capture: 949 posts across 63 pages (4 windows); proactive -from spam exclusions (Imikealfreq, lnmikealfred/sanjay, dixieoneshot007, pabloskif, TheLongInnstor, DrejerServices, IMikealfreog); evening w3 flooded by telegram impersonator mikealfred_b (796719216, 'Visit my profile I highly recommend you to join my first private Telegram group') at 24 of 25 on one page \u2014 added -from:796719216 for the remainder of that window and narrowed its end to 2026-03-30T03:05:20Z (1s after oldest post on the flood page); no other stalls; BUSY vs usual 200-375 (overnight window alone took 32 pages); read-labelled in run13."
     },
     {
       "date": "2026-03-30",
@@ -84,7 +169,7 @@
       "full_capture": true,
       "classified_posts": 236,
       "partial_day": false,
-      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 238 matching posts paged (48 pages, recency, 25/page) until no next_token; 236 classified; no X count available (outside 7-day counts window); run13 full capture: 238 paged posts across 48 pages (4 original windows plus resplit remainder windows); proactive -from spam exclusions (Imikealfreq, lnmikealfred/sanjay, dixieoneshot007, pabloskif, TheLongInnstor, DrejerServices, IMikealfreog); no extra in-run -from; morning 10:00-16:00Z stalled on empty next_token pages after oldest 13:51:07Z \u2014 narrowed that window end to 13:51:08Z then resplit remaining range into 10:00-12:00 and 12:00-13:51:07 (recovered 16 posts in 10:00-12:00 and later 5 in 12:00-13:00); 13:00-13:51:07 needed further resplits/narrowing (13:00-13:25, 13:25-13:51:07, then 13:25-13:30 / 13:30-13:33:59) and recovered a few more isolated posts; 13:25-13:30Z produced only empty pages before a terminal no-token empty (possible thin/unretrievable sliver); typical/light vs usual 200-375; keyword labels only, not read-labelled."
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 238 matching posts paged (48 pages, recency, 25/page) until no next_token; 236 classified; no X count available (outside 7-day counts window); run13 full capture: 238 paged posts across 48 pages (4 original windows plus resplit remainder windows); proactive -from spam exclusions (Imikealfreq, lnmikealfred/sanjay, dixieoneshot007, pabloskif, TheLongInnstor, DrejerServices, IMikealfreog); no extra in-run -from; morning 10:00-16:00Z stalled on empty next_token pages after oldest 13:51:07Z \u2014 narrowed that window end to 13:51:08Z then resplit remaining range into 10:00-12:00 and 12:00-13:51:07 (recovered 16 posts in 10:00-12:00 and later 5 in 12:00-13:00); 13:00-13:51:07 needed further resplits/narrowing (13:00-13:25, 13:25-13:51:07, then 13:25-13:30 / 13:30-13:33:59) and recovered a few more isolated posts; 13:25-13:30Z produced only empty pages before a terminal no-token empty (possible thin/unretrievable sliver); typical/light vs usual 200-375; read-labelled in run13."
     },
     {
       "date": "2026-03-31",
@@ -101,7 +186,7 @@
       "full_capture": true,
       "classified_posts": 384,
       "partial_day": false,
-      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 392 matching posts paged (27 pages, recency, 25/page) until no next_token; 384 classified after dropping 8 spam/dup; no X count available (outside 7-day counts window); run13 full capture: 392 posts across 27 pages (4 windows); proactive -from spam exclusions (Imikealfreq, lnmikealfred/sanjay, dixieoneshot007, pabloskif, TheLongInnstor, DrejerServices, IMikealfreog); no extra in-run -from; no stalls; slightly busy vs usual 200-375, driven by a heavy afternoon (14 of 27 pages in the noon-6pm ET window); keyword labels only, not read-labelled."
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 392 matching posts paged (27 pages, recency, 25/page) until no next_token; 384 classified after dropping 8 spam/dup; no X count available (outside 7-day counts window); run13 full capture: 392 posts across 27 pages (4 windows); proactive -from spam exclusions (Imikealfreq, lnmikealfred/sanjay, dixieoneshot007, pabloskif, TheLongInnstor, DrejerServices, IMikealfreog); no extra in-run -from; no stalls; slightly busy vs usual 200-375, driven by a heavy afternoon (14 of 27 pages in the noon-6pm ET window); read-labelled in run13."
     },
     {
       "date": "2026-04-01",
