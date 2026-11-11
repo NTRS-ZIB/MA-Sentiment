@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-10T08:25:48-05:00",
+  "last_updated": "2026-11-10T21:01:41-05:00",
   "scores": [
+    {
+      "date": "2026-03-20",
+      "negative_count": 137,
+      "positive_count": 76,
+      "neutral_count": 754,
+      "negative_score": 14,
+      "engagement_weighted_negative": 15.3,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 126,
+      "unique_accounts": 749,
+      "negative_accounts_score": 17,
+      "top_account_negative_posts": 3,
+      "full_capture": true,
+      "classified_posts": 967,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 986 matching posts paged (92 pages, recency, 25/page) until no next_token; 967 classified after dropping 14 spam/dup; no X count available (outside 7-day counts window); run15 full capture: 986 paged posts (981 unique) across 92 pages, paged in UTC sub-windows covering the full ET day (04:00Z-04:00Z) with -from:796719216 (mikealfred_b telegram impersonator) excluded proactively; slow/sparse windows were cut at the oldest captured post and re-paged as fresh windows (20:00-23:09Z, 00:00-02:42Z, 01:48-02:23Z, 16:00-17:25Z, 22:37-22:49Z). Judgment call: 22:53:30-23:09:15Z (6:53-7:09pm ET) returned 3 consecutive empty pages with a next_token (and was empty inside two earlier wider windows), treated as having no retrievable posts; the 22:06-23:09Z evening span was very sparse overall. BUSY vs usual 200-375: heavy midday/afternoon (12:00-20:00Z ~ 8am-4pm ET). Captured in run15; read-labelled in run16 (Nov 10)."
+    },
     {
       "date": "2026-03-21",
       "negative_count": 24,
