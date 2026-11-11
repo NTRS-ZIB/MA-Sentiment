@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-10T21:01:41-05:00",
+  "last_updated": "2026-11-10T21:07:58-05:00",
   "scores": [
+    {
+      "date": "2026-03-19",
+      "negative_count": 126,
+      "positive_count": 65,
+      "neutral_count": 482,
+      "negative_score": 19,
+      "engagement_weighted_negative": 17.4,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 118,
+      "unique_accounts": 548,
+      "negative_accounts_score": 22,
+      "top_account_negative_posts": 2,
+      "full_capture": true,
+      "classified_posts": 673,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 695 matching posts paged (66 pages, recency, 25/page) until no next_token; 673 classified after dropping 16 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (04:00Z to 04:00Z next day) because recency paging was slow (sparse pages); slow windows were cut at the oldest captured post (exclusive end) and the rest re-paged as fresh windows. Fresh/uncut windows: 04:00:00-12:00:00Z, 12:00:00-13:01:46Z, 13:01:46-14:03:33Z, 16:00:00-16:56:41Z, 17:53:22-18:50:03Z, 18:50:03-19:46:45Z, 20:00:00-20:52:19Z, 20:52:19-21:44:38Z, 00:00:00-01:00:47Z, 01:00:47-02:01:35Z, 16:56:41-17:03:22Z, 17:03:22-17:10:03Z, 17:10:03-17:16:45Z, 17:16:45-17:23:26Z, 17:23:26-17:30:08Z; all paged until no next_token. Cut windows (tail captured before the cut): 14:03:33-16:00:00Z (was 12:00:00-16:00:00Z), 19:46:45-20:00:00Z (was 16:00:00-20:00:00Z), 21:44:38-00:00:00Z (was 20:00:00-00:00:00Z), 02:01:35-04:00:00Z (was 00:00:00-04:00:00Z), 17:34:21-17:53:22Z (was 16:56:41-17:53:22Z), 17:34:20-17:34:21Z (was 16:56:41-17:34:21Z), 17:30:08-17:34:20Z (was 16:56:41-17:34:20Z). run16 full capture with -from:796719216 (mikealfred_b telegram impersonator) excluded proactively. The 16:56-17:34Z span (12:56-1:34pm ET) paged very slowly (empty/1-post pages with next_token), so it was re-paged as a fresh window and then as 7-minute windows, each paged until no next_token. BUSY vs usual 200-375: Mike's 'gold and silver are not safe haven assets / shiny rocks' post plus his 'biggest bear trap in 27 years' call drew heavy pushback, along with deleted-tweet and blocking accusations. Captured and read-labelled in run16 (Nov 10)."
+    },
     {
       "date": "2026-03-20",
       "negative_count": 137,
