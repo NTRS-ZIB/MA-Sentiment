@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-11T21:29:59-05:00",
+  "last_updated": "2026-11-12T08:26:51-05:00",
   "scores": [
     {
       "date": "2026-03-14",
@@ -4114,6 +4114,23 @@
       "classified_posts": 194,
       "partial_day": false,
       "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 389 matching posts paged (17 pages, recency, 25/page) until no next_token; 194 classified after dropping 195 spam/dup; X counts reports 428 for the day, +39 vs paged (9%) (X counts includes posts that search paging did not return, e.g. since-deleted posts or protected/suspended accounts; cause not verified); 195 of the 389 paged posts were the 4RTGABSZ Facebook-promo copypasta bot (already on the spam list) and were dropped; no narrowing needed"
+    },
+    {
+      "date": "2026-11-11",
+      "negative_count": 109,
+      "positive_count": 22,
+      "neutral_count": 314,
+      "negative_score": 24,
+      "engagement_weighted_negative": 23.0,
+      "total_matching_posts": 671,
+      "unique_negative_accounts": 90,
+      "unique_accounts": 354,
+      "negative_accounts_score": 25,
+      "top_account_negative_posts": 6,
+      "full_capture": true,
+      "classified_posts": 445,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 577 matching posts paged (25 pages, recency, 25/page) until no next_token; 445 classified after dropping 42 spam/dup; X counts reports 671 for the day, +94 vs paged (14%) (X counts includes posts that search paging did not return, e.g. since-deleted posts or protected/suspended accounts; cause not verified); the 577 paged figure includes 90 duplicate posts from the re-paged windows: 487 unique posts, so X counts is +184 (27%) vs unique; hours 12-14Z and 17-19Z were short by 24 and 130 vs X hourly counts; re-paged 17:00-19:00Z (3 pages) and 12:00-14:00Z (1 page) as separate windows and got no new posts, so the shortfall appears to be posts search will not return (cause not verified); no narrowing needed"
     }
   ]
 }
