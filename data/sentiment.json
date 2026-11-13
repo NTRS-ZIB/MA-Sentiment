@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-12T08:26:51-05:00",
+  "last_updated": "2026-11-12T21:15:36-05:00",
   "scores": [
+    {
+      "date": "2026-03-13",
+      "negative_count": 43,
+      "positive_count": 17,
+      "neutral_count": 273,
+      "negative_score": 13,
+      "engagement_weighted_negative": 11.4,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 37,
+      "unique_accounts": 261,
+      "negative_accounts_score": 14,
+      "top_account_negative_posts": 6,
+      "full_capture": true,
+      "classified_posts": 333,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 333 matching posts paged (79 pages, recency, 25/page) until no next_token; 333 classified; no X count available (outside 7-day counts window); paged in 37 UTC sub-windows covering the full ET day (04:00Z to 04:00Z next day, EDT) with hourly daytime windows; slow windows were cut at the oldest captured post (exclusive end) and the rest re-paged as fresh windows (08:00-11:00Z cut at 10:49:02Z, re-paged hourly; 10:00-10:49Z split further to 10:00-10:15, 10:15-10:30, 10:30-10:43:41, 10:30-10:34:47Z after empty pages with next_token); every window was paged until no next_token. Gap probes: fresh windows from each hourly window start to its oldest captured post (15:00-15:10, 17:00-17:05, 18:00-18:16, 19:00-19:05, 20:00-20:20, 22:00-22:12, 00:00-00:24, 02:00-02:21, 08:00-08:20, 09:00-09:54, 11:00-11:45, 12:00-12:31Z) all returned no posts. Several windows returned 3-5 empty pages with a next_token before more posts or the end appeared (10:30-10:43Z yielded 1 more post after 3 empty pages). run18 full capture with -from:796719216 (mikealfred_b telegram impersonator) excluded proactively. Usual volume (333 paged, 333 classified, no spam dropped): mockery of Mike's '10AM rip' Claude/Mac-mini algo joke, CK_Cryptoklepto's repeated 'paid to hate on MARA' attacks, wagyu/sushi dinner photo replies, chart-squiggler banter. Captured and read-labelled in run18 (Nov 12)."
+    },
     {
       "date": "2026-03-14",
       "negative_count": 45,
