@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-12T21:22:43-05:00",
+  "last_updated": "2026-11-12T21:30:43-05:00",
   "scores": [
+    {
+      "date": "2026-03-11",
+      "negative_count": 91,
+      "positive_count": 22,
+      "neutral_count": 489,
+      "negative_score": 15,
+      "engagement_weighted_negative": 36.7,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 84,
+      "unique_accounts": 492,
+      "negative_accounts_score": 17,
+      "top_account_negative_posts": 2,
+      "full_capture": true,
+      "classified_posts": 602,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 629 matching posts paged (82 pages, recency, 25/page) until no next_token; 602 classified after dropping 27 spam/dup; no X count available (outside 7-day counts window); paged in 37 UTC sub-windows covering the full ET day (04:00Z to 04:00Z next day, EDT) with hourly daytime windows; slow windows were cut at the oldest captured post (exclusive end) and the rest re-paged as fresh windows, repeatedly where needed (13:00-14:00Z cut at 13:41:18Z, then 13:29:28Z, 13:27:11Z, re-paged as 13:00-13:14Z and 13:14-13:27:11Z, then 13:14-13:15:35Z; 16:00-17:00Z cut at 16:43:34Z; 00:00-02:00Z cut at 01:39:03Z, then 01:00:57Z, 00:59:35Z, re-paged as 00:00-00:20Z, 00:20-00:40Z, 00:40-00:59:35Z, with further cuts at 00:00:53Z, 00:55:24Z and 00:51:11Z); every window was paged until no next_token. Gap probes 11:00-11:13:54Z, 15:00-15:07:06Z, 20:00-20:16:39Z, 23:00-23:02:21Z and 13:00-13:03:19Z returned no posts. run18 full capture with -from:796719216 (mikealfred_b telegram impersonator) excluded proactively. BUSY vs usual 200-375 (629 paged, 602 classified after dropping 19 AI-bot replies and 8 copypasta spam): heavy pushback on Mike's 'keep stacking until 100 BTC' post (called out of touch/clickbait), his cut of the CIFR target to $20, HIMS-short and deleted-tweet mockery amplified by Ben Cowen ('even Grok calls Mike out'), and the evening first-class-to-Dubai post; also agreement with his 'chart squigglers vs quality assets' post and concern for Opendoor CEO Kaz's security. Captured and read-labelled in run18 (Nov 12)."
+    },
     {
       "date": "2026-03-12",
       "negative_count": 229,
