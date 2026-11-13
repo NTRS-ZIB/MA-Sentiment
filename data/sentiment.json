@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-12T21:15:36-05:00",
+  "last_updated": "2026-11-12T21:22:43-05:00",
   "scores": [
+    {
+      "date": "2026-03-12",
+      "negative_count": 229,
+      "positive_count": 38,
+      "neutral_count": 571,
+      "negative_score": 27,
+      "engagement_weighted_negative": 39.6,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 215,
+      "unique_accounts": 683,
+      "negative_accounts_score": 31,
+      "top_account_negative_posts": 4,
+      "full_capture": true,
+      "classified_posts": 838,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 870 matching posts paged (77 pages, recency, 25/page) until no next_token; 838 classified after dropping 32 spam/dup; no X count available (outside 7-day counts window); paged in 20 UTC sub-windows covering the full ET day (04:00Z to 04:00Z next day, EDT) with hourly daytime windows; slow windows were cut at the oldest captured post (exclusive end) and the rest re-paged as fresh windows (18:00-19:00Z cut at 18:36:41Z, re-paged 18:00-18:36:41Z; 00:00-02:00Z cut at 00:20:43Z, re-paged 00:00-00:20:43Z); every window was paged until no next_token. Gap probe 17:00-17:12:38Z returned no posts. run18 full capture with -from:796719216 (mikealfred_b telegram impersonator) excluded proactively. BUSY vs usual 200-375 (870 paged, 838 classified after dropping 16 AI-bot replies and 16 copypasta spam): huge backlash to Mike's first-class flight-to-Dubai post (first class 'coding with Claude and buying bitcoin' vs economy watching for drones), widely called fake/made-up/copied, with many insults; also deleted-post and HIMS/BKKT criticism, alongside praise for his Scott Melker (Wolf of All Streets) show appearance and wine-collection post. Captured and read-labelled in run18 (Nov 12)."
+    },
     {
       "date": "2026-03-13",
       "negative_count": 43,
