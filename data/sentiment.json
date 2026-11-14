@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-13T08:22:56-05:00",
+  "last_updated": "2026-11-13T21:07:57-05:00",
   "scores": [
+    {
+      "date": "2026-03-10",
+      "negative_count": 60,
+      "positive_count": 46,
+      "neutral_count": 427,
+      "negative_score": 11,
+      "engagement_weighted_negative": 17.1,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 54,
+      "unique_accounts": 383,
+      "negative_accounts_score": 14,
+      "top_account_negative_posts": 4,
+      "full_capture": true,
+      "classified_posts": 533,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 545 matching posts paged (78 pages, recency, 25/page) until no next_token; 533 classified after dropping 12 spam/dup; no X count available (outside 7-day counts window); paged in 35 UTC sub-windows covering the full ET day (04:00Z to 04:00Z next day, EDT) with hourly daytime windows; every window was paged until no next_token. Slow windows were cut at the oldest captured post (exclusive end) and the rest re-paged as fresh windows: 12:00-13:00Z cut at 12:28:41Z, 14:00-15:00Z cut at 14:34:38Z then 14:00:09Z, 16:00-17:00Z cut at 16:50:41Z, 17:00-18:00Z cut at 17:13:58Z, 20:00-21:00Z cut at 20:00:47Z, 21:00-22:00Z cut at 21:05:43Z; 12:00-12:28:41Z and 16:00-16:50:41Z were split into halves. The 00:00-02:00Z window returned 0 posts and 'done' on its first page (early-done), so it was re-paged as 00:00-01:00Z and 01:00-02:00Z, which yielded the evening posts. Judgment call: remainder windows 12:14-12:28:41Z, 16:25-16:50:41Z, 17:00-17:13:58Z and a gap probe 11:00-11:15:10Z returned only empty pages with repeating next_tokens (paging loop) and were treated as done. Gap probes 08:00-08:08:24Z, 13:00-13:03:10Z, 19:00-19:02:40Z, 02:00-02:05:01Z and 12:00-12:14Z returned no posts. run19 full capture with -from:796719216 (mikealfred_b telegram impersonator) excluded proactively. BUSY vs usual 200-375 (545 paged, 533 classified after dropping 7 copypasta spam and 5 AI-bot replies): Mike's daylight-saving 'stop complaining' post drew pushback, an extended spat with pepemoonboy (ratio/block, 'ego bruised'), Jane Street-call mockery, ASST 'bagged people' and grifter/clown/pompous jabs; also strong support and OPEN offer-quality discussion with Opendoor CEO Kaz (nejatian) and bullish 'peak bearish sentiment' replies. Captured and read-labelled in run19 (Nov 13)."
+    },
     {
       "date": "2026-03-11",
       "negative_count": 91,
