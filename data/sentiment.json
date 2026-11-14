@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-13T21:07:57-05:00",
+  "last_updated": "2026-11-13T21:16:01-05:00",
   "scores": [
+    {
+      "date": "2026-03-09",
+      "negative_count": 159,
+      "positive_count": 34,
+      "neutral_count": 698,
+      "negative_score": 18,
+      "engagement_weighted_negative": 34.3,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 141,
+      "unique_accounts": 755,
+      "negative_accounts_score": 19,
+      "top_account_negative_posts": 11,
+      "full_capture": true,
+      "classified_posts": 891,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 907 matching posts paged (88 pages, recency, 25/page) until no next_token; 891 classified after dropping 16 spam/dup; no X count available (outside 7-day counts window); paged in 26 UTC sub-windows covering the full ET day (04:00Z to 04:00Z next day, EDT) with a 04:00-08:00Z night block, 08:00-11:00Z, then hourly windows; every window was paged until no next_token. Slow windows were cut at the oldest captured post (exclusive end) and the rest re-paged as fresh windows: 13:00-14:00Z cut at 13:53:28Z then 13:48:31Z, 14:00-15:00Z cut at 14:11:37Z, 17:00-18:00Z cut at 17:39:31Z. Gap probes 11:00-11:07:49Z, 18:00-18:05:57Z and 19:00-19:13:38Z (windows that ended 'done' well after the hour start) returned no posts. run19 full capture with -from:796719216 (mikealfred_b telegram impersonator) excluded proactively. VERY BUSY vs usual 200-375 (907 paged, 891 classified after dropping 9 AI-bot replies and 7 copypasta spam): a massive pile-on under Mike's post calling the Iran war 'successful' (clown/idiot/moron/'good goy' insults, TACO and school-casualty rebukes), mockery of his sarcastic 'it's over, sell everything' crash-list post and his 'I just got off the phone with...' insider-call posts (Jane Street, tanker hotline), accusations of copying others' tweets, and a pepemoonboy/Tank_Hankerous feud (grifter, Carlo Rossi wine jabs, 'eviscerated by Ben Cowen'); also agreement with his AI-is-like-early-Covid analogy. Captured and read-labelled in run19 (Nov 13)."
+    },
     {
       "date": "2026-03-10",
       "negative_count": 60,
