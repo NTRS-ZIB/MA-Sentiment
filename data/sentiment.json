@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-13T21:16:01-05:00",
+  "last_updated": "2026-11-13T21:25:03-05:00",
   "scores": [
+    {
+      "date": "2026-03-08",
+      "negative_count": 213,
+      "positive_count": 47,
+      "neutral_count": 613,
+      "negative_score": 24,
+      "engagement_weighted_negative": 29.5,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 190,
+      "unique_accounts": 706,
+      "negative_accounts_score": 27,
+      "top_account_negative_posts": 4,
+      "full_capture": true,
+      "classified_posts": 873,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 910 matching posts paged (83 pages, recency, 25/page) until no next_token; 873 classified after dropping 37 spam/dup; no X count available (outside 7-day counts window); paged in 42 UTC sub-windows covering the full ET day (05:00Z Mar 8 to 04:00Z Mar 9; DST began Mar 8 so the ET day is 23 hours) with a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token. Slow windows were cut at the oldest captured post (exclusive end) and the rest re-paged as fresh windows: 05-09Z at 05:02:05Z, 09-12Z at 09:00:14Z, 14-15Z at 14:01:03Z, 15-16Z at 15:02:44Z then 15:00:08Z, 16-17Z at 16:27:32Z then 16:01:48Z then 16:00:30Z, 17-18Z at 17:00:12Z, 18-19Z at 18:37:28Z then 18:31:49Z then 18:28:15Z (remaining 18:00-18:28:15Z re-paged as three ~10-minute windows, which surfaced ~27 posts the slow window had not returned) then 18:20:05Z, 19-20Z at 19:00:20Z, 22-23Z at 22:09:39Z then 22:03:31Z, 00-01Z at 00:00:22Z, 01-02Z at 01:00:17Z, 02-03Z at 02:01:40Z, 03-04Z at 03:00:15Z. Gap probes 12:13:33-12:31:46Z and 23:32:14-23:56:37Z returned no posts. run19 full capture with -from:796719216 (mikealfred_b telegram impersonator) excluded proactively. BUSY vs usual 200-375 (910 paged, 873 classified). Every post labelled by reading (keywords only flagged candidates). Drivers: Mike's yacht 'sailed through the Strait of Hormuz, open for business' post drew pics-or-it-didn't-happen and fake-news mockery, caviar/Dom flex jabs; his satirical 'it's over, sell everything' crash-list post drew many play-along and laughing replies but also boy-who-cried-wolf, clickbait and 'shut up' attacks; his '$315k or zero' chart-squiggler satire drew 'bullshit/nonsense' replies; recurring scammer/grifter, phone-call/insider mockery and 'why is Mike Alfred on the IREN board' posts. Supportive replies enjoyed the satire."
+    },
     {
       "date": "2026-03-09",
       "negative_count": 159,
