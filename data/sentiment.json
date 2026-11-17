@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-16T21:05:06-05:00",
+  "last_updated": "2026-11-16T21:16:32-05:00",
   "scores": [
+    {
+      "date": "2026-03-03",
+      "negative_count": 182,
+      "positive_count": 132,
+      "neutral_count": 507,
+      "negative_score": 22,
+      "engagement_weighted_negative": 33.4,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 166,
+      "unique_accounts": 658,
+      "negative_accounts_score": 25,
+      "top_account_negative_posts": 3,
+      "full_capture": true,
+      "classified_posts": 821,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 833 matching posts paged (85 pages, recency, 25/page) until no next_token; 821 classified after dropping 12 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z to 05:00Z next day, EST): a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token. Windows whose paging ended more than ~1 minute after the window start were re-paged from the window start to the oldest captured post as fresh windows (05:00-05:15:34Z, 09:00-10:01:43Z, 12:00-12:14:50Z, 13:00-13:02:35Z, 14:00-14:12:24Z, 15:00-15:03:32Z, 16:00-16:04:21Z, 22:00-22:01:06Z, 00:00-00:02:08Z, 02:00-02:03:11Z, 03:00-03:03:49Z, 04:00-04:01:39Z); all returned no further posts. Seven fresh probes of the largest daytime gaps (10:44-11:12Z, 11:41-12:14Z, 12:14-12:34Z, 13:39-14:12Z, 14:40-15:03Z, 15:44-15:55Z, 16:04-16:27Z) also returned no posts, so the quiet morning stretches look genuine. Judgment call: several pages came back with zero posts but a stale next_token (09:00-10:01Z, 12:00-12:14Z, 00:00-01:00Z, 16:04-16:27Z, 11:41-12:14Z windows); these were treated as the end of the window. run22 full capture (Nov 16) with -from:796719216 (mikealfred_b impersonator) excluded proactively. VERY BUSY vs usual 200-375 (833 paged, 821 classified after dropping 8 copypasta and 4 AI-bot replies), driven by a pile-on after Mike called Ben Cowen a 'charlatan' and mocked a 22-year-old 'chart squiggler' with a $12K account who was 70% cash; replies split between Ben defenders insulting Mike and followers agreeing, plus warm replies to his evening wine post. Every post labelled by reading (keywords only flagged candidates), all 821 in run22 (Nov 16)."
+    },
     {
       "date": "2026-03-04",
       "negative_count": 75,
