@@ -1,22 +1,22 @@
 {
-  "last_updated": "2026-11-15T08:04:51-05:00",
+  "last_updated": "2026-11-16T21:05:06-05:00",
   "scores": [
     {
       "date": "2026-03-04",
-      "negative_count": 74,
-      "positive_count": 57,
-      "neutral_count": 566,
+      "negative_count": 75,
+      "positive_count": 58,
+      "neutral_count": 564,
       "negative_score": 11,
-      "engagement_weighted_negative": 8.0,
+      "engagement_weighted_negative": 8.1,
       "total_matching_posts": null,
-      "unique_negative_accounts": 60,
+      "unique_negative_accounts": 61,
       "unique_accounts": 505,
       "negative_accounts_score": 12,
-      "top_account_negative_posts": 5,
+      "top_account_negative_posts": 4,
       "full_capture": true,
       "classified_posts": 697,
       "partial_day": false,
-      "notes": "Keyword-labelled candidates, reading in progress (550/697 read). Full capture: all 703 matching posts paged (63 pages, recency, 25/page) until no next_token; 697 classified after dropping 6 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z to 05:00Z next day, EST) with a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token or until paging reached within about a minute of the window start. Slow or early-'done' windows were cut at the oldest captured post (exclusive end) and the rest re-paged as fresh windows: 09-12Z at 09:14:17Z, 12-13Z at 12:20:12Z, 13-14Z at 13:10:07Z, 14-15Z at 14:21:01Z (fresh 14:00-14:21Z window surfaced ~26 more posts), 15-16Z at 15:13:45Z (fresh window surfaced ~40 more), 17-18Z at 17:04:00Z, 19-20Z at 19:04:41Z, 20-21Z at 20:13:24Z, 21-22Z at 21:12:49Z, 22-23Z at 22:09:04Z, 23-00Z at 23:05:17Z, 03-04Z at 03:03:15Z; the other re-paged remainders returned no posts. Judgment call: the 03:00-03:03:15Z probe returned a zero-post page with a stale next_token and was treated as empty. run21 full capture (Nov 14) with -from:796719216 (mikealfred_b telegram impersonator) excluded proactively. BUSY vs usual 200-375 (703 paged, 697 classified after dropping 3 copypasta and 3 AI-bot replies). Every post labelled by reading (keywords only flagged candidates); posts 0-549 read in run21, 550-696 in the next run."
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 703 matching posts paged (63 pages, recency, 25/page) until no next_token; 697 classified after dropping 6 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z to 05:00Z next day, EST) with a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token or until paging reached within about a minute of the window start. Slow or early-'done' windows were cut at the oldest captured post (exclusive end) and the rest re-paged as fresh windows: 09-12Z at 09:14:17Z, 12-13Z at 12:20:12Z, 13-14Z at 13:10:07Z, 14-15Z at 14:21:01Z (fresh 14:00-14:21Z window surfaced ~26 more posts), 15-16Z at 15:13:45Z (fresh window surfaced ~40 more), 17-18Z at 17:04:00Z, 19-20Z at 19:04:41Z, 20-21Z at 20:13:24Z, 21-22Z at 21:12:49Z, 22-23Z at 22:09:04Z, 23-00Z at 23:05:17Z, 03-04Z at 03:03:15Z; the other re-paged remainders returned no posts. Judgment call: the 03:00-03:03:15Z probe returned a zero-post page with a stale next_token and was treated as empty. run21 full capture (Nov 14) with -from:796719216 (mikealfred_b telegram impersonator) excluded proactively. BUSY vs usual 200-375 (703 paged, 697 classified after dropping 3 copypasta and 3 AI-bot replies). Every post labelled by reading (keywords only flagged candidates); posts 0-549 read in run21 (Nov 14), 550-696 in run22 (Nov 16)."
     },
     {
       "date": "2026-03-05",
