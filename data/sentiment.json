@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-16T21:23:34-05:00",
+  "last_updated": "2026-11-17T08:15:31-05:00",
   "scores": [
     {
       "date": "2026-03-02",
@@ -4386,6 +4386,40 @@
       "classified_posts": 362,
       "partial_day": false,
       "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 381 matching posts paged (17 pages, recency, 25/page) until no next_token; 362 classified after dropping 19 spam/dup; X counts reports 386 for the day, +5 vs paged (1%) (X counts includes posts that search paging did not return, e.g. since-deleted posts or protected/suspended accounts; cause not verified)"
+    },
+    {
+      "date": "2026-11-15",
+      "negative_count": 42,
+      "positive_count": 57,
+      "neutral_count": 350,
+      "negative_score": 9,
+      "engagement_weighted_negative": 6.6,
+      "total_matching_posts": 465,
+      "unique_negative_accounts": 39,
+      "unique_accounts": 379,
+      "negative_accounts_score": 10,
+      "top_account_negative_posts": 3,
+      "full_capture": true,
+      "classified_posts": 449,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 464 matching posts paged (20 pages, recency, 25/page) until no next_token; 449 classified after dropping 15 spam/dup; X counts reports 465 for the day, +1 vs paged (0%) (X counts includes posts that search paging did not return, e.g. since-deleted posts or protected/suspended accounts; cause not verified); paged to the end in 20 pages with no stalls (the 21Z-01Z spike followed Mike's 'everyone gets a girlfriend' post)"
+    },
+    {
+      "date": "2026-11-16",
+      "negative_count": 96,
+      "positive_count": 25,
+      "neutral_count": 221,
+      "negative_score": 28,
+      "engagement_weighted_negative": 44.9,
+      "total_matching_posts": 480,
+      "unique_negative_accounts": 75,
+      "unique_accounts": 253,
+      "negative_accounts_score": 30,
+      "top_account_negative_posts": 5,
+      "full_capture": true,
+      "classified_posts": 342,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 402 matching posts paged (49 pages, recency, 25/page) until no next_token; 342 classified after dropping 7 spam/dup; X counts reports 480 for the day, +78 vs paged (16%) (X counts includes posts that search paging did not return, e.g. since-deleted posts or protected/suspended accounts; cause not verified); paging stalled/slowed after the 11:39Z span, so the 05:00-11:39Z remainder was re-paged in sub-windows (3h/2h/1h plus 15-min windows for 11Z, 15Z and 20Z, and short fresh windows from each window start): 349 unique posts; X counts shows 480, mostly hour 11Z (X 115 vs 8 paged) and 15Z (65 vs 39), which fresh re-paging did not return, so the gap appears to be posts search will not return (cause not verified); the 49 pages include 53 duplicate rows from re-paging"
     }
   ]
 }
