@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-16T21:16:32-05:00",
+  "last_updated": "2026-11-16T21:23:34-05:00",
   "scores": [
+    {
+      "date": "2026-03-02",
+      "negative_count": 40,
+      "positive_count": 63,
+      "neutral_count": 324,
+      "negative_score": 9,
+      "engagement_weighted_negative": 6.1,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 37,
+      "unique_accounts": 337,
+      "negative_accounts_score": 11,
+      "top_account_negative_posts": 2,
+      "full_capture": true,
+      "classified_posts": 427,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 431 matching posts paged (65 pages, recency, 25/page) until no next_token; 427 classified after dropping 4 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z to 05:00Z next day, EST): a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token. Windows whose paging ended more than ~1 minute after the window start were re-paged from the window start to the oldest captured post as fresh windows (05:00-05:21:08Z, 09:00-09:16:49Z, 12:00-12:02:07Z, 14:00-14:07:20Z, 19:00-19:05:42Z, 21:00-21:02:03Z, 22:00-22:05:26Z, 00:00-00:06:03Z, 01:00-01:03:46Z, 02:00-02:03:11Z, 03:00-03:01:32Z, 04:00-04:01:30Z); all returned no further posts. The 13:00-14:00Z hour returned no posts and was re-probed as two fresh 30-minute windows, also empty; fresh probes of the 14:14-14:47Z and 21:12-21:33Z gaps were empty too. run22 full capture (Nov 16) with -from:796719216 (mikealfred_b impersonator) excluded proactively. BUSY vs usual 200-375 (431 paged, 427 classified after dropping 3 copypasta and 1 AI-bot reply); mostly supportive replies to Mike's Iran-strike 'markets will be fine' and ISM-expansion bullish posts plus his 'sad that BTC is rising before I finish accumulating' joke, with a smaller set mocking his calls, dancing videos and ASST losses. Every post labelled by reading (keywords only flagged candidates), all 427 in run22 (Nov 16)."
+    },
     {
       "date": "2026-03-03",
       "negative_count": 182,
