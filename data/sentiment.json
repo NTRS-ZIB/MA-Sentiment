@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-17T08:15:31-05:00",
+  "last_updated": "2026-11-17T21:10:14-05:00",
   "scores": [
+    {
+      "date": "2026-03-01",
+      "negative_count": 129,
+      "positive_count": 64,
+      "neutral_count": 466,
+      "negative_score": 20,
+      "engagement_weighted_negative": 16.3,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 116,
+      "unique_accounts": 539,
+      "negative_accounts_score": 22,
+      "top_account_negative_posts": 8,
+      "full_capture": true,
+      "classified_posts": 659,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 673 matching posts paged (68 pages, recency, 25/page) until no next_token; 659 classified after dropping 14 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z to 05:00Z next day, EST): a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token. Windows whose paging ended more than ~1 minute after the window start were re-paged from the window start to the oldest captured post as fresh windows (05:00-05:01:04Z, 09:00-09:05:04Z, 12:00-12:03:02Z, 13:00-13:06:16Z, 14:00-14:02:27Z, 15:00-15:15:41Z, 19:00-19:03:45Z, 21:00-21:02:26Z, 23:00-23:01:06Z, 01:00-01:01:44Z, 03:00-03:02:22Z, 04:00-04:03:28Z); two of these returned a zero-post page with a stale next_token and were treated as ended. run23 full capture (Nov 17) with -from:796719216 (mikealfred_b impersonator) excluded proactively. VERY BUSY vs usual 200-375 (673 paged, 659 classified after spam/duplicate rules): replies to Mike's posts on the US/Israel strike that killed Khamenei ('I call for the fall of the regime', liquidity/BTC $315K), his rewrite of the NYT headline, an Opendoor offer post and jokes about opening businesses in Iran; negatives were insults over his war cheering, Epstein-regime jabs, mockery of deleted calls and a repeat 'con man' account (YTriggered16380, 8). Every post labelled by reading (keywords only flagged candidates), all 659 in run23 (Nov 17)."
+    },
     {
       "date": "2026-03-02",
       "negative_count": 40,
