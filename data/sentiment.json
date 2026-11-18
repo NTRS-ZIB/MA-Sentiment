@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-17T21:10:14-05:00",
+  "last_updated": "2026-11-18T08:02:16-05:00",
   "scores": [
     {
       "date": "2026-03-01",
@@ -4437,6 +4437,23 @@
       "classified_posts": 342,
       "partial_day": false,
       "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 402 matching posts paged (49 pages, recency, 25/page) until no next_token; 342 classified after dropping 7 spam/dup; X counts reports 480 for the day, +78 vs paged (16%) (X counts includes posts that search paging did not return, e.g. since-deleted posts or protected/suspended accounts; cause not verified); paging stalled/slowed after the 11:39Z span, so the 05:00-11:39Z remainder was re-paged in sub-windows (3h/2h/1h plus 15-min windows for 11Z, 15Z and 20Z, and short fresh windows from each window start): 349 unique posts; X counts shows 480, mostly hour 11Z (X 115 vs 8 paged) and 15Z (65 vs 39), which fresh re-paging did not return, so the gap appears to be posts search will not return (cause not verified); the 49 pages include 53 duplicate rows from re-paging"
+    },
+    {
+      "date": "2026-11-17",
+      "negative_count": 72,
+      "positive_count": 18,
+      "neutral_count": 319,
+      "negative_score": 18,
+      "engagement_weighted_negative": 24.0,
+      "total_matching_posts": 416,
+      "unique_negative_accounts": 41,
+      "unique_accounts": 301,
+      "negative_accounts_score": 14,
+      "top_account_negative_posts": 9,
+      "full_capture": true,
+      "classified_posts": 409,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 413 matching posts paged (18 pages, recency, 25/page) until no next_token; 409 classified after dropping 4 spam/dup; X counts reports 416 for the day, +3 vs paged (1%) (X counts includes posts that search paging did not return, e.g. since-deleted posts or protected/suspended accounts; cause not verified); all 413 matching posts paged (18 pages, recency, 25/page) until no next_token; 409 classified after dropping 4 spam/bot; X counts reports 416, +3 vs paged (<1%), hourly paged counts match X's except 21Z/23Z off by 1-2; most replies were threads about Jensen Huang's NVDA exit where Mike was only tagged and were read as neutral"
     }
   ]
 }
