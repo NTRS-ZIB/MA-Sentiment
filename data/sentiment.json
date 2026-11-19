@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-18T08:02:25-05:00",
+  "last_updated": "2026-11-18T21:08:46-05:00",
   "scores": [
+    {
+      "date": "2026-02-28",
+      "negative_count": 511,
+      "positive_count": 372,
+      "neutral_count": 1893,
+      "negative_score": 18,
+      "engagement_weighted_negative": 20.7,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 406,
+      "unique_accounts": 1808,
+      "negative_accounts_score": 22,
+      "top_account_negative_posts": 12,
+      "full_capture": true,
+      "classified_posts": 2776,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 2857 matching posts paged (161 pages, recency, 25/page) until no next_token; 2776 classified after dropping 81 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z to 05:00Z next day, EST): a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token. Windows whose paging ended more than ~1 minute after the window start were re-paged from the window start to the oldest captured post as fresh windows (05:00-05:54:15Z, 09:00-10:36:54Z, 12:00-12:09:24Z, 13:00-13:11:29Z, 14:00-14:32:06Z, 02:00-02:01:08Z, 03:00-03:01:30Z). run23 full capture (Nov 17) with -from:796719216 (mikealfred_b impersonator) excluded proactively. EXTREMELY BUSY vs usual 200-375 (2,857 paged, 2,776 classified after spam/duplicate rules), the day of the US/Israel strikes on Iran; most posts are replies to Mike's war posts (including a 'low IQ' / Epstein-files post). Negatives were mainly backlash at Mike's pro-strike/regime-change Iran posts (warmonger, hypocrite, 'read the room', many antisemitic 'Zionist' slurs, 'go enlist yourself'), plain insults (idiot, clown, stfu), mockery of his 'bottom is in' / $315K BTC / 'Bitcoin confirming the regime's fall' calls, and 'alfraud'/scammer jabs; positives were short agreement ('Facts', 'Agree Mike') and pledges to keep following him. Insults aimed at other people in the threads (Mamdani, SixSigma, Kamala) were left neutral. Every post labelled by reading (keywords only flagged candidates): posts 0-1214 in run23 (Nov 17), 1215-2775 in run24 (Nov 18)."
+    },
     {
       "date": "2026-03-01",
       "negative_count": 129,
