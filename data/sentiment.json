@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-18T21:08:46-05:00",
+  "last_updated": "2026-11-19T08:13:04-05:00",
   "scores": [
+    {
+      "date": "2026-02-27",
+      "negative_count": 42,
+      "positive_count": 35,
+      "neutral_count": 510,
+      "negative_score": 7,
+      "engagement_weighted_negative": 6.7,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 34,
+      "unique_accounts": 485,
+      "negative_accounts_score": 7,
+      "top_account_negative_posts": 4,
+      "full_capture": true,
+      "classified_posts": 587,
+      "partial_day": false,
+      "notes": "Keyword-labelled candidates, reading in progress (314/587 read). Full capture: all 595 matching posts paged (68 pages, recency, 25/page) until no next_token; 587 classified after dropping 8 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z to 05:00Z next day, EST): a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token. Windows whose paging ended more than ~1 minute after the window start were re-paged from the window start to the oldest captured post as fresh windows (05:00:00-05:02:49Z, 09:00:00-09:04:42Z, 13:00:00-13:06:59Z, 14:00:00-14:03:53Z, 15:00:00-15:01:31Z, 17:00:00-17:01:31Z, 18:00:00-18:01:19Z, 19:00:00-19:04:51Z, 20:00:00-20:04:15Z, 21:00:00-21:02:28Z, 00:00:00-00:02:39Z, 02:00:00-02:04:32Z, 03:00:00-03:07:22Z, 04:00:00-04:01:56Z); all of these returned no further posts. Windows 20:00:00-20:04:15Z, 00:00:00-00:02:39Z ended on a zero-post page carrying a stale next_token and were treated as ended. run24 full capture (Nov 18) with -from:796719216 (mikealfred_b impersonator) excluded proactively."
+    },
     {
       "date": "2026-02-28",
       "negative_count": 511,
@@ -4471,6 +4488,23 @@
       "classified_posts": 409,
       "partial_day": false,
       "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 413 matching posts paged (18 pages, recency, 25/page) until no next_token; 409 classified after dropping 4 spam/dup; X counts reports 416 for the day, +3 vs paged (1%) (X counts includes posts that search paging did not return, e.g. since-deleted posts or protected/suspended accounts; cause not verified); all 413 matching posts paged (18 pages, recency, 25/page) until no next_token; 409 classified after dropping 4 spam/bot; X counts reports 416, +3 vs paged (<1%), hourly paged counts match X's except 21Z/23Z off by 1-2; most replies were threads about Jensen Huang's NVDA exit where Mike was only tagged and were read as neutral"
+    },
+    {
+      "date": "2026-11-18",
+      "negative_count": 84,
+      "positive_count": 107,
+      "neutral_count": 415,
+      "negative_score": 14,
+      "engagement_weighted_negative": 23.1,
+      "total_matching_posts": 668,
+      "unique_negative_accounts": 71,
+      "unique_accounts": 459,
+      "negative_accounts_score": 15,
+      "top_account_negative_posts": 4,
+      "full_capture": true,
+      "classified_posts": 606,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 613 matching posts paged (26 pages, recency, 25/page) until no next_token; 606 classified after dropping 7 spam/dup; X counts reports 668 for the day, +55 vs paged (8%) (X counts includes posts that search paging did not return, e.g. since-deleted posts or protected/suspended accounts; cause not verified); query excluded the mikealfred_b impersonator (-from:796719216); paged in one 24h window until an empty page; hourly paged counts were 1-11 below X's for 14Z-04Z (largest 14Z -11, 15Z -8); the 15:00-16:00Z hour was re-paged as a fresh window (4 pages) and returned the same 77 posts, so the gap is posts search paging does not return. Replies were mostly the Jensen Huang/NVDA, recession/2027-boom threads and positive board-meeting/safe-travels replies after Mike joined the OPEN board; negatives were mostly insults, 'Mike Alfred curse' mockery and IREN/BKKT/SLNH blame"
     }
   ]
 }
