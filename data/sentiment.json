@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-19T21:14:39-05:00",
+  "last_updated": "2026-11-20T08:05:11-05:00",
   "scores": [
     {
       "date": "2026-02-26",
@@ -4522,6 +4522,23 @@
       "classified_posts": 606,
       "partial_day": false,
       "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 613 matching posts paged (26 pages, recency, 25/page) until no next_token; 606 classified after dropping 7 spam/dup; X counts reports 668 for the day, +55 vs paged (8%) (X counts includes posts that search paging did not return, e.g. since-deleted posts or protected/suspended accounts; cause not verified); query excluded the mikealfred_b impersonator (-from:796719216); paged in one 24h window until an empty page; hourly paged counts were 1-11 below X's for 14Z-04Z (largest 14Z -11, 15Z -8); the 15:00-16:00Z hour was re-paged as a fresh window (4 pages) and returned the same 77 posts, so the gap is posts search paging does not return. Replies were mostly the Jensen Huang/NVDA, recession/2027-boom threads and positive board-meeting/safe-travels replies after Mike joined the OPEN board; negatives were mostly insults, 'Mike Alfred curse' mockery and IREN/BKKT/SLNH blame"
+    },
+    {
+      "date": "2026-11-19",
+      "negative_count": 75,
+      "positive_count": 46,
+      "neutral_count": 232,
+      "negative_score": 21,
+      "engagement_weighted_negative": 16.9,
+      "total_matching_posts": 363,
+      "unique_negative_accounts": 60,
+      "unique_accounts": 258,
+      "negative_accounts_score": 23,
+      "top_account_negative_posts": 4,
+      "full_capture": true,
+      "classified_posts": 353,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 360 matching posts paged (16 pages, recency, 25/page) until no next_token; 353 classified after dropping 7 spam/dup; X counts reports 363 for the day, +3 vs paged (1%) (X counts includes posts that search paging did not return, e.g. since-deleted posts or protected/suspended accounts; cause not verified)"
     }
   ]
 }
