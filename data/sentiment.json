@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-20T21:06:00-05:00",
+  "last_updated": "2026-11-20T21:06:51-05:00",
   "scores": [
+    {
+      "date": "2026-02-24",
+      "negative_count": 267,
+      "positive_count": 84,
+      "neutral_count": 757,
+      "negative_score": 24,
+      "engagement_weighted_negative": 47.7,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 232,
+      "unique_accounts": 829,
+      "negative_accounts_score": 28,
+      "top_account_negative_posts": 9,
+      "full_capture": true,
+      "classified_posts": 1108,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 1121 matching posts paged (98 pages, recency, 25/page) until no next_token; 1108 classified after dropping 13 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z to 05:00Z next day, EST): a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token (one 503 Service Unavailable page was retried). Windows whose oldest captured post was more than ~1 minute after the window start were re-paged from the window start to the oldest captured post as fresh windows (05:00:00-05:02:43Z, 09:00:00-09:04:44Z, 12:00:00-12:10:54Z, 15:00:00-15:05:43Z, 16:00:00-16:07:52Z, 18:00:00-18:03:13Z, 22:00:00-22:01:57Z, 00:00:00-00:05:02Z, 01:00:00-01:01:09Z); none returned further posts. run26 full capture (Nov 20 2026) with -from:796719216 (mikealfred_b impersonator) excluded proactively; two Telegram promo spam accounts (Nostre_damusa, Davidroseberg5) excluded as spam. ~98 X reads. VERY BUSY vs usual 200-375 (1,121 paged, 1,108 classified after spam/duplicate rules); most of the volume was replies to Mike's post that his 'inside guy' at Jane Street said the 10am BTC algo was being switched off, and his public fight with George Noble (gnoble79). Negatives were mainly mockery of the Jane Street call ('trust me bro', 'just got off the phone with...' parodies, liar/fraud/clown), grifter/fraud jabs from Noble's side pointing to OPEN/ASST picks and wrong BTC calls, claims he deletes bad calls, and a pile-on after Jim Chanos's 'fake Petrus' reply; positives were agreement with his 'stay disciplined' post and supporters taking his side against Noble. Insults aimed at Noble and others in the threads were left neutral. Every post labelled by reading (keywords only flagged candidates) in run26 (Nov 20)."
+    },
     {
       "date": "2026-02-25",
       "negative_count": 160,
@@ -16,7 +33,7 @@
       "full_capture": true,
       "classified_posts": 1195,
       "partial_day": false,
-      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 1244 matching posts paged (98 pages, recency, 25/page) until no next_token; 1195 classified after dropping 42 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z to 05:00Z next day, EST): a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token. Windows whose oldest captured post was more than ~1 minute after the window start were re-paged from the window start to the oldest captured post as fresh windows (05:00:00-05:01:53Z, 09:00:00-09:12:53Z, 13:00:00-13:02:11Z, 14:00:00-14:03:02Z, 19:00:00-19:01:42Z, 23:00:00-23:04:13Z, 00:00:00-00:01:22Z); each returned only the already-captured boundary post with a next_token that had already been exhausted (paging loop), so they were treated as done (judgment call) and no further posts were found. run25 (Nov 19 2026), 98 X reads. VERY BUSY vs usual 200-375 (1,244 paged, 1,195 classified after spam/duplicate rules); most of the volume was replies to Mike's post that an insider friend at Jane Street told him staff were 'destroying evidence' of the '10am algo', plus a 'who is bullish' style thread and his flu/sick-kids post. Negatives were mainly mockery of that Jane Street rumor ('inside guy', 'phone guy', 'trust me bro', serial liar), Alfraud/grifter/con-man jabs, and mockery of failed BTC/IREN/OPEN calls and his paid subscription; positives were credit for being right about Jane Street manipulation, 'spot on'/'100%' agreement and get-well wishes. Every post labelled by reading (keywords only flagged candidates): posts 0-451 in run25 (Nov 19), 452-1194 in run26 (Nov 20)."
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 1244 matching posts paged (98 pages, recency, 25/page) until no next_token; 1195 classified after dropping 42 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z to 05:00Z next day, EST): a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token. Windows whose oldest captured post was more than ~1 minute after the window start were re-paged from the window start to the oldest captured post as fresh windows (05:00:00-05:01:53Z, 09:00:00-09:12:53Z, 13:00:00-13:02:11Z, 14:00:00-14:03:02Z, 19:00:00-19:01:42Z, 23:00:00-23:04:13Z, 00:00:00-00:01:22Z); each returned only the already-captured boundary post with a next_token that had already been exhausted (paging loop), so they were treated as done (judgment call) and no further posts were found. run25 (Nov 19 2026), 98 X reads. VERY BUSY vs usual 200-375 (1,244 paged, 1,195 classified after spam/duplicate rules); most of the volume was replies to Mike's post that an insider friend at Jane Street told him staff were 'destroying evidence' of the '10am algo' and his flu/sick-kids post. Negatives were mainly mockery of that Jane Street rumor ('inside guy', 'phone guy', 'trust me bro', serial liar), Alfraud/grifter/con-man jabs, and mockery of failed BTC/IREN/OPEN calls and his paid subscription; positives were credit for being right about Jane Street manipulation, 'spot on'/'100%' agreement and get-well wishes. Every post labelled by reading (keywords only flagged candidates): posts 0-451 in run25 (Nov 19), 452-1194 in run26 (Nov 20)."
     },
     {
       "date": "2026-02-26",
