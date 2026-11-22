@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-21T21:05:48-05:00",
+  "last_updated": "2026-11-21T21:08:48-05:00",
   "scores": [
+    {
+      "date": "2026-02-22",
+      "negative_count": 62,
+      "positive_count": 29,
+      "neutral_count": 694,
+      "negative_score": 8,
+      "engagement_weighted_negative": 6.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 54,
+      "unique_accounts": 645,
+      "negative_accounts_score": 8,
+      "top_account_negative_posts": 4,
+      "full_capture": true,
+      "classified_posts": 785,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 789 matching posts paged (41 pages, recency, 25/page) until no next_token; 785 classified after dropping 4 spam/dup; no X count available (outside 7-day counts window)"
+    },
     {
       "date": "2026-02-23",
       "negative_count": 65,
