@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-22T08:04:44-05:00",
+  "last_updated": "2026-11-22T20:58:08-05:00",
   "scores": [
+    {
+      "date": "2026-02-21",
+      "negative_count": 36,
+      "positive_count": 42,
+      "neutral_count": 590,
+      "negative_score": 5,
+      "engagement_weighted_negative": 4.2,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 35,
+      "unique_accounts": 537,
+      "negative_accounts_score": 7,
+      "top_account_negative_posts": 2,
+      "full_capture": true,
+      "classified_posts": 668,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 680 matching posts paged (32 pages, recency, 25/page) until no next_token; 668 classified after dropping 12 spam/dup; no X count available (outside 7-day counts window); paged as a single recency-sorted stream over the full ET day (05:00Z Feb 21 to 05:00Z Feb 22, EST) until no next_token (32 pages, 680 posts); the stream's oldest post was 07:01:37Z, so the start of the window was re-paged as a fresh window (05:00:00-07:01:37Z) in run28, which returned no posts. Full capture with -from:796719216 (mikealfred_b impersonator) excluded. BUSY vs usual 200-375 (680 paged, 668 classified after spam/duplicate rules); volume came from Mike's Saturday posts on blue cities (Denver/NYC under Mamdani as 'hell holes'), West Texas data-center protests, BTC DCA / $315K long-term target, and salary-vs-owning-a-business advice, plus $ASST/IREN/CIFR questions. Negatives were mainly fraud/scammer/Ponzi jabs over $ASST, mockery of past BTC calls and picks, hypocrisy jabs about his city takes, and insults (idiot, shitbag, entitled); positives were agreement and thanks. Criticism of Mamdani, Mark Cuban and others in the threads was left neutral. Every post labelled by reading (keywords only flagged candidates): posts 0-484 in run27 (Nov 21), posts 485-667 in run28 (Nov 22)."
+    },
     {
       "date": "2026-02-22",
       "negative_count": 62,
