@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-22T20:58:08-05:00",
+  "last_updated": "2026-11-22T21:07:17-05:00",
   "scores": [
+    {
+      "date": "2026-02-20",
+      "negative_count": 109,
+      "positive_count": 105,
+      "neutral_count": 773,
+      "negative_score": 11,
+      "engagement_weighted_negative": 14.5,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 95,
+      "unique_accounts": 735,
+      "negative_accounts_score": 13,
+      "top_account_negative_posts": 3,
+      "full_capture": true,
+      "classified_posts": 987,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 1008 matching posts paged (91 pages, recency, 25/page) until no next_token; 987 classified after dropping 21 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z Feb 20 to 05:00Z Feb 21, EST): a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token (one 503 Service Unavailable page was retried; the 21:00-22:00Z window returned a zero-post first page that still had a next_token, which was followed and returned 18 more posts). Windows whose oldest captured post was more than ~1 minute after the window start were re-paged from the window start to the oldest captured post as fresh windows (09:00:00-09:02:30Z, 12:00:00-12:04:34Z, 14:00:00-14:01:03Z, 19:00:00-19:01:14Z, 20:00:00-20:03:25Z, 22:00:00-22:08:49Z, 23:00:00-23:01:40Z, 01:00:00-01:04:20Z, 02:00:00-02:02:28Z, 03:00:00-03:02:53Z, 04:00:00-04:03:25Z); none returned further posts. run28 full capture (Nov 22 2026) with -from:796719216 (mikealfred_b impersonator) excluded; ~93 X reads. VERY BUSY vs usual 200-375 (1,008 paged, 987 classified after spam/duplicate rules: 16 copypasta, 3 automated AI-bot replies, 2 Telegram promo); volume came from Mike's 'THE BOTTOM IS IN' BTC post (9:02 AM ET), his posts on the Supreme Court striking down Trump's IEEPA tariffs, weak Q4 GDP/hot PCE and Powell being 'behind the curve', $OPEN earnings, CIFR debt trading above par, and his $ASST position (~-40% unrealized). Negatives were mainly mockery of the bottom call ('bottom counter 17', 'another great call'), parodies of his 'got a call' / Jane Street algo posts, claims he deletes wrong calls and blocks critics, fraud/grifter/scam jabs, and backlash at a portfolio-flex reply; positives were agreement with the bottom/tariff/Fed posts and support for his conviction. Criticism of Trump, Powell, George Noble and other users in the threads was left neutral. Every post labelled by reading (keywords only flagged candidates), all 987 in run28 (Nov 22)."
+    },
     {
       "date": "2026-02-21",
       "negative_count": 36,
