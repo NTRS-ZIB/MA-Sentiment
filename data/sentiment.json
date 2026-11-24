@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-23T07:57:06-05:00",
+  "last_updated": "2026-11-23T21:00:50-05:00",
   "scores": [
+    {
+      "date": "2026-02-19",
+      "negative_count": 72,
+      "positive_count": 113,
+      "neutral_count": 552,
+      "negative_score": 10,
+      "engagement_weighted_negative": 6.0,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 66,
+      "unique_accounts": 540,
+      "negative_accounts_score": 12,
+      "top_account_negative_posts": 3,
+      "full_capture": true,
+      "classified_posts": 737,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 769 matching posts paged (82 pages, recency, 25/page) until no next_token; 737 classified after dropping 32 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z Feb 19 to 05:00Z Feb 20, EST): a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token (the 15:00:00-15:01:03Z re-page returned a zero-post page with a next_token, which was followed and returned nothing). Windows whose oldest captured post was more than ~1 minute after the window start were re-paged from the window start to the oldest captured post as fresh windows (09:00:00-09:17:32Z, 12:00:00-12:12:14Z, 13:00:00-13:30:58Z, 14:00:00-14:02:17Z, 15:00:00-15:01:03Z, 17:00:00-17:01:08Z, 18:00:00-18:01:32Z, 19:00:00-19:04:13Z, 20:00:00-20:08:11Z, 21:00:00-21:01:09Z, 22:00:00-22:02:51Z, 03:00:00-03:02:37Z); none returned further posts. run28 full capture (Nov 22 2026) with -from:796719216 (mikealfred_b impersonator) excluded; ~82 X reads. BUSY vs usual 200-375 (769 paged, 737 classified after spam/duplicate rules: 24 copypasta, 8 automated AI-bot replies); volume came from $OPEN Q4 earnings and its new AI-native mortgage product with Lennar (Mike's 1.6M-share position, Bill Pulte and Kaz Nejatian replies), Mike's 'markets are trying to exhaust you / reversal' posts, his 'typical?' lifestyle post (sauna, golf, wagyu noodles), a Spaces 1v1 with David Bailey, and the George Noble feud. Negatives were mainly scam/fraud/conman and 'deletes his posts' jabs, mockery of his reversal and 'got a call' posts, chart-squiggler hypocrisy jabs, and insults; positives were $OPEN cheering, thanks for his Spaces advice and agreement. Criticism of George Noble, Pulte and other users in the threads was left neutral. Every post labelled by reading (keywords only flagged candidates): posts 0-704 in run28 (Nov 22), posts 705-736 in run29 (Nov 23)."
+    },
     {
       "date": "2026-02-20",
       "negative_count": 109,
