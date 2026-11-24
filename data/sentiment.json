@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-23T21:06:03-05:00",
+  "last_updated": "2026-11-23T21:10:19-05:00",
   "scores": [
+    {
+      "date": "2026-02-17",
+      "negative_count": 130,
+      "positive_count": 109,
+      "neutral_count": 506,
+      "negative_score": 17,
+      "engagement_weighted_negative": 21.4,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 113,
+      "unique_accounts": 577,
+      "negative_accounts_score": 20,
+      "top_account_negative_posts": 5,
+      "full_capture": true,
+      "classified_posts": 745,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 758 matching posts paged (75 pages, recency, 25/page) until no next_token; 745 classified after dropping 13 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z Feb 17 to 05:00Z Feb 18, EST): a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token (two zero-post pages that still had a next_token were followed and returned nothing further). Windows whose oldest captured post was more than ~1 minute after the window start were re-paged from the window start to the oldest captured post as fresh windows (09:00:00-09:18:25Z, 12:00:00-12:12:49Z, 13:00:00-13:19:53Z, 14:00:00-14:09:56Z, 17:00:00-17:03:23Z, 18:00:00-18:05:18Z, 19:00:00-19:10:59Z, 20:00:00-20:22:26Z, 21:00:00-21:05:04Z, 22:00:00-22:05:07Z, 00:00:00-00:01:11Z, 02:00:00-02:03:06Z); none returned further posts. run29 full capture (Nov 23 2026) with -from:796719216 (mikealfred_b impersonator) excluded; ~77 X reads. BUSY vs usual 200-375 (758 paged, 745 classified after spam/duplicate rules: 9 copypasta, 3 automated AI-bot replies, 1 Telegram promo); volume came from Mike's 'adding while they sell' bear-raid posts on $CIFR/$IREN/$ASST, the Alpine Fox 13F disclosures, a heated Nakamoto Spaces exchange with David Bailey (and Slacker), Jane Street/BTC manipulation posts, and his evening 'typical?' lifestyle post (married, no baldness, devout Buddhist, gun owner, high 8-figure net worth). Negatives were mainly humble-brag/insecurity/narcissist jabs, con man/grifter/pumper insults, 'deletes posts and blocks' complaints, blame for blowing up the Space, and mockery of his 'got a call' and buy-the-dip calls; positives were admiration, congratulations, thanks for his insights and agreement with adding on dips. Criticism of David Bailey/$NAKA, Jane Street, Buddhism and other users in the threads was left neutral. Every post labelled by reading (keywords only flagged candidates), all 745 in run29 (Nov 23)."
+    },
     {
       "date": "2026-02-18",
       "negative_count": 125,
