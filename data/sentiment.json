@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-23T21:00:50-05:00",
+  "last_updated": "2026-11-23T21:06:03-05:00",
   "scores": [
+    {
+      "date": "2026-02-18",
+      "negative_count": 125,
+      "positive_count": 48,
+      "neutral_count": 525,
+      "negative_score": 18,
+      "engagement_weighted_negative": 40.4,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 105,
+      "unique_accounts": 577,
+      "negative_accounts_score": 18,
+      "top_account_negative_posts": 10,
+      "full_capture": true,
+      "classified_posts": 698,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 700 matching posts paged (72 pages, recency, 25/page) until no next_token; 698 classified after dropping 2 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z Feb 18 to 05:00Z Feb 19, EST): a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token (one zero-post page that still had a next_token was followed and returned nothing further). Windows whose oldest captured post was more than ~1 minute after the window start were re-paged from the window start to the oldest captured post as fresh windows (05:00:00-05:01:05Z, 09:00:00-09:05:41Z, 12:00:00-12:02:27Z, 13:00:00-13:01:28Z, 15:00:00-15:01:09Z, 16:00:00-16:04:14Z, 17:00:00-17:02:07Z, 20:00:00-20:06:14Z, 22:00:00-22:03:33Z, 23:00:00-23:03:27Z, 00:00:00-00:02:47Z, 01:00:00-01:08:06Z, 02:00:00-02:16:38Z, 03:00:00-03:07:55Z); none returned further posts. run29 full capture (Nov 23 2026) with -from:796719216 (mikealfred_b impersonator) excluded; ~80 X reads. BUSY vs usual 200-375 (700 paged, 698 classified after spam/duplicate rules: 2 automated AI-bot replies); volume came from Mike's 'typical?' lifestyle post (married, no baldness, devout Buddhist, gun owner, high 8-figure net worth, no boss, good alcohol only, 15-year-old truck), his 190-degree 45-minute dry-vs-wet sauna poll, an omakase lunch photo, Jane Street BTC manipulation posts and the eve of $OPEN earnings. Negatives were mainly humble-brag/insecurity and validation-seeking jabs, con man/fraud/grifter insults (incl. repeated height mockery from one account), 'deletes and blocks' complaints, and mockery of past BTC/silver calls; positives were congratulations, admiration and agreement. Criticism of Buddhism, other repliers and George Noble in the threads was left neutral. Every post labelled by reading (keywords only flagged candidates), all 698 in run29 (Nov 23)."
+    },
     {
       "date": "2026-02-19",
       "negative_count": 72,
