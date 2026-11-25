@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-24T21:06:19-05:00",
+  "last_updated": "2026-11-24T21:12:10-05:00",
   "scores": [
+    {
+      "date": "2026-02-13",
+      "negative_count": 107,
+      "positive_count": 78,
+      "neutral_count": 631,
+      "negative_score": 13,
+      "engagement_weighted_negative": 16.1,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 79,
+      "unique_accounts": 619,
+      "negative_accounts_score": 13,
+      "top_account_negative_posts": 16,
+      "full_capture": true,
+      "classified_posts": 816,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 858 matching posts paged (83 pages, recency, 25/page) until no next_token; 816 classified after dropping 42 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z Feb 13 to 05:00Z Feb 14, EST): a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token (zero-post pages that still carried a next_token were followed and returned nothing further). Windows whose oldest captured post was more than ~1 minute after the window start were re-paged from the window start to the oldest captured post as fresh windows (01:00:00-01:01:29Z, 03:00:00-03:04:06Z, 04:00:00-04:02:27Z, 09:00:00-11:35:35Z, 14:00:00-14:01:59Z, 21:00:00-21:06:54Z, 23:00:00-23:05:16Z, 00:00:00-00:01:46Z, 18:00:00-18:01:39Z, 17:00:00-17:01:22Z, 15:00:00-15:02:40Z); none returned further posts. run30 (Nov 24 2026) full capture with -from:796719216 (mikealfred_b impersonator) excluded; ~83 X reads. VERY BUSY vs usual 200-375 (858 paged, 816 classified after spam/duplicate rules: 32 copypasta, 10 automated AI-bot replies); a Friday, volume came from replies to Mike's Bitcoin posts (a flood of one-line BTC price guesses for July), his 13F filing (CIFR/IBIT calls/IREN holdings, OPEN share-count debate, 'proof' and deleted-tweet questions), an exchange with David Levenson / Tom Lee-linked bear posts and Free-speech/Epstein threads, and fear/regret-of-selling posts. Negatives were mainly ASST-loss and deleted-tweet jabs, fraud/con-man/prison accusations (16 from one account), 'phone call'/Cramer 2.0 mockery and 'blocked me' complaints; positives were thanks for the 13F transparency, praise for his CIFR/IREN calls and defences against the fraud claims. Every post labelled by reading (keywords only flagged candidates)."
+    },
     {
       "date": "2026-02-14",
       "negative_count": 114,
@@ -16,7 +33,7 @@
       "full_capture": true,
       "classified_posts": 462,
       "partial_day": false,
-      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 469 matching posts paged (68 pages, recency, 25/page) until no next_token; 462 classified after dropping 7 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z Feb 14 to 05:00Z Feb 15, EST): a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token (zero-post pages that still carried a next_token were followed and returned nothing further). Windows whose oldest captured post was more than ~1 minute after the window start were re-paged from the window start to the oldest captured post as fresh windows (05:00:00-05:04:07Z, 09:00:00-09:26:30Z, 12:00:00-12:03:06Z, 13:00:00-13:10:41Z, 14:00:00-14:24:59Z, 00:00:00-00:01:06Z, 01:00:00-01:04:31Z, 03:00:00-03:01:43Z, 04:00:00-04:04:15Z, 18:00:00-18:02:09Z, 20:00:00-20:04:48Z, 22:00:00-22:01:06Z, 23:00:00-23:02:54Z, 02:00:00-02:01:15Z); none returned further posts. run30 (Nov 24 2026) full capture with -from:796719216 (mikealfred_b impersonator) excluded; ~68 X reads. BUSY vs usual 200-375 (469 paged, 462 classified after spam/duplicate rules: 3 copypasta, 4 automated AI-bot replies); a Saturday (Valentine's Day) with volume from Mike's 13F filing (replies debating his holdings/performance, IREN/CIFR/ASST sizes and 'proof' of his OPEN position), a Valentine's/latte-art greeting post, his 'last chance below $69K' Bitcoin post, wine and tariff/Epstein-related replies. Negatives were dominated by one account's repeated prison/fraud/height accusations (about 40 posts), plus ASST-loss, deleted-tweet and proof-demand jabs; positives were greetings with praise, thanks and defences against the fraud accusations. Every post labelled by reading (keywords only flagged candidates)."
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 469 matching posts paged (68 pages, recency, 25/page) until no next_token; 462 classified after dropping 7 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z Feb 14 to 05:00Z Feb 15, EST): a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token (zero-post pages that still carried a next_token were followed and returned nothing further). Windows whose oldest captured post was more than ~1 minute after the window start were re-paged from the window start to the oldest captured post as fresh windows (05:00:00-05:04:07Z, 09:00:00-09:26:30Z, 12:00:00-12:03:06Z, 13:00:00-13:10:41Z, 14:00:00-14:24:59Z, 00:00:00-00:01:06Z, 01:00:00-01:04:31Z, 03:00:00-03:01:43Z, 04:00:00-04:04:15Z, 18:00:00-18:02:09Z, 20:00:00-20:04:48Z, 22:00:00-22:01:06Z, 23:00:00-23:02:54Z, 02:00:00-02:01:15Z); none returned further posts. run30 (Nov 24 2026) full capture with -from:796719216 (mikealfred_b impersonator) excluded; ~68 X reads. BUSY vs usual 200-375 (469 paged, 462 classified after spam/duplicate rules: 3 copypasta, 4 automated AI-bot replies); a Saturday (Valentine's Day) with volume from Mike's 13F filing (replies debating his holdings/performance, IREN/CIFR/ASST sizes and 'proof' of his OPEN position), a Valentine's/latte-art greeting post, his 'last chance below $69K' Bitcoin post, wine and tariff/Epstein-related replies. Negatives were dominated by one account's repeated prison/fraud/height accusations (53 posts from YTriggered16380), plus ASST-loss, deleted-tweet and proof-demand jabs; positives were greetings with praise, thanks and defences against the fraud accusations. Every post labelled by reading (keywords only flagged candidates)."
     },
     {
       "date": "2026-02-15",
