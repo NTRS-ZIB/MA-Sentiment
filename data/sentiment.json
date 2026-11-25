@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-24T08:05:03-05:00",
+  "last_updated": "2026-11-24T20:56:22-05:00",
   "scores": [
+    {
+      "date": "2026-02-16",
+      "negative_count": 95,
+      "positive_count": 78,
+      "neutral_count": 277,
+      "negative_score": 21,
+      "engagement_weighted_negative": 24.6,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 88,
+      "unique_accounts": 375,
+      "negative_accounts_score": 23,
+      "top_account_negative_posts": 3,
+      "full_capture": true,
+      "classified_posts": 450,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 454 matching posts paged (66 pages, recency, 25/page) until no next_token; 450 classified after dropping 4 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z Feb 16 to 05:00Z Feb 17, EST): a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token (one zero-post page that still had a next_token was followed and returned nothing further). Windows whose oldest captured post was more than ~1 minute after the window start were re-paged from the window start to the oldest captured post as fresh windows (09:00:00-09:03:26Z, 12:00:00-12:09:42Z, 13:00:00-13:03:04Z, 14:00:00-14:01:32Z, 16:00:00-16:02:41Z, 17:00:00-17:05:09Z, 18:00:00-18:03:52Z, 19:00:00-19:05:27Z, 20:00:00-20:19:31Z, 21:00:00-21:01:06Z, 22:00:00-22:08:17Z, 00:00:00-00:06:19Z, 01:00:00-01:06:57Z, 02:00:00-02:01:06Z, 04:00:00-04:01:03Z); none returned further posts. run29 full capture (Nov 23 2026) with -from:796719216 (mikealfred_b impersonator) excluded; ~67 X reads. BUSY vs usual 200-375 (454 paged, 450 classified after spam/duplicate rules: 3 copypasta, 1 Telegram promo); volume came from Mike's Presidents' Day 'I got the call' post (big players done, algos flipping bullish), BTC $1M/generational-wealth posts, golf with his dad, and an AI-vs-human-connection post. Negatives were mainly mockery of the repeated 'I got the call' posts and failed calls, clown/fraud/grifter/stock-promoter jabs and height mockery; positives were warm replies to the golf-with-dad post and agreement. Every post labelled by reading (keywords only flagged candidates): posts 0-399 in run29 (Nov 23); posts 400-449 in run30 (Nov 24)."
+    },
     {
       "date": "2026-02-17",
       "negative_count": 130,
