@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-24T20:56:22-05:00",
+  "last_updated": "2026-11-24T21:01:54-05:00",
   "scores": [
+    {
+      "date": "2026-02-15",
+      "negative_count": 73,
+      "positive_count": 22,
+      "neutral_count": 289,
+      "negative_score": 19,
+      "engagement_weighted_negative": 21.3,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 61,
+      "unique_accounts": 319,
+      "negative_accounts_score": 19,
+      "top_account_negative_posts": 4,
+      "full_capture": true,
+      "classified_posts": 384,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 387 matching posts paged (64 pages, recency, 25/page) until no next_token; 384 classified after dropping 3 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z Feb 15 to 05:00Z Feb 16, EST): a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token (zero-post pages that still carried a next_token were followed and returned nothing further). Windows whose oldest captured post was more than ~1 minute after the window start were re-paged from the window start to the oldest captured post as fresh windows (05:00:00-05:03:10Z, 09:00:00-09:56:13Z, 13:00:00-13:06:02Z, 14:00:00-14:09:51Z, 19:00:00-19:01:40Z, 21:00:00-21:10:27Z, 22:00:00-22:01:20Z, 23:00:00-23:22:46Z, 01:00:00-01:03:00Z, 02:00:00-02:11:35Z, 03:00:00-03:15:15Z, 17:00:00-17:01:18Z, 18:00:00-18:04:15Z, 20:00:00-20:02:03Z, 04:00:00-04:07:12Z, 15:00:00-15:02:23Z); none returned further posts. run30 (Nov 24 2026) full capture with -from:796719216 (mikealfred_b impersonator) excluded; ~65 X reads. BUSY vs usual 200-375 (387 paged, 384 classified after spam/duplicate rules: 3 copypasta); a Sunday, volume came from replies to Mike's Bitcoin posts (a flood of mocking 'squiggler'/'plumber'/'blockchain stopped' replies and sarcastic thanks for a 'sell everything' take), BTC $1M/generational-wealth replies, and ASST/OPEN holding debates (he was being asked about or blamed for ASST). Negatives were mainly mockery of his deleted 'never see $69,420 again' post and ASST call, fraud/felon accusations (one account), loser/idiot/clown jabs and 'he blocked me' complaints; positives were defences of his OPEN/ASST positions and thanks for humour/transparency. Every post labelled by reading (keywords only flagged candidates).\")\nN[day]=n; json.dump(N,open(\"raw/capture_notes.json\",\"w\"),indent=1); print(n)\nE\npython3 mknote2.py 2026-02-15 \"run30 (Nov 24 2026)\" 65 \"BUSY vs usual 200-375 (387 paged, 384 classified after spam/duplicate rules: 3 copypasta); a Sunday, volume came from Mike's sarcastic 'BTC blockchain stopped / selling everything' post (a flood of mocking 'squiggler'/'plumber' replies and sarcastic thanks), BTC-$1M/generational-wealth and wine posts, and ASST/OPEN holding debates. Negatives were mainly mockery of his deleted 'never see \\$69,420 again' post and ASST call, fraud/felon accusations (YTriggered16380), loser/idiot/clown jabs and 'blocked me' complaints; positives were defences of his OPEN/ASST positions and thanks for humour/transparency.\"\npython3 build.py | tail -1; python3 - <<'E'\nimport json;s=[x for x in json.load(open('/workspace/mike-alfred-sentiment/sentiment.json'))['scores'] if x['date']=='2026-02-15'][0];print({k:v for k,v in s.items() if k!='notes'})\nEM/generational-wealth and wine posts, and ASST/OPEN holding debates. Negatives were mainly mockery of his deleted 'never see $69,420 again' post and ASST call, fraud/felon accusations (YTriggered16380), loser/idiot/clown jabs and 'blocked me' complaints; positives were defences of his OPEN/ASST positions and thanks for humour/transparency. Every post labelled by reading (keywords only flagged candidates)."
+    },
     {
       "date": "2026-02-16",
       "negative_count": 95,
