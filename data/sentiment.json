@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-25T21:02:45-05:00",
+  "last_updated": "2026-11-26T08:05:05-05:00",
   "scores": [
     {
       "date": "2026-02-12",
@@ -4862,6 +4862,23 @@
       "classified_posts": 1988,
       "partial_day": false,
       "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 2061 matching posts paged (85 pages, recency, 25/page) until no next_token; 1988 classified after dropping 73 spam/dup; X counts reports 2088 for the day, +27 vs paged (1%) (X counts includes posts that search paging did not return, e.g. since-deleted posts or protected/suspended accounts; cause not verified); paged in a single recency query over the ET window (05:00Z Nov 24 to 05:00Z Nov 25, EST), 85 pages until no next_token; query (\"Mike Alfred\" OR @mikealfred) -from:mikealfred -is:retweet; ~90 X reads. VERY BUSY vs usual 200-375 (2,061 paged, 1,988 classified after 73 spam/duplicate drops: 36 copypasta, 36 automated AI-bot replies); X counts reports 2,088 (+27, 1%). Many replies were angry threads about alleged deleted posts/lying, subscriber-money and shill/pump accusations; the 920 negatives are spread over many accounts (top account 12). Every post labelled by reading (keywords only flagged candidates)."
+    },
+    {
+      "date": "2026-11-25",
+      "negative_count": 506,
+      "positive_count": 80,
+      "neutral_count": 618,
+      "negative_score": 42,
+      "engagement_weighted_negative": 39.0,
+      "total_matching_posts": 1269,
+      "unique_negative_accounts": 359,
+      "unique_accounts": 809,
+      "negative_accounts_score": 44,
+      "top_account_negative_posts": 16,
+      "full_capture": true,
+      "classified_posts": 1204,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 1230 matching posts paged (52 pages, recency, 25/page) until no next_token; 1204 classified after dropping 26 spam/dup; X counts reports 1269 for the day, +39 vs paged (3%) (X counts includes posts that search paging did not return, e.g. since-deleted posts or protected/suspended accounts; cause not verified); paged the full ET day (05:00Z Nov 25 to 05:00Z Nov 26, EST) with one recency query ((\"Mike Alfred\" OR @mikealfred) -from:mikealfred -is:retweet), 52 pages until no next_token; 1,230 paged, 1,204 classified after 26 spam/duplicate drops; X counts reports 1,269 (gap -39 vs paged, X's count includes spam/dupes). ~53 X reads. Every post labelled by reading (keywords only flagged candidates)."
     }
   ]
 }
