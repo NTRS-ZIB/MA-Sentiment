@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-26T08:05:05-05:00",
+  "last_updated": "2026-11-26T21:00:09-05:00",
   "scores": [
+    {
+      "date": "2026-02-11",
+      "negative_count": 169,
+      "positive_count": 89,
+      "neutral_count": 769,
+      "negative_score": 16,
+      "engagement_weighted_negative": 15.8,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 142,
+      "unique_accounts": 749,
+      "negative_accounts_score": 19,
+      "top_account_negative_posts": 11,
+      "full_capture": true,
+      "classified_posts": 1027,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 1102 matching posts paged (106 pages, recency, 25/page) until no next_token; 1027 classified after dropping 75 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z Feb 11 to 05:00Z Feb 12, EST): a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token (zero-post pages that still carried a next_token were followed and returned nothing further). Windows whose oldest captured post was more than ~1 minute after the window start were re-paged from the window start to the oldest captured post as fresh windows (09:00:00-09:03:55Z, 12:00:00-12:01:28Z, 13:00:00-13:08:05Z, 14:00:00-14:01:08Z, 15:00:00-15:02:44Z, 16:00:00-16:02:24Z, 20:00:00-20:02:29Z, 21:00:00-21:01:23Z, 22:00:00-22:03:34Z, 04:00:00-04:01:44Z); none returned further posts. run31-32 full capture with -from:796719216 (mikealfred_b impersonator) excluded; ~106 X reads. VERY BUSY day: ASST post-reverse-split collapse drove 'deleted ASST posts'/grifter mockery and a YTriggered16 height-insult spree; also Binance/CZ capitulation thread, Ackman META 'closet indexer' thread and a taco joke post. Every post labelled by reading (keywords only flagged candidates)."
+    },
     {
       "date": "2026-02-12",
       "negative_count": 211,
