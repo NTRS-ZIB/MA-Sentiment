@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-27T21:10:59-05:00",
+  "last_updated": "2026-11-28T08:04:37-05:00",
   "scores": [
     {
       "date": "2026-02-08",
@@ -4964,6 +4964,23 @@
       "classified_posts": 90,
       "partial_day": false,
       "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 91 matching posts paged (5 pages, recency, 25/page) until no next_token; 90 classified after dropping 1 spam/dup; matches X counts (91); Full capture: all 91 matching posts paged (5 pages, recency, 25/page) until no next_token, covering the full ET day (05:00Z Nov 26 to 05:00Z Nov 27, EST) with one query ((\"Mike Alfred\" OR @mikealfred) -from:mikealfred -is:retweet); 90 classified after dropping 1 automated AI-bot reply; X counts reports 91 (gap +1 vs paged = the dropped bot reply). Thanksgiving, very quiet day. ~6 X reads. Every post labelled by reading (keywords only flagged candidates)."
+    },
+    {
+      "date": "2026-11-27",
+      "negative_count": 74,
+      "positive_count": 7,
+      "neutral_count": 240,
+      "negative_score": 23,
+      "engagement_weighted_negative": 46.6,
+      "total_matching_posts": 334,
+      "unique_negative_accounts": 66,
+      "unique_accounts": 201,
+      "negative_accounts_score": 33,
+      "top_account_negative_posts": 3,
+      "full_capture": true,
+      "classified_posts": 321,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 333 matching posts paged (15 pages, recency, 25/page) until no next_token; 321 classified after dropping 12 spam/dup; X counts reports 334 for the day, +1 vs paged (0%) (X counts includes posts that search paging did not return, e.g. since-deleted posts or protected/suspended accounts; cause not verified); paged in one recency pass (05:00Z Nov 27 to 05:00Z Nov 28, EST) with one query ((\"Mike Alfred\" OR @mikealfred) -from:mikealfred -is:retweet) until no next_token; 12 spam/duplicate/AI-bot replies dropped; X count 334 (gap +1 vs 333 paged). Busy day driven by Opendoor ATM filing and Mike's deleted-posts / IREN bodyguard-job threads. ~16 X reads. Every post labelled by reading (keywords only flagged candidates)."
     }
   ]
 }
