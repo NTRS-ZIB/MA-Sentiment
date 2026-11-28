@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-27T08:05:44-05:00",
+  "last_updated": "2026-11-27T21:06:03-05:00",
   "scores": [
+    {
+      "date": "2026-02-09",
+      "negative_count": 85,
+      "positive_count": 34,
+      "neutral_count": 545,
+      "negative_score": 13,
+      "engagement_weighted_negative": 15.2,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 78,
+      "unique_accounts": 497,
+      "negative_accounts_score": 16,
+      "top_account_negative_posts": 2,
+      "full_capture": true,
+      "classified_posts": 664,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 826 matching posts paged (101 pages, recency, 25/page) until no next_token; 664 classified after dropping 162 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z Feb 9 to 05:00Z Feb 10, EST): a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token (zero-post pages that still carried a next_token were followed and returned nothing further). Windows whose oldest captured post was more than ~1 minute after the window start were re-paged from the window start to the oldest captured post as fresh windows (05:00:00-05:02:25Z, 09:00:00-09:16:24Z, 12:00:00-12:07:52Z, 13:00:00-13:06:34Z, 14:00:00-14:05:33Z, 15:00:00-15:02:59Z, 17:00:00-17:02:45Z, 18:00:00-18:03:46Z, 19:00:00-19:01:21Z, 20:00:00-20:01:30Z, 22:00:00-22:01:17Z, 00:00:00-00:02:44Z, 01:00:00-01:04:12Z, 02:00:00-02:04:49Z, 03:00:00-03:01:33Z, 04:00:00-04:03:28Z); none returned further posts. run33 full capture with -from:796719216 (mikealfred_b impersonator) excluded; ~103 X reads. BUSY day (826 paged, 664 classified after 158 copypasta + 4 bot replies dropped): Mike's Tokyo sushi/vacation posts, HIMS Super Bowl-ad collapse and 'kid analysts' jabs, 'chart squigglers' feud, deleted ASST posts questions, CIFR/Anthropic deal hints. Every post labelled by reading (keywords only flagged candidates)."
+    },
     {
       "date": "2026-02-10",
       "negative_count": 203,
