@@ -1,6 +1,23 @@
 {
-  "last_updated": "2026-11-27T21:06:03-05:00",
+  "last_updated": "2026-11-27T21:10:59-05:00",
   "scores": [
+    {
+      "date": "2026-02-08",
+      "negative_count": 140,
+      "positive_count": 29,
+      "neutral_count": 525,
+      "negative_score": 20,
+      "engagement_weighted_negative": 17.2,
+      "total_matching_posts": null,
+      "unique_negative_accounts": 119,
+      "unique_accounts": 577,
+      "negative_accounts_score": 21,
+      "top_account_negative_posts": 12,
+      "full_capture": true,
+      "classified_posts": 694,
+      "partial_day": false,
+      "notes": "Labelled by reading each post (sentiment toward Mike Alfred personally). Full capture: all 709 matching posts paged (70 pages, recency, 25/page) until no next_token; 694 classified after dropping 15 spam/dup; no X count available (outside 7-day counts window); paged in UTC sub-windows covering the full ET day (05:00Z Feb 8 to 05:00Z Feb 9, EST): a 05:00-09:00Z night block, 09:00-12:00Z, then hourly windows; every window was paged until no next_token (zero-post pages that still carried a next_token were followed and returned nothing further). Windows whose oldest captured post was more than ~1 minute after the window start were re-paged from the window start to the oldest captured post as fresh windows (14:00:00-14:01:05Z, 17:00:00-17:04:55Z, 20:00:00-20:01:45Z, 21:00:00-21:01:09Z, 23:00:00-23:04:16Z, 00:00:00-00:01:07Z, 02:00:00-02:01:43Z, 03:00:00-03:03:56Z, 04:00:00-04:08:22Z); none returned further posts. run33 full capture with -from:796719216 (mikealfred_b impersonator) excluded; ~71 X reads. BUSY Sunday (709 paged, 694 classified after 11 bot replies + 4 copypasta dropped): Mike's '$1M BTC / don't wait for $58K / 23-year-old chart squiggler' post drew a large BTC-skeptic and 'pedocoin' pile-on, plus HIMS/big-pharma spat, deleted-tweet and con-man attacks (YTriggered16). Every post labelled by reading (keywords only flagged candidates)."
+    },
     {
       "date": "2026-02-09",
       "negative_count": 85,
